@@ -1,3 +1,6 @@
+# Text editor files
+tags
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -13,6 +16,10 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+# Design files
+*.psd
+*.ai
 
 # Windows shortcuts
 *.lnk
@@ -31,13 +38,9 @@ $RECYCLE.BIN/
 # Thumbnails
 ._*
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
+# Files that might appear on external disk
 .Spotlight-V100
-.TemporaryItems
 .Trashes
-.VolumeIcon.icns
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -45,3 +48,13 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# Folders no one needs
+.sass-cache
+.sass-cache/*
+_site
+_site/*
+_artwork
+_artwork/*
+design-pattern_files/
+design-pattern_files/*
