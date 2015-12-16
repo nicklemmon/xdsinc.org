@@ -6,16 +6,27 @@
 
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="description" content="Quisque sed eros sit amet massa finibus consequat. Fusce efficitur ullamcorper laoreet. Nulla luctus velit sit amet fringilla auctor. Nullam faucibus porttitor mauris, et tempor ex maximus sit amet. Fusce molestie imperdiet commodo. Sed sagittis porttitor libero. Proin et ipsum at leo volutpat sagittis eu sit amet ex. Nulla congue malesuada metus at cursus."> <!-- description meta tag -->
+		<meta name="description" content="XDS Inc will be re-launching their website shortly! XDS is a nonprofit providing recovery services in North Carolina, largely in partnership with other agencies."> <!-- description meta tag -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="robots" content="index, follow">
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-71215302-1', 'auto');
+			ga('send', 'pageview');
+		</script> <!-- Google analytics -->
+		
 		<title>XDS Inc - Cross Disability Services, Incorporated</title>
 
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<!-- stylesheet (produced via style.scss) -->
-		<link href="/assets/css/style.css" rel="stylesheet">
+		<link href="assets/css/style.css" rel="stylesheet">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,10 +44,14 @@
 		<main>
 
 			<div class="background">
-				<div class="bg-element" id="bg_farm"></div>
-				<div class="bg-element" id="bg_tiny-home"></div>
-				<div class="bg-element" id="bg_wellness"></div>
-				<div class="bg-element" id="bg_paws"></div>
+				<div class="one-half">
+					<div class="bg-element" id="bg_tiny-home"></div>
+					<div class="bg-element" id="bg_paws"></div>
+				</div> <!-- end .one-half -->
+				<div class="one-half">
+					<div class="bg-element" id="bg_wellness"></div>
+					<div class="bg-element" id="bg_farm"></div>
+				</div> <!-- end .one-half -->
 			</div> <!-- end .background -->
 			<!-- <div class="overlay"></div> end .overlay -->
 
@@ -47,8 +62,9 @@
 				<!-- <img class="brand" src="/assets/images/logo.jpg"> -->
 				<p>XDS will be re-launching it's website in the near future, if you want to be notified when it launches, send us your email and we will let you know! Your email will not be shared.</p>
 
-				<form>
-					<label for="email">E-mail address</label>
+				<form action="//formspree.io/thava@xdsinc.org"
+      method="POST">
+					<label name="email" for="email">E-mail address</label>
 					<input type="text" placeholder="example@gmail.com" name="email" required></input>
 					<input class="btn" type="submit" value="Send"/>
 				</form> <!-- end form -->
@@ -65,9 +81,9 @@
 
 		</footer> -->
 
-    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+    <script src="assets/js/jquery-1.11.3.min.js"></script>
     <!-- custom scripts -->
-    <script src="/assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
 
 	</body>

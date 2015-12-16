@@ -28,28 +28,59 @@ body {
 
   .bg-element {
     display: inline-block;
+    width: 100%;
     margin-right: -4px; // used to eliminate default space b/t inline-block items
+    margin-bottom: 0;
     line-height: 0; // eliminates empty space at the bottom of inline-block element
-    height: 100%;
-    width: 25%;
     background-size: cover;
-    @include filter(sepia(80%) blur(5px));
+    border: 1rem solid white;
   }
 
+    .one-half {
+      display: inline-block;
+      margin-right: -4px;
+      margin-bottom: 0;
+      line-height: 0;
+      height: 100%;
+      width: 50%;
+    }
+
     .bg-element#bg_tiny-home {
-      background-image: url('../images/bg_tiny-home.jpg');
+      height: 50%;
+      background-position: 0% 0%;
+      background-image: url('../images/opt_bg_tiny-home.png');
+
+      @media($mobile) {
+        background-image: url('../images/opt_sm_bg_tiny-home.png');
+      }
     }
 
     .bg-element#bg_farm {
-      background-image: url('../images/bg_farm.jpg');
+      height: calc(100% * 2/8);
+      background-image: url('../images/opt_bg_farm.png');
+
+      @media($mobile) {
+        background-image: url('../images/opt_sm_bg_farm.png');
+      }
     }
 
     .bg-element#bg_paws {
-      background-image: url('../images/bg_paws.png');
+      height: 50%;
+      background-image: url('../images/opt_bg_paws.png');
+
+      @media($mobile) {
+        background-image: url('../images/opt_sm_bg_paws.png');
+      }
     }
 
     .bg-element#bg_wellness {
-      background-image: url('../images/bg_wellness.jpg');
+      height: calc(100% * 6/8);
+      background-position: 0 85%;
+      background-image: url('../images/opt_bg_wellness.png');
+
+      @media($mobile) {
+        background-image: url('../images/opt_sm_bg_wellness.png');
+      }
     }
 
 @include keyframes(dropDownFadeIn) {
@@ -77,6 +108,7 @@ section.landing {
   // box-shadow: inset 0 0 0 1px #ccc;
   padding: $xl-padding;
   background: white;
+  box-shadow: 0 3rem 5rem rgba(0,0,0,.5);
   z-index: 3;
   @include animation-delay(.5s);
   @include animation-name(dropDownFadeIn);
@@ -85,22 +117,28 @@ section.landing {
   @include animation-fill-mode(forwards);
 
   @include media($mobile) {
-    margin: $md-padding auto;
-    padding: $lg-padding;
+    text-align: center;
+    margin: $md-padding*2 auto;
+    padding: $sm-padding;
   }
 
 }
 
-h1.sub-heading {
+.sub-heading {
   color: $dark-base-lightened;
   border-bottom: 1px solid $dark-base-lightened;
   display: inline-block;
   text-transform: uppercase;
   font-size: .9rem;
   letter-spacing: 2px;
+  margin-right: -4px;
   margin-bottom: $lg-padding;
   padding-bottom: $sm-padding;
 }
+
+  .sub-heading .fa {
+    margin-right: .9rem;
+  }
 
 img.brand {
   display: block;
@@ -116,6 +154,11 @@ h2 {
   line-height: 125%;
   font-weight: 700;
   margin-bottom: 2.5rem;
+
+  @include media($mobile) {
+    font-size: 1.75rem;
+  }
+
 }
 
 p {
@@ -131,6 +174,11 @@ p:last-of-type {
 
   p a {
     color: $light-secondary-accent;
+    @include transition(color .4s ease);
+
+    &:hover {
+      color: $secondary-accent;
+    }
   }
 
   p a.phone {
@@ -159,34 +207,70 @@ form {
       font-family: 'FontAwesome';
     }
   form input {
+    -webkit-appearance: none;
+    float: left; // aligns input[type='text'] and submit .btn
+    line-height: 120%;
     min-height: 3rem; // makes inputs the same height
-    margin-right: -4px; // adjusts spacing between inline-block elements;
-    font-size: 1.2rem;
+    margin-right: -1px; // overlaps button with field
+    padding: .5rem 1rem;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
   }
 
   form input[type="text"] {
     color: $dark-base;
     font-family: 'FontAwesome';
     width: 80%;
-    padding: .5rem 1rem;
-    line-height: 120%;
     border: 1px solid $dark-base-lightened;
-  }
+    font-size: 1.2rem;
+    border-radius: .4rem 0 0 .4rem;
 
-    form input[type="text"] {
+    @include media($mobile) {
+      width: 100%;
+      border-radius: .4rem .4rem 0 0;
+      margin-bottom: -.2rem; // hides bottom of form behind button
+    }
+
+    &:hover {
       outline-color: transparent;
       border: 1px solid $light-secondary-accent;
     }
 
+  }
+
   form input[type="submit"] {
     width: 20%;
+
+    @include media($mobile) {
+      width: 100%;
+    }
+
   }
 
 .btn {
+  position: relative;
+  cursor: pointer;
   font-family: $secondary-font-stack;
-  font-size: 1.1rem;
-  text-transform: uppercase;
   color: white;
-  background: $primary-accent;
+  text-shadow: 0 .1rem .25rem $primary-accent-darkened;
+  font-size: .9rem;
+  text-transform: uppercase;
+  background: $primary-accent-darkened; // fall-back
+  //@include linear-gradient($primary-accent, $primary-accent-darkened);
+  box-shadow: inset 0 0 0 .2rem $primary-accent;
   border: none;
+  @include transition(all .4s ease);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $primary-accent;
+  }
+
+
 }

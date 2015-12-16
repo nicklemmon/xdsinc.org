@@ -2836,29 +2836,63 @@ body {
 
 .bg-element {
   display: inline-block;
+  width: 100%;
   margin-right: -4px;
+  margin-bottom: 0;
+  line-height: 0;
+  background-size: cover;
+  border: 1rem solid white;
+}
+
+.one-half {
+  display: inline-block;
+  margin-right: -4px;
+  margin-bottom: 0;
   line-height: 0;
   height: 100%;
-  width: 25%;
-  background-size: cover;
-  -webkit-filter: sepia(80%) blur(5px);
-  filter: sepia(80%) blur(5px);
+  width: 50%;
 }
 
 .bg-element#bg_tiny-home {
-  background-image: url("../images/bg_tiny-home.jpg");
+  height: 50%;
+  background-position: 0% 0%;
+  background-image: url("../images/opt_bg_tiny-home.png");
+}
+@media (max-width 700px 4) {
+  .bg-element#bg_tiny-home {
+    background-image: url("../images/opt_sm_bg_tiny-home.png");
+  }
 }
 
 .bg-element#bg_farm {
-  background-image: url("../images/bg_farm.jpg");
+  height: calc(100% * 2/8);
+  background-image: url("../images/opt_bg_farm.png");
+}
+@media (max-width 700px 4) {
+  .bg-element#bg_farm {
+    background-image: url("../images/opt_sm_bg_farm.png");
+  }
 }
 
 .bg-element#bg_paws {
-  background-image: url("../images/bg_paws.png");
+  height: 50%;
+  background-image: url("../images/opt_bg_paws.png");
+}
+@media (max-width 700px 4) {
+  .bg-element#bg_paws {
+    background-image: url("../images/opt_sm_bg_paws.png");
+  }
 }
 
 .bg-element#bg_wellness {
-  background-image: url("../images/bg_wellness.jpg");
+  height: calc(100% * 6/8);
+  background-position: 0 85%;
+  background-image: url("../images/opt_bg_wellness.png");
+}
+@media (max-width 700px 4) {
+  .bg-element#bg_wellness {
+    background-image: url("../images/opt_sm_bg_wellness.png");
+  }
 }
 
 @-webkit-keyframes dropDownFadeIn {
@@ -2921,6 +2955,7 @@ section.landing {
   margin: 0 auto;
   padding: 4.5rem;
   background: white;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.5);
   z-index: 3;
   -webkit-animation-delay: 0.5s;
   -moz-animation-delay: 0.5s;
@@ -2940,20 +2975,26 @@ section.landing {
 }
 @media screen and (max-width: 700px) {
   section.landing {
-    margin: 2.5rem auto;
-    padding: 3rem;
+    text-align: center;
+    margin: 5rem auto;
+    padding: 1.5rem;
   }
 }
 
-h1.sub-heading {
+.sub-heading {
   color: #b3b3b3;
   border-bottom: 1px solid #b3b3b3;
   display: inline-block;
   text-transform: uppercase;
   font-size: .9rem;
   letter-spacing: 2px;
+  margin-right: -4px;
   margin-bottom: 3rem;
   padding-bottom: 1.5rem;
+}
+
+.sub-heading .fa {
+  margin-right: .9rem;
 }
 
 img.brand {
@@ -2971,6 +3012,11 @@ h2 {
   font-weight: 700;
   margin-bottom: 2.5rem;
 }
+@media screen and (max-width: 700px) {
+  h2 {
+    font-size: 1.75rem;
+  }
+}
 
 p {
   color: #333333;
@@ -2985,6 +3031,12 @@ p:last-of-type {
 
 p a {
   color: #1695a3;
+  -webkit-transition: color 0.4s ease;
+  -moz-transition: color 0.4s ease;
+  transition: color 0.4s ease;
+}
+p a:hover {
+  color: #225378;
 }
 
 form {
@@ -3010,21 +3062,33 @@ form label::after {
 }
 
 form input {
+  -webkit-appearance: none;
+  float: left;
+  line-height: 120%;
   min-height: 3rem;
-  margin-right: -4px;
-  font-size: 1.2rem;
+  margin-right: -1px;
+  padding: .5rem 1rem;
+}
+form input:hover, form input:focus, form input:active {
+  outline: none;
 }
 
 form input[type="text"] {
   color: #333333;
   font-family: 'FontAwesome';
   width: 80%;
-  padding: .5rem 1rem;
-  line-height: 120%;
   border: 1px solid #b3b3b3;
+  font-size: 1.2rem;
+  border-radius: .4rem 0 0 .4rem;
 }
-
-form input[type="text"] {
+@media screen and (max-width: 700px) {
+  form input[type="text"] {
+    width: 100%;
+    border-radius: .4rem .4rem 0 0;
+    margin-bottom: -.2rem;
+  }
+}
+form input[type="text"]:hover {
   outline-color: transparent;
   border: 1px solid #1695a3;
 }
@@ -3032,14 +3096,29 @@ form input[type="text"] {
 form input[type="submit"] {
   width: 20%;
 }
+@media screen and (max-width: 700px) {
+  form input[type="submit"] {
+    width: 100%;
+  }
+}
 
 .btn {
+  position: relative;
+  cursor: pointer;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.1rem;
-  text-transform: uppercase;
   color: white;
-  background: #eb7f00;
+  text-shadow: 0 0.1rem 0.25rem #eb5c00;
+  font-size: .9rem;
+  text-transform: uppercase;
+  background: #eb5c00;
+  box-shadow: inset 0 0 0 0.2rem #eb7f00;
   border: none;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.btn:hover, .btn:focus, .btn:active {
+  background: #eb7f00;
 }
 
 /* importing temp landing page */
