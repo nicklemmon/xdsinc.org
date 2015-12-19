@@ -43,7 +43,7 @@ form {
     font-size: 1.2rem;
     border-radius: .4rem 0 0 .4rem;
 
-    @include media($mobile) {
+    @media(max-width: $mobile) {
       width: 100%;
       border-radius: .4rem .4rem 0 0;
       margin-bottom: -.2rem; // hides bottom of form behind button
@@ -59,7 +59,7 @@ form {
   form input[type="submit"] {
     width: 20%;
 
-    @include media($mobile) {
+    @media(max-width: $mobile) {
       width: 100%;
     }
 

@@ -1,8 +1,11 @@
 // Padding variables
-$xs-padding:  1rem;
-$sm-padding:  1.5rem;
-$md-padding:  2rem;
-$lg-padding:  3rem;
+$xs-padding: 1rem;
+$sm-padding: 1.5rem;
+$md-padding: 2rem;
+$lg-padding: 3rem;
 
 // Media queries
-$mobile: new-breakpoint(max-width 700px 4);
+$desktopWide: 1300px;
+$desktopReg: 1040px;
+$tablet: 900px;
+$mobile: 700px;

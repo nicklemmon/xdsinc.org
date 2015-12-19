@@ -6,18 +6,62 @@ body {
   font-family: $primary-font-stack;
 }
 
+h1 {
+  font-family: $primary-font-stack;
+  font-size: 2rem;
+  line-height: 130%;
+  margin-bottom: $md-padding;
+
+  @media(min-width:$mobile){
+    font-size: 2.2rem;
+  }
+
+}
+
 h2 {
   font-family: $secondary-font-stack;
-  color: $secondary-accent;
-  font-size: 2.5rem;
+  font-size: 1.75rem;
   line-height: 125%;
   font-weight: 700;
   margin-bottom: 2.5rem;
 
-  @include media($mobile) {
-    font-size: 1.75rem;
+  @media(min-width:$mobile) {
+    font-size: 2.2rem;
   }
 
+}
+
+h3 {
+  font-family: $secondary-font-stack;
+  font-size: 1.2rem;
+  line-height: 130%;
+  letter-spacing: 2px;
+  margin-bottom: $sm-padding;
+
+  @media(min-width:$mobile) {
+    font-size: 1.6rem;
+  }
+
+}
+
+h4 {
+  font-family: $primary-font-stack;
+  font-size: 1rem;
+  line-height: 140%;
+  margin-top: $xs-padding;
+  margin-bottom: $sm-padding;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  @media(min-width:$mobile) {
+    font-size: 1.1rem;
+  }
+
+}
+
+a {
+  font-size: 1.1rem;
+  line-height: 130%;
 }
 
 p {
@@ -41,7 +85,8 @@ p {
   }
 
 
-.sub-heading {
+.SubHeading {
+  font-family: $primary-font-stack;
   color: $dark-base-lightened;
   border-bottom: 1px solid $dark-base-lightened;
   display: inline-block;
@@ -49,10 +94,10 @@ p {
   font-size: .9rem;
   letter-spacing: 2px;
   margin-right: -4px;
-  margin-bottom: $lg-padding;
+  margin-bottom: $md-padding;
   padding-bottom: $sm-padding;
 }
 
-  .sub-heading .fa {
+  .SubHeading .fa {
     margin-right: .9rem;
   }

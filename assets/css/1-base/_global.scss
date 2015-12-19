@@ -8,6 +8,6 @@ main {
 
 section,
 footer {
-  background: pink;
+  max-width: calc($desktopWide + 100px);
   padding: $lg-padding;
 }
