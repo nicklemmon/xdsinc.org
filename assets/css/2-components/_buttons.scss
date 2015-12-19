@@ -1,5 +1,5 @@
 .Button {
-  
+
 }
 
 .Button--primary {
@@ -18,7 +18,7 @@
   //@include linear-gradient($primary-accent, $primary-accent-darkened);
   box-shadow: inset 0 0 0 .2rem $primary-accent;
   border: none;
-  @include transition(all .4s ease);
+  @include transition(background .4s ease);
 
   &:hover,
   &:focus,

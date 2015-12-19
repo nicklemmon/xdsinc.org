@@ -2807,10 +2807,6 @@ legend {
 /* importing font-awesome */
 /* importing variables */
 /* importing color variables */
-body {
-  overflow: hidden;
-}
-
 main {
   width: 100%;
 }
@@ -3005,9 +3001,9 @@ form input[type="submit"] {
   background: #eb5c00;
   box-shadow: inset 0 0 0 0.2rem #eb7f00;
   border: none;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: background 0.4s ease;
+  -moz-transition: background 0.4s ease;
+  transition: background 0.4s ease;
 }
 .Button--primary:hover, .Button--primary:focus, .Button--primary:active {
   background: #eb7f00;
