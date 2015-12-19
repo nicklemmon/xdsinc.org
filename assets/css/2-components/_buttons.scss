@@ -1,24 +1,24 @@
 .Button {
-
-}
-
-.Button--primary {
   @include display(block);
+  font-family: $secondary-font-stack;
+  font-size: .9rem;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: $xs-padding;
+  margin-bottom: $sm-padding;
   padding: $xs-padding;
   max-width: $lg-padding*4;
   position: relative;
+  border: none;
   cursor: pointer;
-  font-family: $secondary-font-stack;
-  text-align: center;
+  @include transition(background .4s ease);
+}
+
+.Button--primary {
   color: white;
   text-shadow: 0 .1rem .25rem $primary-accent-darkened;
-  font-size: .9rem;
-  text-transform: uppercase;
-  background: $primary-accent-darkened; // fall-back
-  //@include linear-gradient($primary-accent, $primary-accent-darkened);
+  background: $primary-accent-darkened;
   box-shadow: inset 0 0 0 .2rem $primary-accent;
-  border: none;
-  @include transition(background .4s ease);
 
   &:hover,
   &:focus,
@@ -29,5 +29,27 @@
 }
 
 .Button--secondary {
+  color: white;
+  text-shadow: 0 .1rem .25rem $secondary-accent-darkened;
+  background: $secondary-accent;
+  box-shadow: inset 0 0 0 .2rem $secondary-accent-darkened;
 
+  &:hover,
+  &:focus,
+  &:active {
+    background: $secondary-accent-darkened;
+  }
+
+}
+
+.Button--ghost {
+  color: $dark-base;
+  background: rgba($dark-base, 0);
+  box-shadow: inset 0 0 0 .2rem $dark-base;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: rgba($dark-base, .05);
+  }
 }
