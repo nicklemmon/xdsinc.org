@@ -16,11 +16,11 @@
 @import '1-base/typography'; /* importing typography */
 
 //=== Importing components
-@import '2-components/forms.scss'; /* importing form components */
-@import '2-components/buttons.scss'; /* importing button components */
-@import '2-components/circles.scss'; /* importing circle components */
-@import '2-components/program-tiles.scss'; /* importing program tile component */
+@import '2-components/forms'; /* importing form components */
+@import '2-components/buttons'; /* importing button components */
+@import '2-components/circles'; /* importing circle components */
+@import '2-components/program-tiles'; /* importing program tile component */
 
 //=== Importing sections
-@import '3-sections/header.scss'; /* importing header section */
-@import '3-sections/footer.scss'; /* importing footer section */
+@import '3-sections/header'; /* importing header section */
+@import '3-sections/footer'; /* importing footer section */

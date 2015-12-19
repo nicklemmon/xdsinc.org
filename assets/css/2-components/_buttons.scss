@@ -1,7 +1,15 @@
-.btn {
+.Button {
+  
+}
+
+.Button--primary {
+  @include display(block);
+  padding: $xs-padding;
+  max-width: $lg-padding*4;
   position: relative;
   cursor: pointer;
   font-family: $secondary-font-stack;
+  text-align: center;
   color: white;
   text-shadow: 0 .1rem .25rem $primary-accent-darkened;
   font-size: .9rem;
@@ -17,5 +25,9 @@
   &:active {
     background: $primary-accent;
   }
-  
+
+}
+
+.Button--secondary {
+
 }

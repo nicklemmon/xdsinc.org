@@ -2990,10 +2990,14 @@ form input[type="submit"] {
 }
 
 /* importing form components */
-.btn {
+.Button--primary {
+  display: block;
+  padding: 1rem;
+  max-width: 12rem;
   position: relative;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
+  text-align: center;
   color: white;
   text-shadow: 0 0.1rem 0.25rem #eb5c00;
   font-size: .9rem;
@@ -3005,7 +3009,7 @@ form input[type="submit"] {
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-.btn:hover, .btn:focus, .btn:active {
+.Button--primary:hover, .Button--primary:focus, .Button--primary:active {
   background: #eb7f00;
 }
 
