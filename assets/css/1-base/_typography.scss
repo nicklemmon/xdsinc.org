@@ -2,5 +2,57 @@ $primary-font-stack: 'Crimson Text', sans-serif;
 $secondary-font-stack: 'Montserrat', sans-serif;
 
 body {
-  font-size: 62.5%;
+  font-size: 62.5%; // used for rem font-sizing so that they correspond roughly to px
+  font-family: $primary-font-stack;
 }
+
+h2 {
+  font-family: $secondary-font-stack;
+  color: $secondary-accent;
+  font-size: 2.5rem;
+  line-height: 125%;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+
+  @include media($mobile) {
+    font-size: 1.75rem;
+  }
+
+}
+
+p {
+  color: $dark-base;
+  font-size: 1.2rem;
+  line-height: 150%;
+  margin-bottom: $sm-padding;
+}
+
+  p:last-of-type {
+    margin-bottom: $md-padding;
+  }
+
+  p a {
+    color: $light-secondary-accent;
+    @include transition(color .4s ease);
+
+    &:hover {
+      color: $secondary-accent;
+    }
+  }
+
+
+.sub-heading {
+  color: $dark-base-lightened;
+  border-bottom: 1px solid $dark-base-lightened;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: .9rem;
+  letter-spacing: 2px;
+  margin-right: -4px;
+  margin-bottom: $lg-padding;
+  padding-bottom: $sm-padding;
+}
+
+  .sub-heading .fa {
+    margin-right: .9rem;
+  }

@@ -1,15 +1,8 @@
-/*== COLORS ==*/
-$light-base: #FFFFE2;
-$dark-base: #333333;
-  $dark-base-lightened: lighten($dark-base, 50%);
-$primary-accent: #EB7F00;
-  $primary-accent-darkened: #EB5C00;
-$light-secondary-accent: #1695A3;
-$secondary-accent: #225378;
-$highlight: #ACF0F2;
-
-/*== MISC VARIABLES ==*/
+// Padding variables
 $xs-padding:  1rem;
 $sm-padding:  1.5rem;
 $md-padding:  2rem;
 $lg-padding:  3rem;
+
+// Media queries
+$mobile: new-breakpoint(max-width 700px 4);

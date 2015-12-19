@@ -1,0 +1,66 @@
+form {
+  @include display(inline-block);
+  width: 100%;
+  margin-bottom: $sm-padding;
+}
+
+  form label {
+    font-family: $secondary-font-stack;
+    color: $light-secondary-accent;
+    @include display(block);
+    width: 100%;
+    font-size: .9rem;
+    margin-bottom: $sm-padding/2;
+  }
+
+    form label:after,
+    form label::after {
+      margin-left: .5rem;
+      content: "\f178";
+      font-family: 'FontAwesome';
+    }
+  form input {
+    -webkit-appearance: none;
+    float: left; // aligns input[type='text'] and submit .btn
+    line-height: 120%;
+    min-height: 3rem; // makes inputs the same height
+    margin-right: -1px; // overlaps button with field
+    padding: .5rem 1rem;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
+  }
+
+  form input[type="text"] {
+    color: $dark-base;
+    font-family: 'FontAwesome';
+    width: 80%;
+    border: 1px solid $dark-base-lightened;
+    font-size: 1.2rem;
+    border-radius: .4rem 0 0 .4rem;
+
+    @include media($mobile) {
+      width: 100%;
+      border-radius: .4rem .4rem 0 0;
+      margin-bottom: -.2rem; // hides bottom of form behind button
+    }
+
+    &:hover {
+      outline-color: transparent;
+      border: 1px solid $light-secondary-accent;
+    }
+
+  }
+
+  form input[type="submit"] {
+    width: 20%;
+
+    @include media($mobile) {
+      width: 100%;
+    }
+
+  }

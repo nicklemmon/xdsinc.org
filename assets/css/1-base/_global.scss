@@ -1,0 +1,13 @@
+body {
+  overflow: hidden;
+}
+
+main {
+  width: 100%;
+}
+
+section,
+footer {
+  background: pink;
+  padding: $lg-padding;
+}
