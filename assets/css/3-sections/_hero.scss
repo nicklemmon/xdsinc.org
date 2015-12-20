@@ -1,0 +1,31 @@
+.Section--hero {
+  background: #ccc; // temporary
+  padding-bottom: $xl-padding;
+}
+
+  header {
+    margin-bottom: $lg-padding;
+  }
+
+  .Brand {
+    @extend .u-inlineBlock;
+    margin: 0;
+    line-height: 100%;
+  }
+
+  .MainNavigation {
+    @extend .u-inlineBlock;
+    font-family: $secondary-font-stack;
+    float: right;
+    margin: 0;
+    line-height: 100%;
+  }
+
+  .MainNavigation-link {
+    @extend .u-inlineBlock;
+    font-size: 1rem;
+    margin-left: $sm-padding;
+    line-height: 100%;
+    text-decoration: none;
+    color: white;
+  }

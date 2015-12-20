@@ -2813,8 +2813,13 @@ main {
 
 section,
 footer {
-  max-width: calc($desktopWide + 100px);
-  padding: 3rem;
+  padding: 2rem;
+}
+@media (min-width: 700px) {
+  section,
+  footer {
+    padding: 3rem;
+  }
 }
 
 /* importing misc */
@@ -2826,6 +2831,11 @@ footer {
 }
 
 /* importing utilities */
+.u-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .u-full {
   width: 100%;
 }
@@ -3082,6 +3092,11 @@ form input[type="submit"] {
 /* importing button components */
 /* importing circle components */
 /* importing program tile component */
+.Section--hero {
+  background: #ccc;
+  padding-bottom: 6rem;
+}
+
 header {
   margin-bottom: 3rem;
 }
@@ -3092,14 +3107,18 @@ header {
 }
 
 .MainNavigation {
+  font-family: "Montserrat", sans-serif;
   float: right;
   margin: 0;
   line-height: 100%;
 }
 
 .MainNavigation-link {
-  margin-left: 1rem;
+  font-size: 1rem;
+  margin-left: 1.5rem;
   line-height: 100%;
+  text-decoration: none;
+  color: white;
 }
 
 /* importing header section */

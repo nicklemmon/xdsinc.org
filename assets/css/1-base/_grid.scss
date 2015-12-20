@@ -1,3 +1,8 @@
+.u-container {
+  max-width: $desktopWide + 100px;
+  margin: 0 auto; // centers;
+}
+
 .u-full {
   width: 100%;
 }

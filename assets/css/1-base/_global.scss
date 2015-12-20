@@ -7,6 +7,10 @@ main {
 
 section,
 footer {
-  max-width: calc($desktopWide + 100px);
-  padding: $lg-padding;
+  padding: $md-padding;
+
+  @media (min-width: $mobile) {
+    padding: $lg-padding;
+  }
+
 }
