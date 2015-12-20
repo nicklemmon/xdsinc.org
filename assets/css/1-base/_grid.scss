@@ -10,6 +10,7 @@
 .u-twoThirds {
   @extend .u-inlineBlock;
   width: calc(2/3);
+  padding-right: $sm-padding;
 
   @media (max-width: $mobile) {
     width: 100%;
@@ -17,9 +18,10 @@
 
 }
 
-.u-half {
+.u-oneHalf {
   @extend .u-inlineBlock;
   width: 50%;
+  padding-right: $sm-padding;
 
   @media (max-width: $mobile) {
     width: 100%;
@@ -28,12 +30,19 @@
 }
 
 .u-oneThird {
+  @extend .u-inlineBlock;
   width: calc(1/3);
+  padding-right: $sm-padding;
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
 }
 
 .u-oneFourth {
   @extend .u-inlineBlock;
   width: 25%;
+  padding-right: $sm-padding;
 
   @media (max-width: $tablet) {
     width: 50%;

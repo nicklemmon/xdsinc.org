@@ -1,0 +1,13 @@
+.ProgramCard {
+  margin-bottom: 1rem;
+  height: 20rem;
+  background: #ccc; // temporary
+  text-decoration: none;
+}
+
+  .ProgramCard-title {
+    color: $secondary-accent;
+    padding: $md-padding $sm-padding;
+    min-height: $xl-padding;
+    background: pink;
+  }

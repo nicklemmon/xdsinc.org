@@ -2823,7 +2823,7 @@ footer {
 }
 
 /* importing misc */
-.u-inlineBlock, .u-twoThirds, .u-half, .u-oneFourth, .Brand, .MainNavigation, .MainNavigation-link {
+.u-inlineBlock, .u-twoThirds, .u-oneHalf, .u-oneThird, .u-oneFourth, .Brand, .MainNavigation, .MainNavigation-link {
   display: inline-block;
   margin: 0;
   line-height: 100%;
@@ -2842,6 +2842,7 @@ footer {
 
 .u-twoThirds {
   width: calc(2/3);
+  padding-right: 1.5rem;
 }
 @media (max-width: 700px) {
   .u-twoThirds {
@@ -2849,21 +2850,29 @@ footer {
   }
 }
 
-.u-half {
+.u-oneHalf {
   width: 50%;
+  padding-right: 1.5rem;
 }
 @media (max-width: 700px) {
-  .u-half {
+  .u-oneHalf {
     width: 100%;
   }
 }
 
 .u-oneThird {
   width: calc(1/3);
+  padding-right: 1.5rem;
+}
+@media (max-width: 700px) {
+  .u-oneThird {
+    width: 100%;
+  }
 }
 
 .u-oneFourth {
   width: 25%;
+  padding-right: 1.5rem;
 }
 @media (max-width: 900px) {
   .u-oneFourth {
@@ -2883,14 +2892,16 @@ body {
 }
 
 h1 {
-  font-family: "Crimson Text", sans-serif;
-  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
   line-height: 130%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 @media (min-width: 700px) {
   h1 {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -2940,10 +2951,15 @@ a {
 }
 
 p {
-  color: #333333;
-  font-size: 1.2rem;
-  line-height: 150%;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 130%;
+}
+@media (min-width: 700px) {
+  p {
+    font-size: 1.2rem;
+    line-height: 140%;
+    margin-bottom: 1.5rem;
+  }
 }
 
 p:last-of-type {
@@ -2967,7 +2983,7 @@ p a:hover {
   display: inline-block;
   text-transform: uppercase;
   font-size: .9rem;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-right: -4px;
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
@@ -3090,15 +3106,84 @@ form input[type="submit"] {
 }
 
 /* importing button components */
+.Circle {
+  border-radius: 50%;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+}
+
+.Circle--large {
+  height: 400px;
+  width: 400px;
+  padding: 3rem;
+  background: rgba(235, 127, 0, 0.8);
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 700px) {
+  .Circle--large {
+    height: 550px;
+    width: 550px;
+    margin-left: 3rem;
+  }
+}
+
+.Circle .Button {
+  margin: 0 auto;
+}
+
 /* importing circle components */
+.ProgramCard {
+  margin-bottom: 1rem;
+  height: 20rem;
+  background: #ccc;
+  text-decoration: none;
+}
+
+.ProgramCard-title {
+  color: #225378;
+  padding: 2rem 1.5rem;
+  min-height: 6rem;
+  background: pink;
+}
+
 /* importing program tile component */
 .Section--hero {
   background: #ccc;
+  padding-left: 0;
+  padding-right: 0;
   padding-bottom: 6rem;
 }
 
 header {
-  margin-bottom: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-bottom: 6rem;
 }
 
 .Brand {

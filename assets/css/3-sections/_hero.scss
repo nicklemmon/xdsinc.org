@@ -1,10 +1,14 @@
 .Section--hero {
   background: #ccc; // temporary
+  padding-left: 0;
+  padding-right: 0;
   padding-bottom: $xl-padding;
 }
 
   header {
-    margin-bottom: $lg-padding;
+    padding-left: $lg-padding;
+    padding-right: $lg-padding;
+    margin-bottom: $xl-padding;
   }
 
   .Brand {

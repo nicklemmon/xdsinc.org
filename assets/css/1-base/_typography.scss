@@ -7,13 +7,15 @@ body {
 }
 
 h1 {
-  font-family: $primary-font-stack;
-  font-size: 2rem;
+  font-family: $secondary-font-stack;
+  text-transform: uppercase;
+  font-size: 1.5rem;
   line-height: 130%;
-  margin-bottom: $md-padding;
+  margin-bottom: $xs-padding;
 
   @media(min-width:$mobile){
-    font-size: 2.2rem;
+    font-size: 2.3rem;
+    margin-bottom: $md-padding;
   }
 
 }
@@ -64,10 +66,15 @@ a {
 }
 
 p {
-  color: $dark-base;
-  font-size: 1.2rem;
-  line-height: 150%;
-  margin-bottom: $sm-padding;
+  font-size: 1rem;
+  line-height: 130%;
+
+  @media (min-width: $mobile) {
+    font-size: 1.2rem;
+    line-height: 140%;
+    margin-bottom: $sm-padding;
+  }
+
 }
 
   p:last-of-type {
@@ -91,7 +98,7 @@ p {
   display: inline-block;
   text-transform: uppercase;
   font-size: .9rem;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-right: -4px;
   margin-bottom: $md-padding;
   padding-bottom: $sm-padding;
