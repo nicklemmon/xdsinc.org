@@ -1,19 +1,41 @@
-// .u-full {
-//   width: 100%;
-// }
-//
-// .u-twoThirds {
-//   width: calc(2/3);
-// }
-//
-// .u-half {
-//   width: 50%;
-// }
-//
-// .u-oneThird {
-//   width: calc(1/3);
-// }
-//
-// .u-oneFourth {
-//   width: 25%;
-// }
+.u-full {
+  width: 100%;
+}
+
+.u-twoThirds {
+  @extend .u-inlineBlock;
+  width: calc(2/3);
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+
+}
+
+.u-half {
+  @extend .u-inlineBlock;
+  width: 50%;
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+
+}
+
+.u-oneThird {
+  width: calc(1/3);
+}
+
+.u-oneFourth {
+  @extend .u-inlineBlock;
+  width: 25%;
+
+  @media (max-width: $tablet) {
+    width: 50%;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+
+}

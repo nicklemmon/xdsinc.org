@@ -1,0 +1,6 @@
+.u-inlineBlock {
+  @include display(inline-block);
+  margin: 0; // helps w/ extra spacing w/ display: inline-block
+  line-height: 100%; // helps w/ extra spacing w/ display: inline-block
+  margin-left: -4px; // helps w/ extra spacing w/ display: inline-block;
+}
