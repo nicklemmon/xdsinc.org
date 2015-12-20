@@ -12,6 +12,10 @@
   width: calc(2/3);
   padding-right: $sm-padding;
 
+  &:last-of-type {
+    padding-right: 0;
+  }
+
   @media (max-width: $mobile) {
     width: 100%;
   }
@@ -22,6 +26,10 @@
   @extend .u-inlineBlock;
   width: 50%;
   padding-right: $sm-padding;
+
+  &:last-of-type {
+    padding-right: 0;
+  }
 
   @media (max-width: $mobile) {
     width: 100%;
@@ -34,6 +42,10 @@
   width: calc(1/3);
   padding-right: $sm-padding;
 
+  &:last-of-type {
+    padding-right: 0;
+  }
+
   @media (max-width: $mobile) {
     width: 100%;
   }
@@ -44,12 +56,22 @@
   width: 25%;
   padding-right: $sm-padding;
 
-  @media (max-width: $tablet) {
+  &:last-of-type {
+    padding-right: 0;
+  }
+
+  @media (max-width: $desktopReg) {
     width: 50%;
+
+    &:nth-child(even) {
+      padding-right: 0; // disables right padding (the gutter) when the .u-oneFourth elements collapse in to two columns
+    }
+
   }
 
   @media (max-width: $mobile) {
     width: 100%;
+    padding-right: 0; // disables right padding (the gutter) when the .u-oneFourth elements collapse in to a single column
   }
 
 }

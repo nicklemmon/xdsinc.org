@@ -1,13 +1,21 @@
 .ProgramCard {
-  margin-bottom: 1rem;
-  height: 20rem;
+  position: relative;
+  @include display(block);
+  margin-bottom: $sm-padding;
+  height: 24rem;
+  width: 100%;
   background: #ccc; // temporary
   text-decoration: none;
 }
 
   .ProgramCard-title {
+    position: absolute;
+    bottom: 0;
     color: $secondary-accent;
     padding: $md-padding $sm-padding;
-    min-height: $xl-padding;
-    background: pink;
+    width: 100%;
+    min-height: 7rem;
+    background: white;
+    color: $secondary-accent;
+    font-size: 1.2rem;
   }

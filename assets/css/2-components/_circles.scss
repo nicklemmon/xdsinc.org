@@ -13,6 +13,7 @@
   .Circle--large {
     @include size(400px);
     padding: $lg-padding;
+    padding-right: $lg-padding !important; // fixes issue with grid removing right padding
     background: rgba($primary-accent, .8);
     color: white;
     margin-left: auto;
