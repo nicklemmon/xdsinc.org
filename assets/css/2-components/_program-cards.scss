@@ -9,13 +9,17 @@
 }
 
   .ProgramCard-title {
+    @include display(flex);
+    @include align-items(center); // vertically centers text within .ProgramCard-title
     position: absolute;
     bottom: 0;
     color: $secondary-accent;
-    padding: $md-padding $sm-padding;
+    padding: $md-padding;
     width: 100%;
     min-height: 7rem;
     background: white;
-    color: $secondary-accent;
+    color: $light-secondary-accent;
     font-size: 1.2rem;
+    font-weight: 600;
+    box-shadow: 0 .3rem 0 $light-gray;
   }

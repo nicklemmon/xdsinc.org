@@ -22,6 +22,7 @@
     @media (min-width: $mobile) {
       @include size(550px);
       margin-left: $lg-padding;
+      padding-top: $xl-padding;
     }
 
   }

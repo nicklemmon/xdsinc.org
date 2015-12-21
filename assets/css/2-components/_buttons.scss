@@ -52,4 +52,18 @@
   &:active {
     background: rgba($dark-base, .05);
   }
+
+}
+
+.Button--ghostNegative {
+  color: white;
+  background: rgba(white, 0);
+  box-shadow: inset 0 0 0 .2rem white;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: rgba(white, .1);
+  }
+
 }
