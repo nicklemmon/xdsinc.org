@@ -4,7 +4,6 @@
   padding: $xl-padding $lg-padding;
   width: 100%;
   color: white;
-  border-radius: $defaultBorderRadius;
   @include transition(background $defaultTransition ease);
 }
 

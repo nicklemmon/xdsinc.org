@@ -3031,6 +3031,7 @@ p a:hover {
 
 .MainNavigation .Button {
   display: inline-block;
+  letter-spacing: 1px;
 }
 
 /* importing navigation components */
@@ -3137,8 +3138,7 @@ form input[type="submit"] {
 }
 
 .Button--tertiary {
-  color: white;
-  text-shadow: 0 0.1rem 0.25 #1695a3;
+  color: #1695a3;
   background: #acf0f2;
   box-shadow: inset 0 0 0 0.2rem #1695a3;
 }
@@ -3303,7 +3303,6 @@ form input[type="submit"] {
   padding: 6rem 3rem;
   width: 100%;
   color: white;
-  border-radius: 0.5rem;
   -webkit-transition: background 0.4s ease;
   -moz-transition: background 0.4s ease;
   transition: background 0.4s ease;

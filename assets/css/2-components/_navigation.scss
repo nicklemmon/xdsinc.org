@@ -17,5 +17,5 @@
 
   .MainNavigation .Button {
     @include display(inline-block);
-    //margin-left: $sm-padding;
+    letter-spacing: 1px;
   }
