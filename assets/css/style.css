@@ -2823,11 +2823,15 @@ footer {
 }
 
 /* importing misc */
-.u-inlineBlock, .u-twoThirds, .u-oneHalf, .u-oneThird, .u-oneFourth, .Brand, .MainNavigation, .MainNavigation-link {
+.u-inlineBlock, .u-twoThirds, .u-oneHalf, .u-oneThird, .u-oneFourth, .MainNavigation, .MainNavigation-link, .ProgramCard-title::before, .ProgramCard-title:before, .Brand {
   display: inline-block;
   margin: 0;
   line-height: 100%;
   margin-left: -4px;
+}
+
+.u-emphasis {
+  font-style: italic;
 }
 
 /* importing utilities */
@@ -2912,11 +2916,11 @@ h1 {
   text-transform: uppercase;
   font-size: 1.5rem;
   line-height: 130%;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 @media (min-width: 700px) {
   h1 {
-    font-size: 1.9rem;
+    font-size: 2.2rem;
     margin-bottom: 2rem;
   }
 }
@@ -3010,6 +3014,26 @@ p a:hover {
 }
 
 /* importing typography */
+.MainNavigation {
+  font-family: "Montserrat", sans-serif;
+  float: right;
+  margin: 0;
+  line-height: 100%;
+}
+
+.MainNavigation-link {
+  font-size: 1rem;
+  margin-left: 1.5rem;
+  line-height: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+.MainNavigation .Button {
+  display: inline-block;
+}
+
+/* importing navigation components */
 form {
   display: inline-block;
   width: 100%;
@@ -3082,7 +3106,7 @@ form input[type="submit"] {
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
-  padding: 1rem;
+  padding: 1rem 2rem;
   max-width: 12rem;
   position: relative;
   border: none;
@@ -3110,6 +3134,16 @@ form input[type="submit"] {
 }
 .Button--secondary:hover, .Button--secondary:focus, .Button--secondary:active {
   background: #1c4564;
+}
+
+.Button--tertiary {
+  color: white;
+  text-shadow: 0 0.1rem 0.25 #1695a3;
+  background: #acf0f2;
+  box-shadow: inset 0 0 0 0.2rem #1695a3;
+}
+.Button--tertiary:hover, .Button--tertiary:focus, .Button--tertiary:active {
+  background: #96ecef;
 }
 
 .Button--ghost {
@@ -3180,6 +3214,12 @@ form input[type="submit"] {
   }
 }
 
+.Circle--large .u-emphasis {
+  padding-top: 1.5rem;
+  border-top: 1px solid white;
+  font-size: 1.6rem;
+}
+
 .Circle .Button {
   margin: 0 auto;
 }
@@ -3193,6 +3233,22 @@ form input[type="submit"] {
   width: 100%;
   background: #ccc;
   text-decoration: none;
+}
+
+.ProgramCard#paws {
+  background: url("/assets/images/");
+}
+
+.ProgramCard#farm {
+  background: url("/assets/images/");
+}
+
+.ProgramCard#wellness {
+  background: url("/assets/images/");
+}
+
+.ProgramCard#tinyHomes {
+  background: url("/assets/images/");
 }
 
 .ProgramCard-title {
@@ -3214,18 +3270,67 @@ form input[type="submit"] {
   -ms-flex-align: center;
   position: absolute;
   bottom: 0;
-  color: #225378;
+  color: #757575;
   padding: 2rem;
   width: 100%;
   min-height: 7rem;
   background: white;
-  color: #1695a3;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   box-shadow: 0 0.3rem 0 #dbdbdb;
+  overflow: hidden;
+}
+.ProgramCard-title span {
+  position: relative;
+  z-index: 1;
+}
+.ProgramCard-title::before, .ProgramCard-title:before {
+  content: "";
+  z-index: 0;
+  position: absolute;
+  left: -2.5%;
+  bottom: 20%;
+  height: 4.75rem;
+  width: 4.75rem;
+  border-radius: 50%;
+  background: #acf0f2;
 }
 
 /* importing program tile component */
+.MediaSource {
+  display: block;
+  text-align: center;
+  padding: 6rem 3rem;
+  width: 100%;
+  color: white;
+  border-radius: 0.5rem;
+  -webkit-transition: background 0.4s ease;
+  -moz-transition: background 0.4s ease;
+  transition: background 0.4s ease;
+}
+
+.MediaSource#wral {
+  background: #041E30;
+}
+.MediaSource#wral:hover, .MediaSource#wral:focus, .MediaSource#wral:active {
+  background: #020f18;
+}
+
+.MediaSource#wunc {
+  background: #4A565F;
+}
+.MediaSource#wunc:hover, .MediaSource#wunc:focus, .MediaSource#wunc:active {
+  background: #3f4951;
+}
+
+.MediaSource#dth {
+  background: #7BAFD4;
+}
+.MediaSource#dth:hover, .MediaSource#dth:focus, .MediaSource#dth:active {
+  background: #68a3ce;
+}
+
+/* importing media source component */
 .Section--hero {
   background: #ccc;
   padding-left: 0;
@@ -3243,21 +3348,6 @@ header {
 .Brand {
   margin: 0;
   line-height: 100%;
-}
-
-.MainNavigation {
-  font-family: "Montserrat", sans-serif;
-  float: right;
-  margin: 0;
-  line-height: 100%;
-}
-
-.MainNavigation-link {
-  font-size: 1rem;
-  margin-left: 1.5rem;
-  line-height: 100%;
-  text-decoration: none;
-  color: white;
 }
 
 /* importing header section */

@@ -1,0 +1,42 @@
+.MediaSource {
+  @include display(block);
+  text-align: center;
+  padding: $xl-padding $lg-padding;
+  width: 100%;
+  color: white;
+  border-radius: $defaultBorderRadius;
+  @include transition(background $defaultTransition ease);
+}
+
+.MediaSource#wral {
+  background: #041E30; // taken from www.wral.com
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: darken(#041E30, 5%);
+  }
+
+}
+
+.MediaSource#wunc {
+  background: #4A565F; // taken from www.wunc.org
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: darken(#4A565F, 5%);
+  }
+
+}
+
+.MediaSource#dth {
+  background: #7BAFD4; // taken from http://identity.unc.edu/colors/
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: darken(#7BAFD4, 5%);
+  }
+
+}

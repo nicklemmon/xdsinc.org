@@ -1,0 +1,21 @@
+.MainNavigation {
+  @extend .u-inlineBlock;
+  font-family: $secondary-font-stack;
+  float: right;
+  margin: 0;
+  line-height: 100%;
+}
+
+  .MainNavigation-link {
+    @extend .u-inlineBlock;
+    font-size: 1rem;
+    margin-left: $sm-padding;
+    line-height: 100%;
+    text-decoration: none;
+    color: white;
+  }
+
+  .MainNavigation .Button {
+    @include display(inline-block);
+    //margin-left: $sm-padding;
+  }

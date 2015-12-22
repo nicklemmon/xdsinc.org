@@ -8,18 +8,53 @@
   text-decoration: none;
 }
 
+.ProgramCard#paws {
+  background: url('/assets/images/');
+}
+
+.ProgramCard#farm {
+  background: url('/assets/images/');
+}
+
+.ProgramCard#wellness {
+  background: url('/assets/images/');
+}
+
+.ProgramCard#tinyHomes {
+  background: url('/assets/images/');
+}
+
   .ProgramCard-title {
     @include display(flex);
     @include align-items(center); // vertically centers text within .ProgramCard-title
     position: absolute;
     bottom: 0;
-    color: $secondary-accent;
+    color: $dark-gray;
     padding: $md-padding;
     width: 100%;
     min-height: 7rem;
     background: white;
-    color: $light-secondary-accent;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 600;
     box-shadow: 0 .3rem 0 $light-gray;
+    overflow: hidden;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::before,
+    &:before {
+      content:"";
+      @extend .u-inlineBlock;
+      z-index: 0;
+      position: absolute;
+      left: -2.5%;
+      bottom: 20%;
+      @include size(4.75rem);
+      border-radius: 50%;
+      background: $highlight;
+    }
+
   }
