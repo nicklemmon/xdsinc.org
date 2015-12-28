@@ -90,6 +90,14 @@
   @include size(8rem);
   border-radius: 50%;
   position: relative;
+  @include transition(background $defaultTransition ease);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $med-gray
+  }
+
 }
 
   .ContinueToContent:before {

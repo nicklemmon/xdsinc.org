@@ -72,7 +72,7 @@
 
   @media (max-width: $mobile) {
     width: 100%;
-    padding-right: 0; // disables right padding (the gutter) when the .u-oneFourth elements collapse in to a single column
+    padding-right: 0 !important; // disables right padding (the gutter) when the .u-oneFourth elements collapse in to a single column
   }
 
 }

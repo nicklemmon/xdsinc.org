@@ -1,4 +1,5 @@
 $light-base: #FFFFE2;
+  $light-base-darkened: darken($light-base, 20%);
 $dark-base: #333333;
   $dark-base-lightened: lighten($dark-base, 50%);
 $primary-accent: #EB7F00;
@@ -7,6 +8,6 @@ $light-secondary-accent: #1695A3;
 $secondary-accent: #225378;
   $secondary-accent-darkened: darken($secondary-accent, 5%);
 $highlight: #ACF0F2;
-  $highlight-darkened: darken($highlight, 5%);
+  $highlight-darkened: darken($highlight, 8%);
 $light-gray: #EDEDED;
-$med-gray: darken($light-gray, 10%);
+$med-gray: darken($light-gray, 5%);

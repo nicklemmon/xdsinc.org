@@ -2905,7 +2905,7 @@ footer {
 @media (max-width: 700px) {
   .u-oneFourth {
     width: 100%;
-    padding-right: 0;
+    padding-right: 0 !important;
   }
 }
 
@@ -3147,7 +3147,7 @@ form input[type="submit"] {
   box-shadow: inset 0 0 0 0.2rem #1695a3;
 }
 .Button--tertiary:hover, .Button--tertiary:focus, .Button--tertiary:active {
-  background: #96ecef;
+  background: #89eaec;
 }
 
 .Button--ghost {
@@ -3178,6 +3178,12 @@ form input[type="submit"] {
   width: 8rem;
   border-radius: 50%;
   position: relative;
+  -webkit-transition: background 0.4s ease;
+  -moz-transition: background 0.4s ease;
+  transition: background 0.4s ease;
+}
+.ContinueToContent:hover, .ContinueToContent:focus, .ContinueToContent:active {
+  background: #e0e0e0;
 }
 
 .ContinueToContent:before {
@@ -3321,7 +3327,7 @@ form input[type="submit"] {
   font-size: 1.3rem;
   letter-spacing: .5px;
   font-weight: 400;
-  box-shadow: 0 0.3rem 0 lightgray;
+  box-shadow: 0 0.3rem 0 #e0e0e0;
   overflow: hidden;
 }
 .ProgramCard-title span {
@@ -3385,7 +3391,7 @@ form input[type="submit"] {
 }
 @media (min-width: 700px) {
   .LinkList {
-    padding: 12rem 1.5rem 6rem 2rem;
+    padding: 12rem 1.5rem 12rem 2rem;
   }
 }
 
@@ -3502,6 +3508,7 @@ header {
 /* importing programs section */
 .Section--media {
   position: relative;
+  overflow: hidden;
 }
 
 @media (min-width: 1040px) {
