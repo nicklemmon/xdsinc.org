@@ -1,5 +1,6 @@
 .LinkList {
   padding: $xl-padding $md-padding $md-padding $md-padding;
+  width: 100%;
 
   @media (min-width: $mobile) and (max-width: $desktopReg) {
     display: none;
@@ -21,7 +22,7 @@
   }
 
   .LinkList--news {
-    background: $secondary-accent;
+    background: $dark-base;
     color: white;
   }
 

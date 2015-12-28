@@ -30,7 +30,7 @@
     @include align-items(center); // vertically centers text within .ProgramCard-title
     position: absolute;
     bottom: 0;
-    color: $dark-gray;
+    color: $dark-base;
     padding: $md-padding;
     width: 100%;
     min-height: 7rem;

@@ -3313,7 +3313,7 @@ form input[type="submit"] {
   -ms-flex-align: center;
   position: absolute;
   bottom: 0;
-  color: #878787;
+  color: #333333;
   padding: 2rem;
   width: 100%;
   min-height: 7rem;
@@ -3376,6 +3376,7 @@ form input[type="submit"] {
 /* importing media source component */
 .LinkList {
   padding: 6rem 2rem 2rem 2rem;
+  width: 100%;
 }
 @media (min-width: 700px) and (max-width: 1040px) {
   .LinkList {
@@ -3398,7 +3399,7 @@ form input[type="submit"] {
 }
 
 .LinkList--news {
-  background: #225378;
+  background: #333333;
   color: white;
 }
 
@@ -3423,8 +3424,8 @@ form input[type="submit"] {
   font-size: 1.4rem;
   margin-right: 1.5rem;
   border-radius: 50%;
-  background: lightgray;
-  color: #1695a3;
+  background: white;
+  color: #eb7f00;
 }
 
 .SocialMedia span {
@@ -3466,7 +3467,7 @@ form input[type="submit"] {
 
 /* importing social media components */
 .Section--hero {
-  background: url("/assets/images/hero.png") #878787;
+  background: url("/assets/images/hero.png") #333333;
   background-size: cover;
   padding-left: 0;
   padding-right: 0;
@@ -3518,7 +3519,7 @@ header {
 /* importing media section */
 /* importing partners section */
 footer {
-  background: #878787;
+  background: #333333;
   color: white;
 }
 
