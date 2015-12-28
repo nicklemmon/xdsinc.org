@@ -33,6 +33,17 @@
       font-size: 1.6rem
     }
 
-    .Circle .Button {
-      margin: 0 auto; // centers buttons within .Circle components
-    }
+  .Circle--med {
+    @include size(400px);
+    color: white;
+    background: rgba($highlight, .9);
+    padding: $lg-padding;
+  }
+
+  .Circle .Button {
+    margin: 0 auto; // centers buttons within .Circle components
+  }
+
+  .Circle a {
+    color: white;
+  }

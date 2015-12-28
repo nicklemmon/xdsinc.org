@@ -3220,8 +3220,20 @@ form input[type="submit"] {
   font-size: 1.6rem;
 }
 
+.Circle--med {
+  height: 400px;
+  width: 400px;
+  color: white;
+  background: rgba(172, 240, 242, 0.9);
+  padding: 3rem;
+}
+
 .Circle .Button {
   margin: 0 auto;
+}
+
+.Circle a {
+  color: white;
 }
 
 /* importing circle components */
@@ -3355,4 +3367,15 @@ header {
 }
 
 /* importing programs section */
+.Section--media {
+  position: relative;
+}
+
+.Section--media .Circle {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+}
+
+/* importing media section */
 /* importing footer section */
