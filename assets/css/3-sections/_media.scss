@@ -11,3 +11,11 @@
     }
 
   }
+
+@media (min-width: $mobile) and (max-width: $desktopReg) {
+
+  #dth {
+    margin-top: $sm-padding; // fixes issue with the media source collapsing inappropriately
+  }
+
+}

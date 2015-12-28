@@ -2823,7 +2823,7 @@ footer {
 }
 
 /* importing misc */
-.u-inlineBlock, .u-twoThirds, .u-oneHalf, .u-oneThird, .u-oneFourth, .MainNavigation, .MainNavigation-link, .ProgramCard-title::before, .ProgramCard-title:before, .Brand {
+.u-inlineBlock, .u-twoThirds, .u-oneHalf, .u-oneThird, .u-oneFourth, .MainNavigation, .MainNavigation-link, .ProgramCard-title::before, .ProgramCard-title:before, .SocialMedia, .Brand {
   display: inline-block;
   margin: 0;
   line-height: 100%;
@@ -3377,6 +3377,11 @@ form input[type="submit"] {
 .LinkList {
   padding: 6rem 2rem 2rem 2rem;
 }
+@media (min-width: 700px) and (max-width: 1040px) {
+  .LinkList {
+    display: none;
+  }
+}
 @media (min-width: 700px) {
   .LinkList {
     padding: 12rem 1.5rem 6rem 2rem;
@@ -3393,7 +3398,7 @@ form input[type="submit"] {
 }
 
 .LinkList--news {
-  background: #acf0f2;
+  background: #225378;
   color: white;
 }
 
@@ -3411,6 +3416,55 @@ form input[type="submit"] {
 }
 
 /* importing link list components */
+.SocialMedia {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.4rem;
+  margin-right: 1.5rem;
+  border-radius: 50%;
+  background: lightgray;
+  color: #1695a3;
+}
+
+.SocialMedia span {
+  position: absolute;
+  left: -9999px;
+}
+
+.SocialMedia--Facebook:before {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  content: "\f09a";
+  font-family: FontAwesome;
+}
+
+.SocialMedia--Twitter:before {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  content: "\f099";
+  font-family: FontAwesome;
+}
+
+.SocialMedia--YouTube:before {
+  position: absolute;
+  top: 30%;
+  left: 28%;
+  content: "\f16a";
+  font-family: FontAwesome;
+}
+
+.SocialMedia--LinkedIn:before {
+  position: absolute;
+  top: 30%;
+  left: 32%;
+  content: "\f0e1";
+  font-family: FontAwesome;
+}
+
+/* importing social media components */
 .Section--hero {
   background: url("/assets/images/hero.png") #878787;
   background-size: cover;
@@ -3456,6 +3510,11 @@ header {
   }
 }
 
+@media (min-width: 700px) and (max-width: 1040px) {
+  #dth {
+    margin-top: 1.5rem;
+  }
+}
 /* importing media section */
 /* importing partners section */
 footer {
