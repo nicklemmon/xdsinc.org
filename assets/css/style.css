@@ -2961,7 +2961,7 @@ h4 {
 }
 @media (min-width: 700px) {
   h4 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -3226,6 +3226,8 @@ form input[type="submit"] {
   color: white;
   background: rgba(172, 240, 242, 0.9);
   padding: 3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Circle .Button {
@@ -3245,22 +3247,23 @@ form input[type="submit"] {
   width: 100%;
   background: #ccc;
   text-decoration: none;
+  background-size: cover !important;
 }
 
 .ProgramCard#paws {
-  background: url("/assets/images/");
+  background: url("/assets/images/opt_sm_bg_paws.png");
 }
 
 .ProgramCard#farm {
-  background: url("/assets/images/");
+  background: url("/assets/images/opt_sm_bg_farm.png");
 }
 
 .ProgramCard#wellness {
-  background: url("/assets/images/");
+  background: url("/assets/images/opt_sm_bg_wellness.png");
 }
 
 .ProgramCard#tinyHomes {
-  background: url("/assets/images/");
+  background: url("/assets/images/opt_sm_bg_tiny-home.png");
 }
 
 .ProgramCard-title {
@@ -3282,14 +3285,15 @@ form input[type="submit"] {
   -ms-flex-align: center;
   position: absolute;
   bottom: 0;
-  color: #757575;
+  color: #878787;
   padding: 2rem;
   width: 100%;
   min-height: 7rem;
   background: white;
   font-size: 1.3rem;
-  font-weight: 600;
-  box-shadow: 0 0.3rem 0 #dbdbdb;
+  letter-spacing: .5px;
+  font-weight: 400;
+  box-shadow: 0 0.3rem 0 lightgray;
   overflow: hidden;
 }
 .ProgramCard-title span {
@@ -3363,19 +3367,9 @@ header {
 
 /* importing header section */
 .Section--programs {
-  background: #dbdbdb;
+  background: #ededed;
 }
 
 /* importing programs section */
-.Section--media {
-  position: relative;
-}
-
-.Section--media .Circle {
-  position: absolute;
-  top: 20%;
-  right: 10%;
-}
-
 /* importing media section */
 /* importing footer section */

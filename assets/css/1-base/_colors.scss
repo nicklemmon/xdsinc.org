@@ -8,5 +8,6 @@ $secondary-accent: #225378;
   $secondary-accent-darkened: darken($secondary-accent, 5%);
 $highlight: #ACF0F2;
   $highlight-darkened: darken($highlight, 5%);
-$light-gray: #DBDBDB;
+$light-gray: #EDEDED;
+$med-gray: darken($light-gray, 10%);
 $dark-gray: darken($light-gray, 40%);
