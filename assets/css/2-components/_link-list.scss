@@ -1,0 +1,35 @@
+.LinkList {
+  padding: $xl-padding $md-padding $md-padding $md-padding;
+
+  @media (min-width: $mobile) {
+    padding: $xl-padding*2 $sm-padding $xl-padding $md-padding;
+  }
+
+}
+
+  .LinkList .LinkList-listItem {
+    margin-bottom: $sm-padding;
+  }
+
+  .LinkList .LinkList-link {
+    position: relative;
+    padding-left: $sm-padding;
+  }
+
+  .LinkList--news {
+    background: $highlight;
+    color: white;
+  }
+
+    .LinkList--news .LinkList-link {
+      color: white;
+      text-decoration: none;
+    }
+
+      .LinkList--news .LinkList-link:before {
+        content: '\f054';
+        font-family: FontAwesome;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }

@@ -26,7 +26,7 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		<!-- stylesheet (produced via style.scss) -->
-		<link href="assets/css/style.css" rel="stylesheet">
+		<link href="/assets/css/style.css" rel="stylesheet">
 
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -69,11 +69,12 @@
 			</div>
 			</section> <!-- end hero section -->
 
-
 			<section class="Section--programs u-full">
 			<div class="u-container">
 
-				<h3 class="SubHeading">Pellentesque arcu nibh</h3>
+				<a class="ContinueToContent" href="#beginContent"><span class="u-noDisplay">Continue to content</span></a>
+
+				<h3 id="beginContent" class="SubHeading">Pellentesque arcu nibh</h3>
 				<h2>Programs section</h2>
 
 				<div class="u-oneFourth">
@@ -121,7 +122,19 @@
 				</div>
 
 				<div class="u-oneFourth">
-					<aside class="Circle Circle--med">
+					<aside class="LinkList LinkList--news">
+						<h4>XDS in the news</h4>
+
+						<ul class="LinkList-unorderedList">
+							<li class="LinkList-listItem"><a class="LinkList-link" href="#">Duis vehicula at urna</a></li>
+							<li class="LinkList-listItem"><a class="LinkList-link" href="#">Etiam nisi odio</a></li>
+							<li class="LinkList-listItem"><a class="LinkList-link" href="#">Aliquam posuere sem a arcu</a></li>
+							<li class="LinkList-listItem"><a class="LinkList-link" href="#">Quisque tortor risus, scelerisque</a></li>
+							<li class="LinkList-listItem"><a class="LinkList-link" href="#">Vivamus faucibus feugiat tristique</a></li>
+						</ul>
+					</aside>
+
+					<!-- <aside class="Circle Circle--med">
 						<div class="Circle-container">
 							<h4>XDS in the news</h4>
 
@@ -133,7 +146,8 @@
 								<li class="Circle-listItem"><a class="Circle-link" href="#">Vivamus faucibus feugiat tristique</a></li>
 							</ul>
 						</div>
-					</aside>
+					</aside> -->
+
 				</div>
 
 			</div>

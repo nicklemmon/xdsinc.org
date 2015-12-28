@@ -1,10 +1,11 @@
 .Section--hero {
-  background: url('/assets/images/hero.png') #ccc; // temporary
+  background: url('/assets/images/hero.png') $dark-gray; // temporary
   background-size: cover;
   padding-left: 0;
   padding-right: 0;
   padding-bottom: $xl-padding;
   overflow: hidden;
+  position: relative;
 }
 
   header {

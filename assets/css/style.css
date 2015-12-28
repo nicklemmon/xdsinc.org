@@ -2834,6 +2834,10 @@ footer {
   font-style: italic;
 }
 
+.u-noDisplay {
+  margin-left: -9999px;
+}
+
 /* importing utilities */
 .u-container {
   max-width: 1400px;
@@ -3164,6 +3168,30 @@ form input[type="submit"] {
   background: rgba(255, 255, 255, 0.1);
 }
 
+.ContinueToContent {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  border-bottom-color: transparent;
+  background: #ededed;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  position: relative;
+}
+
+.ContinueToContent:before {
+  content: "\f078";
+  font-family: FontAwesome;
+  text-decoration: none;
+  border-bottom-color: transparent;
+  color: #eb7f00;
+  top: 3.5rem;
+  left: 2.25rem;
+  font-size: 3.5rem;
+  position: absolute;
+}
+
 /* importing button components */
 .Circle {
   border-radius: 50%;
@@ -3346,13 +3374,51 @@ form input[type="submit"] {
 }
 
 /* importing media source component */
+.LinkList {
+  padding: 6rem 2rem 2rem 2rem;
+}
+@media (min-width: 700px) {
+  .LinkList {
+    padding: 12rem 1.5rem 6rem 2rem;
+  }
+}
+
+.LinkList .LinkList-listItem {
+  margin-bottom: 1.5rem;
+}
+
+.LinkList .LinkList-link {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.LinkList--news {
+  background: #acf0f2;
+  color: white;
+}
+
+.LinkList--news .LinkList-link {
+  color: white;
+  text-decoration: none;
+}
+
+.LinkList--news .LinkList-link:before {
+  content: '\f054';
+  font-family: FontAwesome;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* importing link list components */
 .Section--hero {
-  background: url("/assets/images/hero.png") #cccccc;
+  background: url("/assets/images/hero.png") #878787;
   background-size: cover;
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 6rem;
   overflow: hidden;
+  position: relative;
 }
 
 header {
@@ -3369,10 +3435,29 @@ header {
 /* importing header section */
 .Section--programs {
   background: #ededed;
+  position: relative;
+}
+
+.Section--programs .ContinueToContent {
+  position: absolute;
+  top: -3rem;
+  left: 45%;
 }
 
 /* importing programs section */
+.Section--media {
+  position: relative;
+}
+
+@media (min-width: 1040px) {
+  .Section--media .LinkList {
+    position: absolute;
+    top: 0;
+  }
+}
+
 /* importing media section */
+/* importing partners section */
 footer {
   background: #878787;
   color: white;

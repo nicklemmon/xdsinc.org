@@ -8,3 +8,7 @@
 .u-emphasis {
   font-style: italic;
 }
+
+.u-noDisplay {
+  margin-left: -9999px; // hides from users not using screen readers
+}

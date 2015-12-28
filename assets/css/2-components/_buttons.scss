@@ -80,3 +80,26 @@
   }
 
 }
+
+.ContinueToContent {
+  @include display(block);
+  margin: 0 auto;
+  text-decoration: none;
+  border-bottom-color: transparent;
+  background: $light-gray;
+  @include size(8rem);
+  border-radius: 50%;
+  position: relative;
+}
+
+  .ContinueToContent:before {
+    content: "\f078";
+    font-family: FontAwesome;
+    text-decoration: none;
+    border-bottom-color: transparent;
+    color: $primary-accent;
+    top: 3.5rem;
+    left: 2.25rem;
+    font-size: 3.5rem;
+    position: absolute;
+  }

@@ -1,3 +1,10 @@
 .Section--programs {
   background: $light-gray;
+  position: relative;
 }
+
+  .Section--programs .ContinueToContent {
+    position: absolute;
+    top: -3rem;
+    left: 45%;
+  }

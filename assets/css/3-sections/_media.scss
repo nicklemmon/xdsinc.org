@@ -1,7 +1,13 @@
 .Section--media {
-
+  position: relative;
 }
 
-  .Section--media .Circle {
-    
+  .Section--media .LinkList {
+
+    @media (min-width: $desktopReg) {
+      position: absolute;
+      top: 0;
+      //height: 100%;
+    }
+
   }
