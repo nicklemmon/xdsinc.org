@@ -1,5 +1,6 @@
 .Section--hero {
-  background: #ccc; // temporary
+  background: url('/assets/images/hero.png') #ccc; // temporary
+  background-size: cover;
   padding-left: 0;
   padding-right: 0;
   padding-bottom: $xl-padding;

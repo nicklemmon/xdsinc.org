@@ -3243,7 +3243,7 @@ form input[type="submit"] {
   position: relative;
   display: block;
   margin-bottom: 1.5rem;
-  height: 24rem;
+  height: 30rem;
   width: 100%;
   background: #ccc;
   text-decoration: none;
@@ -3347,7 +3347,8 @@ form input[type="submit"] {
 
 /* importing media source component */
 .Section--hero {
-  background: #ccc;
+  background: url("/assets/images/hero.png") #cccccc;
+  background-size: cover;
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 6rem;
@@ -3372,4 +3373,14 @@ header {
 
 /* importing programs section */
 /* importing media section */
+footer {
+  background: #878787;
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
 /* importing footer section */
