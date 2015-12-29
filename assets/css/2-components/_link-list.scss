@@ -1,5 +1,5 @@
 .LinkList {
-  padding: $xl-padding 0 $lg-padding 0;
+  padding: 0 0 $lg-padding 0;
   width: 100%;
   height: 100%;
 
@@ -8,19 +8,19 @@
   }
 
   @media (min-width: $mobile) {
-    padding: $xl-padding 0 $lg-padding 0;
+    padding: 0 0 $lg-padding 0;
   }
 
 }
 
   .LinkList .LinkList-header {
     margin: 0 0;
-    padding: $md-padding;
-    border-bottom: 1px solid $dark-base-lightened;
+    padding: $xl-padding $md-padding $md-padding $md-padding;
+    background: $secondary-accent-darkened;
   }
 
   .LinkList .LinkList-unorderedList {
-    margin-bottom: $md-padding;
+    
   }
 
   .LinkList .LinkList-listItem {
@@ -34,29 +34,29 @@
     letter-spacing: 1px;
     line-height: 100%;
     position: relative;
-    padding: $md-padding $lg-padding*2;
+    padding: $sm-padding $lg-padding*2;
     margin-left: -$xs-padding;
     @include transition(transform $defaultTransition ease, background $defaultTransition*2 ease);
-
-    &:hover,
-    &:focus,
-    &:active {
-      background: $dark-base-darkened;
-      @include transform(translateX(.25rem));
-    }
-
   }
 
 
 
   .LinkList--news {
-    background: $dark-base;
+    background: $secondary-accent;
     color: white;
   }
 
     .LinkList--news .LinkList-link {
       color: white;
       text-decoration: none;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: $secondary-accent-darkened;
+        @include transform(translateX(.25rem));
+      }
+
     }
 
       .LinkList--news .LinkList-link:before {
@@ -65,5 +65,5 @@
         font-style: normal;
         position: absolute;
         left: $lg-padding;
-        top: $md-padding;
+        top: $sm-padding;
       }

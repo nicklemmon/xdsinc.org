@@ -3253,7 +3253,7 @@ form input[type="submit"] {
   margin: 0 auto;
   text-decoration: none;
   border-bottom-color: transparent;
-  background: #ededed;
+  background: #f0f0f0;
   height: 7rem;
   width: 7rem;
   border-radius: 50%;
@@ -3266,7 +3266,7 @@ form input[type="submit"] {
   transition: background 0.4s ease;
 }
 .ContinueToContent:hover, .ContinueToContent:focus, .ContinueToContent:active {
-  background: #e0e0e0;
+  background: #cacaca;
 }
 @media (max-width: 700px) {
   .ContinueToContent {
@@ -3494,9 +3494,9 @@ form input[type="submit"] {
   min-height: 7rem;
   background: white;
   font-size: 1.2rem;
-  letter-spacing: 1;
+  letter-spacing: 1px;
   font-weight: 400;
-  box-shadow: 0 0.3rem 0 #e0e0e0;
+  box-shadow: 0 0.3rem 0 #cacaca;
   overflow: hidden;
   -webkit-transition: background 0.6s ease;
   -moz-transition: background 0.6s ease;
@@ -3507,8 +3507,8 @@ form input[type="submit"] {
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  padding-top: 1rem;
-  border-top: 1px solid #acf0f2;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eb7f00;
 }
 .ProgramCard-title::before, .ProgramCard-title:before {
   content: "";
@@ -3530,15 +3530,17 @@ form input[type="submit"] {
   width: 100%;
   color: white;
   background: white;
-  box-shadow: 0 0.3rem 0 #e0e0e0;
-  -webkit-transition: -webkit-transform 0.4s ease;
-  -moz-transition: -moz-transform 0.4s ease;
-  transition: transform 0.4s ease;
+  box-shadow: 0 0.3rem 0 #cacaca;
+  -webkit-transition: -webkit-transform 0.4s ease, filter 0.6s ease;
+  -moz-transition: -moz-transform 0.4s ease, filter 0.6s ease;
+  transition: transform 0.4s ease, filter 0.6s ease;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 .MediaSource:hover, .MediaSource:focus, .MediaSource:active {
   -webkit-transform: translateY(-1rem);
@@ -3546,6 +3548,8 @@ form input[type="submit"] {
   -ms-transform: translateY(-1rem);
   -o-transform: translateY(-1rem);
   transform: translateY(-1rem);
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
 }
 
 .MediaSource#wral {
@@ -3565,7 +3569,7 @@ form input[type="submit"] {
 
 /* importing media source component */
 .LinkList {
-  padding: 6rem 0 3rem 0;
+  padding: 0 0 3rem 0;
   width: 100%;
   height: 100%;
 }
@@ -3576,18 +3580,14 @@ form input[type="submit"] {
 }
 @media (min-width: 700px) {
   .LinkList {
-    padding: 6rem 0 3rem 0;
+    padding: 0 0 3rem 0;
   }
 }
 
 .LinkList .LinkList-header {
   margin: 0 0;
-  padding: 2rem;
-  border-bottom: 1px solid #b3b3b3;
-}
-
-.LinkList .LinkList-unorderedList {
-  margin-bottom: 2rem;
+  padding: 6rem 2rem 2rem 2rem;
+  background: #1c4564;
 }
 
 .LinkList .LinkList-listItem {
@@ -3601,29 +3601,29 @@ form input[type="submit"] {
   letter-spacing: 1px;
   line-height: 100%;
   position: relative;
-  padding: 2rem 6rem;
+  padding: 1.5rem 6rem;
   margin-left: -1rem;
   -webkit-transition: -webkit-transform 0.4s ease, background 0.8s ease;
   -moz-transition: -moz-transform 0.4s ease, background 0.8s ease;
   transition: transform 0.4s ease, background 0.8s ease;
 }
-.LinkList .LinkList-link:hover, .LinkList .LinkList-link:focus, .LinkList .LinkList-link:active {
-  background: #262626;
-  -webkit-transform: translateX(0.25rem);
-  -moz-transform: translateX(0.25rem);
-  -ms-transform: translateX(0.25rem);
-  -o-transform: translateX(0.25rem);
-  transform: translateX(0.25rem);
-}
 
 .LinkList--news {
-  background: #333333;
+  background: #225378;
   color: white;
 }
 
 .LinkList--news .LinkList-link {
   color: white;
   text-decoration: none;
+}
+.LinkList--news .LinkList-link:hover, .LinkList--news .LinkList-link:focus, .LinkList--news .LinkList-link:active {
+  background: #1c4564;
+  -webkit-transform: translateX(0.25rem);
+  -moz-transform: translateX(0.25rem);
+  -ms-transform: translateX(0.25rem);
+  -o-transform: translateX(0.25rem);
+  transform: translateX(0.25rem);
 }
 
 .LinkList--news .LinkList-link:before {
@@ -3632,7 +3632,7 @@ form input[type="submit"] {
   font-style: normal;
   position: absolute;
   left: 3rem;
-  top: 2rem;
+  top: 1.5rem;
 }
 
 /* importing link list components */
@@ -3650,7 +3650,7 @@ form input[type="submit"] {
   transition: background 0.6s ease, line-height 0.4s ease;
 }
 .SocialMedia:hover, .SocialMedia:focus, .SocialMedia:active {
-  background: #ededed;
+  background: #f0f0f0;
   line-height: 70%;
 }
 
@@ -3719,7 +3719,7 @@ header {
 
 /* importing header section */
 .Section--programs {
-  background: #ededed;
+  background: #f0f0f0;
   position: relative;
 }
 
@@ -3743,7 +3743,6 @@ header {
   position: relative;
   overflow: hidden;
   padding-bottom: 12rem;
-  background: #ffffe2;
 }
 
 @media (min-width: 1040px) {
@@ -3766,7 +3765,7 @@ header {
 .Section--partners {
   padding-top: 9rem;
   padding-bottom: 9rem;
-  background: #ededed;
+  background: #f0f0f0;
 }
 
 .Section--partners h2 {

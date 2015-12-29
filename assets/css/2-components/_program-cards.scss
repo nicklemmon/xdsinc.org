@@ -50,7 +50,7 @@
     min-height: 7rem;
     background: white;
     font-size: 1.2rem;
-    letter-spacing: 1;
+    letter-spacing: 1px;
     font-weight: 400;
     box-shadow: 0 .3rem 0 $med-gray;
     overflow: hidden;
@@ -61,8 +61,8 @@
       margin: 0 auto; // centering
       position: relative;
       z-index: 1;
-      padding-top: $xs-padding;
-      border-top: 1px solid $highlight;
+      padding-bottom: $xs-padding;
+      border-bottom: 1px solid $primary-accent;
     }
 
     &::before,
