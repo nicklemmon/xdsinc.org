@@ -14,6 +14,12 @@
   &:active {
     @include transform(translateY(-1rem));
   }
+
+  &:hover > .ProgramCard-title,
+  &:focus > .ProgramCard-title,
+  &:active > .ProgramCard-title {
+    background: $highlight;
+  }
 }
 
 .ProgramCard#paws {
@@ -36,21 +42,27 @@
     @include display(flex);
     @include align-items(center); // vertically centers text within .ProgramCard-title
     position: absolute;
+    font-family: $secondary-font-stack;
     bottom: 0;
     color: $dark-base;
     padding: $md-padding;
     width: 100%;
     min-height: 7rem;
     background: white;
-    font-size: 1.3rem;
-    letter-spacing: .5px;
+    font-size: 1.2rem;
+    letter-spacing: 1;
     font-weight: 400;
     box-shadow: 0 .3rem 0 $med-gray;
     overflow: hidden;
+    @include transition(background $defaultTransition*2 ease);
 
     span {
+      @include display(block); // centering
+      margin: 0 auto; // centering
       position: relative;
       z-index: 1;
+      padding-top: $xs-padding;
+      border-top: 1px solid $highlight;
     }
 
     &::before,

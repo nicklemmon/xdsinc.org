@@ -7,6 +7,11 @@
     margin: 0 auto;
     margin-top: -6rem;
     margin-bottom: $lg-padding;
+
+    @media (max-width: $mobile) {
+      margin-top: -4.5rem;
+    }
+
   }
 
   .Section--programs h2 {

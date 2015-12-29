@@ -8,13 +8,12 @@
     color: $secondary-accent;
   }
 
-  .Section--partners .Partner {
-    background: $light-base;
-    color: white;
+  .Section--partners .u-oneThird {
 
-    &:hover,
-    &:focus,
-    &:active {
-      background: $light-base-darkened;
+    @media (max-width: $mobile) {
+      @include display(flex);
+      @include justify-content(center);
+      @include align-items(center);
     }
+
   }

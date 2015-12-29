@@ -4,6 +4,7 @@
   @include display(flex);
   @include justify-content(center);
   @include align-items(center);
+  @include transition(background $defaultTransition ease);
 }
 
   .Circle-container {
@@ -41,6 +42,34 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  .Circle--partner {
+    @include size(240px);
+    @include display(block);
+    color: white;
+    background: rgba($light-secondary-accent, .9);
+    padding: $lg-padding;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: $secondary-accent;
+    }
+
+  }
+
+    .Circle--partner p {
+      font-family: $secondary-font-stack;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .Circle--partner span {
+      @extend .u-noDisplay;
+    }
 
   .Circle .Button {
     margin: 0 auto; // centers buttons within .Circle components

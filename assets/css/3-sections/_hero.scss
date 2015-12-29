@@ -16,6 +16,14 @@
 
   .Brand {
     @extend .u-inlineBlock;
+    width: 240px;
+    height: 80px;
     margin: 0;
     line-height: 100%;
+    background: url('/assets/images/logo_xds-transparent-realigned.png') white no-repeat center;
+    background-size: 100%;
   }
+
+    .Brand span {
+      @extend .u-noDisplay;
+    }

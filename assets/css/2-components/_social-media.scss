@@ -6,7 +6,15 @@
   margin-right: $sm-padding;
   border-radius: 50%;
   background: white;
-  color: $highlight;
+  color: $light-secondary-accent;
+  @include transition(background $defaultTransition ease, line-height $defaultTransition/2 ease);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $light-gray;
+    line-height: 70%;
+  }
 }
 
   .SocialMedia span { // hides text from users without screen-readers

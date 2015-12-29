@@ -63,7 +63,7 @@
   &:hover,
   &:focus,
   &:active {
-    background: rgba($dark-base, .05);
+    background: rgba($dark-base, .1);
   }
 
 }
@@ -98,6 +98,10 @@
     background: $med-gray;
   }
 
+  @media (max-width: $mobile) {
+    @include size(5rem);
+  }
+
 }
 
   .ContinueToContent:before {
@@ -110,4 +114,11 @@
     left: 2rem;
     font-size: 3rem;
     position: absolute;
+
+    @media (max-width: $mobile) {
+      font-size: 2.5rem;
+      top: 1.85rem;
+      left: 1.25rem;
+    }
+
   }

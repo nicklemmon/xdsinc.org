@@ -2834,7 +2834,7 @@ footer {
   font-style: italic;
 }
 
-.u-noDisplay, .Partner span {
+.u-noDisplay, .Circle--partner span, .MediaSource span, .Brand span {
   margin-left: -9999px;
 }
 
@@ -3157,7 +3157,7 @@ form input[type="submit"] {
   box-shadow: inset 0 0 0 0.2rem #333333;
 }
 .Button--ghost:hover, .Button--ghost:focus, .Button--ghost:active {
-  background: rgba(51, 51, 51, 0.05);
+  background: rgba(51, 51, 51, 0.1);
 }
 
 .Button--ghostNegative {
@@ -3186,6 +3186,12 @@ form input[type="submit"] {
 .ContinueToContent:hover, .ContinueToContent:focus, .ContinueToContent:active {
   background: #e0e0e0;
 }
+@media (max-width: 700px) {
+  .ContinueToContent {
+    height: 5rem;
+    width: 5rem;
+  }
+}
 
 .ContinueToContent:before {
   content: "\f078";
@@ -3197,6 +3203,13 @@ form input[type="submit"] {
   left: 2rem;
   font-size: 3rem;
   position: absolute;
+}
+@media (max-width: 700px) {
+  .ContinueToContent:before {
+    font-size: 2.5rem;
+    top: 1.85rem;
+    left: 1.25rem;
+  }
 }
 
 /* importing button components */
@@ -3228,6 +3241,9 @@ form input[type="submit"] {
   -o-align-items: center;
   align-items: center;
   -ms-flex-align: center;
+  -webkit-transition: background 0.4s ease;
+  -moz-transition: background 0.4s ease;
+  transition: background 0.4s ease;
 }
 
 .Circle--large {
@@ -3265,6 +3281,27 @@ form input[type="submit"] {
   margin-right: auto;
 }
 
+.Circle--partner {
+  height: 240px;
+  width: 240px;
+  display: block;
+  color: white;
+  background: rgba(22, 149, 163, 0.9);
+  padding: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+}
+.Circle--partner:hover, .Circle--partner:focus, .Circle--partner:active {
+  background: #225378;
+}
+
+.Circle--partner p {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+}
+
 .Circle .Button {
   margin: 0 auto;
 }
@@ -3297,6 +3334,9 @@ form input[type="submit"] {
   -ms-transform: translateY(-1rem);
   -o-transform: translateY(-1rem);
   transform: translateY(-1rem);
+}
+.ProgramCard:hover > .ProgramCard-title, .ProgramCard:focus > .ProgramCard-title, .ProgramCard:active > .ProgramCard-title {
+  background: #acf0f2;
 }
 
 .ProgramCard#paws {
@@ -3333,21 +3373,29 @@ form input[type="submit"] {
   align-items: center;
   -ms-flex-align: center;
   position: absolute;
+  font-family: "Montserrat", sans-serif;
   bottom: 0;
   color: #333333;
   padding: 2rem;
   width: 100%;
   min-height: 7rem;
   background: white;
-  font-size: 1.3rem;
-  letter-spacing: .5px;
+  font-size: 1.2rem;
+  letter-spacing: 1;
   font-weight: 400;
   box-shadow: 0 0.3rem 0 #e0e0e0;
   overflow: hidden;
+  -webkit-transition: background 0.8s ease;
+  -moz-transition: background 0.8s ease;
+  transition: background 0.8s ease;
 }
 .ProgramCard-title span {
+  display: block;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
+  padding-top: 1rem;
+  border-top: 1px solid #acf0f2;
 }
 .ProgramCard-title::before, .ProgramCard-title:before {
   content: "";
@@ -3368,30 +3416,38 @@ form input[type="submit"] {
   padding: 6rem 3rem;
   width: 100%;
   color: white;
-  -webkit-transition: background 0.4s ease;
-  -moz-transition: background 0.4s ease;
-  transition: background 0.4s ease;
+  background: white;
+  box-shadow: 0 0.3rem 0 #e0e0e0;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  -moz-transition: -moz-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+.MediaSource:hover, .MediaSource:focus, .MediaSource:active {
+  -webkit-transform: translateY(-1rem);
+  -moz-transform: translateY(-1rem);
+  -ms-transform: translateY(-1rem);
+  -o-transform: translateY(-1rem);
+  transform: translateY(-1rem);
 }
 
 .MediaSource#wral {
-  background: #041E30;
-}
-.MediaSource#wral:hover, .MediaSource#wral:focus, .MediaSource#wral:active {
-  background: #020f18;
+  background: url("/assets/images/logo_wral.png") white no-repeat center;
+  background-size: 90%;
 }
 
 .MediaSource#wunc {
-  background: #4A565F;
-}
-.MediaSource#wunc:hover, .MediaSource#wunc:focus, .MediaSource#wunc:active {
-  background: #3f4951;
+  background: url("/assets/images/logo_wunc.jpg") white no-repeat center;
+  background-size: 90%;
 }
 
 .MediaSource#dth {
-  background: #7BAFD4;
-}
-.MediaSource#dth:hover, .MediaSource#dth:focus, .MediaSource#dth:active {
-  background: #68a3ce;
+  background: url("/assets/images/logo_dth.jpg") white no-repeat center;
+  background-size: 90%;
 }
 
 /* importing media source component */
@@ -3446,7 +3502,14 @@ form input[type="submit"] {
   margin-right: 1.5rem;
   border-radius: 50%;
   background: white;
-  color: #acf0f2;
+  color: #1695a3;
+  -webkit-transition: background 0.4s ease, line-height 0.2s ease;
+  -moz-transition: background 0.4s ease, line-height 0.2s ease;
+  transition: background 0.4s ease, line-height 0.2s ease;
+}
+.SocialMedia:hover, .SocialMedia:focus, .SocialMedia:active {
+  background: #ededed;
+  line-height: 70%;
 }
 
 .SocialMedia span {
@@ -3487,18 +3550,6 @@ form input[type="submit"] {
 }
 
 /* importing social media components */
-.Partner {
-  display: block;
-  height: 300px;
-  width: 300px;
-  padding: 3rem;
-  border-radius: 50%;
-  margin: 0 auto;
-  -webkit-transition: background 0.4s ease;
-  -moz-transition: background 0.4s ease;
-  transition: background 0.4s ease;
-}
-
 .Section--hero {
   background: url("/assets/images/hero.png") #333333;
   background-size: cover;
@@ -3516,8 +3567,12 @@ header {
 }
 
 .Brand {
+  width: 240px;
+  height: 80px;
   margin: 0;
   line-height: 100%;
+  background: url("/assets/images/logo_xds-transparent-realigned.png") white no-repeat center;
+  background-size: 100%;
 }
 
 /* importing header section */
@@ -3531,6 +3586,11 @@ header {
   margin-top: -6rem;
   margin-bottom: 3rem;
 }
+@media (max-width: 700px) {
+  .Section--programs .ContinueToContent {
+    margin-top: -4.5rem;
+  }
+}
 
 .Section--programs h2 {
   color: #225378;
@@ -3540,6 +3600,7 @@ header {
 .Section--media {
   position: relative;
   overflow: hidden;
+  background: #ffffe2;
 }
 
 @media (min-width: 1040px) {
@@ -3569,12 +3630,34 @@ header {
   color: #225378;
 }
 
-.Section--partners .Partner {
-  background: #ffffe2;
-  color: white;
-}
-.Section--partners .Partner:hover, .Section--partners .Partner:focus, .Section--partners .Partner:active {
-  background: #ffff7c;
+@media (max-width: 700px) {
+  .Section--partners .u-oneThird {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+  }
 }
 
 /* importing partners section */
