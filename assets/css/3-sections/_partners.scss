@@ -1,2 +1,20 @@
 .Section--partners {
+  padding-top: $xl-padding*1.5;
+  padding-bottom: $xl-padding*1.5;
+  background: $light-gray;
 }
+
+  .Section--partners h2 {
+    color: $secondary-accent;
+  }
+
+  .Section--partners .Partner {
+    background: $light-base;
+    color: white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: $light-base-darkened;
+    }
+  }

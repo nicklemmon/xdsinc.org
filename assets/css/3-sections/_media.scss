@@ -8,9 +8,12 @@
     @media (min-width: $desktopReg) {
       position: absolute;
       top: 0;
-      //height: 100%;
     }
 
+  }
+
+  .Section--media h2 {
+    color: $secondary-accent;
   }
 
 @media (min-width: $mobile) and (max-width: $desktopReg) {

@@ -4,7 +4,11 @@
 }
 
   .Section--programs .ContinueToContent {
-    position: absolute;
-    top: -3rem;
-    left: 45%;
+    margin: 0 auto;
+    margin-top: -6rem;
+    margin-bottom: $lg-padding;
+  }
+
+  .Section--programs h2 {
+    color: $secondary-accent;
   }

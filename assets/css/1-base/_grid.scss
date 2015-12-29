@@ -39,7 +39,7 @@
 
 .u-oneThird {
   @extend .u-inlineBlock;
-  width: calc(1/3);
+  width: 100% * (1/3);
   padding-right: $sm-padding;
 
   &:last-of-type {
@@ -48,6 +48,7 @@
 
   @media (max-width: $mobile) {
     width: 100%;
+    margin-bottom: $md-padding;
   }
 
 }

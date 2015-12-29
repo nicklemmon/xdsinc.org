@@ -2834,7 +2834,7 @@ footer {
   font-style: italic;
 }
 
-.u-noDisplay {
+.u-noDisplay, .Partner span {
   margin-left: -9999px;
 }
 
@@ -2875,7 +2875,7 @@ footer {
 }
 
 .u-oneThird {
-  width: calc(1/3);
+  width: 33.33333%;
   padding-right: 1.5rem;
 }
 .u-oneThird:last-of-type {
@@ -2884,6 +2884,7 @@ footer {
 @media (max-width: 700px) {
   .u-oneThird {
     width: 100%;
+    margin-bottom: 2rem;
   }
 }
 
@@ -2924,7 +2925,7 @@ h1 {
 }
 @media (min-width: 700px) {
   h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
   }
 }
@@ -2934,7 +2935,7 @@ h2 {
   font-size: 1.75rem;
   line-height: 125%;
   font-weight: 700;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 @media (min-width: 700px) {
   h2 {
@@ -2946,7 +2947,7 @@ h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
   line-height: 130%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 @media (min-width: 700px) {
   h3 {
@@ -3174,8 +3175,8 @@ form input[type="submit"] {
   text-decoration: none;
   border-bottom-color: transparent;
   background: #ededed;
-  height: 8rem;
-  width: 8rem;
+  height: 7rem;
+  width: 7rem;
   border-radius: 50%;
   position: relative;
   -webkit-transition: background 0.4s ease;
@@ -3192,9 +3193,9 @@ form input[type="submit"] {
   text-decoration: none;
   border-bottom-color: transparent;
   color: #eb7f00;
-  top: 3.5rem;
-  left: 2.25rem;
-  font-size: 3.5rem;
+  top: 3rem;
+  left: 2rem;
+  font-size: 3rem;
   position: absolute;
 }
 
@@ -3279,9 +3280,23 @@ form input[type="submit"] {
   margin-bottom: 1.5rem;
   height: 30rem;
   width: 100%;
-  background: #ccc;
   text-decoration: none;
   background-size: cover !important;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  -moz-transition: -moz-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+.ProgramCard:hover, .ProgramCard:focus, .ProgramCard:active {
+  -webkit-transform: translateY(-1rem);
+  -moz-transform: translateY(-1rem);
+  -ms-transform: translateY(-1rem);
+  -o-transform: translateY(-1rem);
+  transform: translateY(-1rem);
 }
 
 .ProgramCard#paws {
@@ -3338,10 +3353,10 @@ form input[type="submit"] {
   content: "";
   z-index: 0;
   position: absolute;
-  left: -2.5%;
+  left: -6%;
   bottom: 20%;
-  height: 4.75rem;
-  width: 4.75rem;
+  height: 7rem;
+  width: 7rem;
   border-radius: 50%;
   background: #acf0f2;
 }
@@ -3391,7 +3406,7 @@ form input[type="submit"] {
 }
 @media (min-width: 700px) {
   .LinkList {
-    padding: 12rem 1.5rem 12rem 2rem;
+    padding: 12rem 1.5rem 6rem 2rem;
   }
 }
 
@@ -3431,7 +3446,7 @@ form input[type="submit"] {
   margin-right: 1.5rem;
   border-radius: 50%;
   background: white;
-  color: #eb7f00;
+  color: #acf0f2;
 }
 
 .SocialMedia span {
@@ -3472,6 +3487,18 @@ form input[type="submit"] {
 }
 
 /* importing social media components */
+.Partner {
+  display: block;
+  height: 300px;
+  width: 300px;
+  padding: 3rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  -webkit-transition: background 0.4s ease;
+  -moz-transition: background 0.4s ease;
+  transition: background 0.4s ease;
+}
+
 .Section--hero {
   background: url("/assets/images/hero.png") #333333;
   background-size: cover;
@@ -3500,9 +3527,13 @@ header {
 }
 
 .Section--programs .ContinueToContent {
-  position: absolute;
-  top: -3rem;
-  left: 45%;
+  margin: 0 auto;
+  margin-top: -6rem;
+  margin-bottom: 3rem;
+}
+
+.Section--programs h2 {
+  color: #225378;
 }
 
 /* importing programs section */
@@ -3518,12 +3549,34 @@ header {
   }
 }
 
+.Section--media h2 {
+  color: #225378;
+}
+
 @media (min-width: 700px) and (max-width: 1040px) {
   #dth {
     margin-top: 1.5rem;
   }
 }
 /* importing media section */
+.Section--partners {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+  background: #ededed;
+}
+
+.Section--partners h2 {
+  color: #225378;
+}
+
+.Section--partners .Partner {
+  background: #ffffe2;
+  color: white;
+}
+.Section--partners .Partner:hover, .Section--partners .Partner:focus, .Section--partners .Partner:active {
+  background: #ffff7c;
+}
+
 /* importing partners section */
 footer {
   background: #333333;

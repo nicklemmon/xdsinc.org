@@ -87,7 +87,7 @@
   text-decoration: none;
   border-bottom-color: transparent;
   background: $light-gray;
-  @include size(8rem);
+  @include size(7rem);
   border-radius: 50%;
   position: relative;
   @include transition(background $defaultTransition ease);
@@ -95,7 +95,7 @@
   &:hover,
   &:focus,
   &:active {
-    background: $med-gray
+    background: $med-gray;
   }
 
 }
@@ -106,8 +106,8 @@
     text-decoration: none;
     border-bottom-color: transparent;
     color: $primary-accent;
-    top: 3.5rem;
-    left: 2.25rem;
-    font-size: 3.5rem;
+    top: 3rem;
+    left: 2rem;
+    font-size: 3rem;
     position: absolute;
   }

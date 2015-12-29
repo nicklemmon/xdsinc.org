@@ -4,9 +4,16 @@
   margin-bottom: $sm-padding;
   height: 30rem;
   width: 100%;
-  background: #ccc; // temporary
   text-decoration: none;
   background-size: cover !important;
+  @include transition(transform $defaultTransition ease);
+  @include transform(translateY(0));
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include transform(translateY(-1rem));
+  }
 }
 
 .ProgramCard#paws {
@@ -52,9 +59,9 @@
       @extend .u-inlineBlock;
       z-index: 0;
       position: absolute;
-      left: -2.5%;
+      left: -6%;
       bottom: 20%;
-      @include size(4.75rem);
+      @include size(7rem);
       border-radius: 50%;
       background: $highlight;
     }
