@@ -54,7 +54,7 @@
     font-weight: 400;
     box-shadow: 0 .3rem 0 $med-gray;
     overflow: hidden;
-    @include transition(background $defaultTransition*2 ease);
+    @include transition(background $defaultTransition*1.5 ease);
 
     span {
       @include display(block); // centering

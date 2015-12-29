@@ -2,6 +2,7 @@ $light-base: #FFFFE2;
   $light-base-darkened: darken($light-base, 20%);
 $dark-base: #333333;
   $dark-base-lightened: lighten($dark-base, 50%);
+  $dark-base-darkened: darken($dark-base, 5%);
 $primary-accent: #EB7F00;
   $primary-accent-darkened: #EB5C00;
 $light-secondary-accent: #1695A3;

@@ -13,9 +13,32 @@
     line-height: 100%;
     text-decoration: none;
     color: white;
+    @include transition(transform $defaultTransition ease);
+
+    &:after {
+      content: "";
+      @include display(block);
+      margin: 0 auto;
+      @include position(relative);
+      top: .3rem;
+      width: 0%;
+      height: 1px;
+      background: white;
+      @include transition(width $defaultTransition/2 ease);
+    }
+
   }
+
+    .MainNavigation-link:hover:after {
+      width: 100%;
+    }
 
   .MainNavigation .Button {
     @include display(inline-block);
     letter-spacing: 1px;
+
+    &:after {
+      width: 0; // disables underline for buttons within the navigation
+    }
+
   }

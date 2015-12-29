@@ -7,7 +7,7 @@
   border-radius: 50%;
   background: white;
   color: $light-secondary-accent;
-  @include transition(background $defaultTransition ease, line-height $defaultTransition/2 ease);
+  @include transition(background $defaultTransition*1.5 ease, line-height $defaultTransition ease);
 
   &:hover,
   &:focus,

@@ -12,7 +12,7 @@
   }
 
   .Circle--large {
-    @include size(400px);
+    @include size(300px);
     padding: $lg-padding;
     padding-right: $lg-padding !important; // fixes issue with grid removing right padding
     background: rgba($primary-accent, .8);
@@ -61,9 +61,18 @@
 
   }
 
+    .Circle--partner .Circle-container {
+      @include display(flex);
+      @include justify-content(center);
+      @include align-items(center);
+    }
+
     .Circle--partner p {
       font-family: $secondary-font-stack;
+      @include display(block);
+      margin: 20% auto;
       text-decoration: none;
+      font-size: 1.1rem;
       font-weight: 700;
     }
 
