@@ -9,7 +9,7 @@
 
 .u-twoThirds {
   @extend .u-inlineBlock;
-  width: calc(2/3);
+  width: 100% * (2/3);
   padding-right: $sm-padding;
 
   &:last-of-type {

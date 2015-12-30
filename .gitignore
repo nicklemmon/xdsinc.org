@@ -61,3 +61,6 @@ design-pattern_files/*
 node_modules/*
 node_modules
 node_modules/
+_upload
+_upload/
+_upload/*

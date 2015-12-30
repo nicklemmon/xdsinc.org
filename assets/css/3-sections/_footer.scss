@@ -7,3 +7,42 @@ footer {
     text-decoration: none;
     color: white;
   }
+
+  footer > .u-twoThirds {
+    @include display(flex);
+    @include align-content(space-between);
+  }
+
+  .FooterUnorderedList {
+    float: right;
+  }
+
+  .FooterUnorderedList-listItem {
+    @extend .u-inlineBlock;
+    text-transform: uppercase;
+    margin-right: $sm-padding;
+  }
+
+  .FooterUnorderedList-link {
+    font-family: $secondary-font-stack;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    line-height: 300%;
+
+    &:after {
+      content: "";
+      @include display(block);
+      margin: 0 auto;
+      @include position(relative);
+      top: 0rem;
+      width: 0%;
+      height: 1px;
+      background: white;
+      @include transition(width $defaultTransition/2 ease);
+    }
+
+  }
+
+    .FooterUnorderedList-link:hover:after {
+      width: 100%;
+    }

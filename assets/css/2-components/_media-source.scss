@@ -13,7 +13,7 @@
   &:hover,
   &:focus,
   &:active {
-    @include transform(translateY(-1rem));
+    @include transform(translateY(-.5rem));
     @include filter(grayscale(0%));
   }
 
