@@ -10,7 +10,7 @@ footer {
   padding: $md-padding;
 
   @media (min-width: $mobile) {
-    padding: $lg-padding $lg-padding $xl-padding $lg-padding;
+    padding: $xl-padding $lg-padding;
   }
 
 }

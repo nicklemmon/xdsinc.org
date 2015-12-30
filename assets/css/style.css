@@ -2818,7 +2818,7 @@ footer {
 @media (min-width: 700px) {
   section,
   footer {
-    padding: 3rem 3rem 6rem 3rem;
+    padding: 6rem 3rem;
   }
 }
 
@@ -3012,11 +3012,11 @@ p a:hover {
   border-bottom: 1px solid #b3b3b3;
   display: inline-block;
   text-transform: uppercase;
-  font-size: .9rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   margin-right: -4px;
-  margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 
 .SubHeading .fa {
@@ -3137,11 +3137,12 @@ form input[type="submit"] {
   font-family: "Montserrat", sans-serif;
   font-size: .9rem;
   text-transform: uppercase;
+  text-decoration: none;
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 1.5rem;
   padding: 1rem 2rem;
-  max-width: 12rem;
+  max-width: 18rem;
   position: relative;
   border: none;
   cursor: pointer;
@@ -3508,7 +3509,7 @@ form input[type="submit"] {
   position: relative;
   z-index: 1;
   padding-bottom: 1rem;
-  border-bottom: 1px solid #eb7f00;
+  border-bottom: 1px solid #225378;
 }
 .ProgramCard-title::before, .ProgramCard-title:before {
   content: "";
@@ -3523,6 +3524,65 @@ form input[type="submit"] {
 }
 
 /* importing program tile component */
+.VignetteContainer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  color: white;
+  max-width: 100%;
+  padding: 3rem;
+  background: white;
+  margin: 0 auto;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 700px) {
+  .VignetteContainer {
+    max-width: 50%;
+    margin: 3rem auto;
+    padding: 6rem;
+  }
+}
+
+.VignetteContainer .VignetteContainer-paragraph {
+  color: #333333;
+  font-size: 1.5rem;
+  line-height: 150%;
+}
+
+.VignetteContainer .Button {
+  width: 100%;
+}
+
+/* importing vignette container component */
 .MediaSource {
   display: block;
   text-align: center;
@@ -3720,6 +3780,7 @@ header {
 .Section--programs {
   background: #f0f0f0;
   position: relative;
+  padding-top: 3rem;
 }
 
 .Section--programs .ContinueToContent {
@@ -3762,8 +3823,8 @@ header {
 }
 /* importing media section */
 .Section--partners {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
+  padding-top: 6rem;
+  padding-bottom: 12rem;
   background: #f0f0f0;
 }
 
@@ -3771,15 +3832,19 @@ header {
   color: #225378;
 }
 
+.Section--partners h4 {
+  color: #b3b3b3;
+}
+
+.Section--partners p {
+  color: #333333;
+}
+
+.Section--partners .u-oneThird {
+  vertical-align: top;
+}
 @media (max-width: 700px) {
   .Section--partners .u-oneThird {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: center;
     -moz-box-pack: center;
     box-pack: center;

@@ -1,0 +1,29 @@
+.VignetteContainer {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+  @include flex-direction(column);
+  color: white;
+  max-width: 100%;
+  padding: $lg-padding;
+  background: white;
+  margin: 0 auto;
+  box-shadow: 0 3rem 5rem rgba(0,0,0,.5);
+
+  @media (min-width: $mobile) {
+    max-width: 50%;
+    margin: $lg-padding auto;
+    padding: $xl-padding;
+  }
+
+}
+
+  .VignetteContainer .VignetteContainer-paragraph {
+    color: $dark-base;
+    font-size: 1.5rem;
+    line-height: 150%;
+  }
+
+  .VignetteContainer .Button {
+    width: 100%;
+  }

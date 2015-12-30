@@ -3,11 +3,12 @@
   font-family: $secondary-font-stack;
   font-size: .9rem;
   text-transform: uppercase;
+  text-decoration: none;
   text-align: center;
   margin-top: $xs-padding;
   margin-bottom: $sm-padding;
   padding: $xs-padding $md-padding;
-  max-width: $lg-padding*4;
+  max-width: $lg-padding*6;
   position: relative;
   border: none;
   cursor: pointer;

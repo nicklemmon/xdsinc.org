@@ -98,11 +98,11 @@ p {
   border-bottom: 1px solid $dark-base-lightened;
   display: inline-block;
   text-transform: uppercase;
-  font-size: .9rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   margin-right: -4px;
-  margin-bottom: $md-padding;
-  padding-bottom: $sm-padding;
+  margin-bottom: $lg-padding;
+  padding-bottom: $xs-padding;
 }
 
   .SubHeading .fa {
