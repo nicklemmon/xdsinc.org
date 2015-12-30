@@ -1,5 +1,5 @@
 .Section--hero {
-  background: url('/assets/images/hero.png') $dark-base; // temporary
+  //background: url('/assets/images/hero.png') $dark-base; // commented out - served through data-attribute in html
   background-size: cover;
   padding-left: 0;
   padding-right: 0;

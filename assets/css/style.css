@@ -3375,7 +3375,7 @@ form input[type="submit"] {
   text-decoration: none;
 }
 .Circle--partner:hover, .Circle--partner:focus, .Circle--partner:active {
-  background: #225378;
+  background: #eb7f00;
 }
 
 .Circle--partner .Circle-container {
@@ -3488,7 +3488,7 @@ form input[type="submit"] {
   position: absolute;
   font-family: "Montserrat", sans-serif;
   bottom: 0;
-  color: #333333;
+  color: #225378;
   padding: 2rem;
   width: 100%;
   min-height: 7rem;
@@ -3601,7 +3601,7 @@ form input[type="submit"] {
   letter-spacing: 1px;
   line-height: 100%;
   position: relative;
-  padding: 1.5rem 6rem;
+  padding: 2rem 6rem;
   margin-left: -1rem;
   -webkit-transition: -webkit-transform 0.4s ease, background 0.8s ease;
   -moz-transition: -moz-transform 0.4s ease, background 0.8s ease;
@@ -3632,7 +3632,7 @@ form input[type="submit"] {
   font-style: normal;
   position: absolute;
   left: 3rem;
-  top: 1.5rem;
+  top: 2rem;
 }
 
 /* importing link list components */
@@ -3645,12 +3645,12 @@ form input[type="submit"] {
   border-radius: 50%;
   background: white;
   color: #1695a3;
-  -webkit-transition: background 0.6s ease, line-height 0.4s ease;
-  -moz-transition: background 0.6s ease, line-height 0.4s ease;
-  transition: background 0.6s ease, line-height 0.4s ease;
+  -webkit-transition: background 0.6s ease, line-height 0.2s ease;
+  -moz-transition: background 0.6s ease, line-height 0.2s ease;
+  transition: background 0.6s ease, line-height 0.2s ease;
 }
 .SocialMedia:hover, .SocialMedia:focus, .SocialMedia:active {
-  background: #f0f0f0;
+  background: #acf0f2;
   line-height: 70%;
 }
 
@@ -3693,7 +3693,6 @@ form input[type="submit"] {
 
 /* importing social media components */
 .Section--hero {
-  background: url("/assets/images/hero.png") #333333;
   background-size: cover;
   padding-left: 0;
   padding-right: 0;

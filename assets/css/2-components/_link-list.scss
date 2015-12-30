@@ -20,7 +20,7 @@
   }
 
   .LinkList .LinkList-unorderedList {
-    
+
   }
 
   .LinkList .LinkList-listItem {
@@ -34,7 +34,7 @@
     letter-spacing: 1px;
     line-height: 100%;
     position: relative;
-    padding: $sm-padding $lg-padding*2;
+    padding: $md-padding $lg-padding*2;
     margin-left: -$xs-padding;
     @include transition(transform $defaultTransition ease, background $defaultTransition*2 ease);
   }
@@ -65,5 +65,5 @@
         font-style: normal;
         position: absolute;
         left: $lg-padding;
-        top: $sm-padding;
+        top: $md-padding;
       }

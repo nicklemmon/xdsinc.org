@@ -7,13 +7,13 @@
   border-radius: 50%;
   background: white;
   color: $light-secondary-accent;
-  @include transition(background $defaultTransition*1.5 ease, line-height $defaultTransition ease);
+  @include transition(background $defaultTransition*1.5 ease, line-height $defaultTransition/2 ease);
 
   &:hover,
   &:focus,
   &:active {
-    background: $light-gray;
-    line-height: 70%;
+    background: $highlight;
+    line-height: 70%; // moves icon up slightly on hover
   }
 }
 
