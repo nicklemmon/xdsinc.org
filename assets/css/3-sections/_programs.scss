@@ -1,16 +1,18 @@
 .Section--programs {
   background: $light-gray;
   position: relative;
-  padding-top: $lg-padding;
+  padding-top: $xl-padding;
 }
 
   .Section--programs .ContinueToContent {
+    position: relative;
+    z-index: 6;
     margin: 0 auto;
-    margin-top: -6rem;
+    margin-top: -7rem;
     margin-bottom: $lg-padding;
 
     @media (max-width: $mobile) {
-      margin-top: -4.5rem;
+      margin-top: -2.5rem;
     }
 
   }

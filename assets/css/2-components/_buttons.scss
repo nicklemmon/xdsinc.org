@@ -99,8 +99,8 @@
   margin: 0 auto;
   text-decoration: none;
   border-bottom-color: transparent;
-  background: $light-gray;
-  @include size(7rem);
+  background: white;
+  @include size(6rem);
   border-radius: 50%;
   position: relative;
   @include animation(bounce 1.5s 3);
@@ -130,9 +130,9 @@
     text-decoration: none;
     border-bottom-color: transparent;
     color: $primary-accent;
-    top: 3rem;
-    left: 2rem;
-    font-size: 3rem;
+    top: 2.5rem;
+    left: 1.8rem;
+    font-size: 2.5rem;
     position: absolute;
     @include transition(color $defaultTransition ease);
 

@@ -10,11 +10,11 @@ h1 {
   font-family: $secondary-font-stack;
   text-transform: uppercase;
   font-size: 1.3rem;
-  line-height: 130%;
+  line-height: 135%;
   margin-bottom: $xs-padding/2;
 
   @media(min-width:$mobile){
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: $md-padding;
   }
 

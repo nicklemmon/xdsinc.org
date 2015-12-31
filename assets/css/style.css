@@ -2924,12 +2924,12 @@ h1 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-size: 1.3rem;
-  line-height: 130%;
+  line-height: 135%;
   margin-bottom: 0.5rem;
 }
 @media (min-width: 700px) {
   h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     margin-bottom: 2rem;
   }
 }
@@ -3032,7 +3032,7 @@ p a:hover {
 }
 
 .MainNavigation-link {
-  font-size: 1rem;
+  font-size: .9rem;
   margin-left: 1.5rem;
   line-height: 100%;
   text-decoration: none;
@@ -3254,9 +3254,9 @@ form input[type="submit"] {
   margin: 0 auto;
   text-decoration: none;
   border-bottom-color: transparent;
-  background: #f0f0f0;
-  height: 7rem;
-  width: 7rem;
+  background: white;
+  height: 6rem;
+  width: 6rem;
   border-radius: 50%;
   position: relative;
   -webkit-animation: bounce 1.5s 3;
@@ -3285,9 +3285,9 @@ form input[type="submit"] {
   text-decoration: none;
   border-bottom-color: transparent;
   color: #eb7f00;
-  top: 3rem;
-  left: 2rem;
-  font-size: 3rem;
+  top: 2.5rem;
+  left: 1.8rem;
+  font-size: 2.5rem;
   position: absolute;
   -webkit-transition: color 0.4s ease;
   -moz-transition: color 0.4s ease;
@@ -3456,6 +3456,7 @@ form input[type="submit"] {
   transform: translateY(-0.5rem);
 }
 .ProgramCard:hover > .ProgramCard-title, .ProgramCard:focus > .ProgramCard-title, .ProgramCard:active > .ProgramCard-title {
+  color: white;
   background: #acf0f2;
 }
 
@@ -3496,7 +3497,7 @@ form input[type="submit"] {
   font-family: "Montserrat", sans-serif;
   bottom: 0;
   color: #225378;
-  padding: 2rem;
+  padding: 1.5rem;
   width: 100%;
   min-height: 7rem;
   background: white;
@@ -3505,15 +3506,17 @@ form input[type="submit"] {
   font-weight: 400;
   box-shadow: 0 0.3rem 0 #d6d6d6;
   overflow: hidden;
-  -webkit-transition: background 0.6s ease;
-  -moz-transition: background 0.6s ease;
-  transition: background 0.6s ease;
+  -webkit-transition: background 0.6s ease, color 0.8s ease;
+  -moz-transition: background 0.6s ease, color 0.8s ease;
+  transition: background 0.6s ease, color 0.8s ease;
 }
 .ProgramCard-title span {
   display: block;
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #225378;
 }
 
 /* importing program tile component */
@@ -3558,6 +3561,11 @@ form input[type="submit"] {
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.5);
 }
 @media (min-width: 900px) {
+  .VignetteContainer {
+    max-width: 75%;
+  }
+}
+@media (min-width: 1300px) {
   .VignetteContainer {
     max-width: 50%;
     margin: 3rem auto;
@@ -3622,7 +3630,7 @@ form input[type="submit"] {
 
 /* importing media source component */
 .LinkList {
-  padding: 0 0 3rem 0;
+  padding: 0 1.5rem 1rem 0;
   width: 100%;
   height: 100%;
 }
@@ -3641,6 +3649,11 @@ form input[type="submit"] {
   margin: 0 0;
   padding: 6rem 2rem 2rem 2rem;
   background: #1c4564;
+}
+
+.LinkList .LinkList-unorderedList {
+  max-width: 33%;
+  padding-right: 1.5rem;
 }
 
 .LinkList .LinkList-listItem {
@@ -3749,24 +3762,87 @@ form input[type="submit"] {
   background-size: cover;
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: 6rem;
-  padding-top: 1.5rem;
-  overflow: hidden;
+  padding-top: 1rem;
+  padding-bottom: 0;
   position: relative;
 }
 
 header {
   padding-left: 3rem;
   padding-right: 3rem;
-  margin-bottom: 6rem;
+  margin-bottom: 1.5rem;
+}
+
+.Section--hero .HeroContent {
+  position: relative;
+  z-index: 5;
+  background: white;
+  color: #333333;
+  text-align: center;
+  max-width: 66.66667%;
+  margin: 0 auto;
+  margin-bottom: -3rem;
+  padding: 6rem 2rem 3rem 2rem;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 900px) {
+  .Section--hero .HeroContent {
+    max-width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .Section--hero .HeroContent {
+    padding: 3rem 2rem 3rem 2rem;
+  }
+}
+
+.Section--hero .HeroContent h1 {
+  color: #225378;
+  border-bottom: 1px solid #333333;
+  padding-bottom: 4.5rem;
+  max-width: 800px;
+}
+
+.Section--hero .HeroContent .u-emphasis {
+  margin-top: -4.5rem;
+  font-size: 1.6rem !important;
+}
+
+.Section--hero .HeroContent .u-emphasis:before {
+  content: '\f0fa';
+  font-family: FontAwesome;
+  font-size: 2em;
+  line-height: 120%;
+  font-style: normal;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: -1.25rem;
+  height: 4rem;
+  width: 4rem;
+  border: 1px solid #333333;
+  padding: 1rem;
+  background: white;
+}
+
+.Section--hero .HeroContent .Button,
+.Section--hero .HeroContent h1,
+.Section--hero .HeroContent p {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Brand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
   width: 240px;
   height: 80px;
-  margin: 0;
+  margin-top: 1.5rem;
   line-height: 100%;
-  background: url("/assets/images/logo_xds-transparent-realigned.png") white no-repeat center;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
   background-size: 100%;
 }
 
@@ -3774,17 +3850,19 @@ header {
 .Section--programs {
   background: #f0f0f0;
   position: relative;
-  padding-top: 3rem;
+  padding-top: 6rem;
 }
 
 .Section--programs .ContinueToContent {
+  position: relative;
+  z-index: 6;
   margin: 0 auto;
-  margin-top: -6rem;
+  margin-top: -7rem;
   margin-bottom: 3rem;
 }
 @media (max-width: 700px) {
   .Section--programs .ContinueToContent {
-    margin-top: -4.5rem;
+    margin-top: -2.5rem;
   }
 }
 
@@ -3905,7 +3983,7 @@ footer > .u-twoThirds {
   display: block;
   margin: 0 auto;
   position: relative;
-  top: 0rem;
+  top: -.4rem;
   width: 0%;
   height: 1px;
   background: white;

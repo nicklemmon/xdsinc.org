@@ -18,6 +18,7 @@
   &:hover > .ProgramCard-title,
   &:focus > .ProgramCard-title,
   &:active > .ProgramCard-title {
+    color: white;
     background: $highlight;
   }
 }
@@ -45,7 +46,7 @@
     font-family: $secondary-font-stack;
     bottom: 0;
     color: $secondary-accent;
-    padding: $md-padding;
+    padding: $sm-padding;
     width: 100%;
     min-height: 7rem;
     background: white;
@@ -54,15 +55,15 @@
     font-weight: 400;
     box-shadow: 0 .3rem 0 $med-gray;
     overflow: hidden;
-    @include transition(background $defaultTransition*1.5 ease);
+    @include transition(background $defaultTransition*1.5 ease, color $defaultTransition*2 ease);
 
     span {
       @include display(block); // centering
       margin: 0 auto; // centering
       position: relative;
       z-index: 1;
-      //padding-bottom: $xs-padding;
-      //border-bottom: 1px solid $secondary-accent;
+      padding-bottom: $xs-padding/2;
+      border-bottom: 1px solid $secondary-accent;
     }
 
     // &::before,

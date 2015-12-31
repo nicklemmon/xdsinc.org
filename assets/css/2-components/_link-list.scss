@@ -1,5 +1,5 @@
 .LinkList {
-  padding: 0 0 $lg-padding 0;
+  padding: 0 $sm-padding $xs-padding 0;
   width: 100%;
   height: 100%;
 
@@ -20,7 +20,8 @@
   }
 
   .LinkList .LinkList-unorderedList {
-
+    max-width: 33%; // allows list to have some padding while still allowing the container to stretch across the screen to the right
+    padding-right: $sm-padding; // allows list to have some padding while still allowing the container to stretch across the screen to the right
   }
 
   .LinkList .LinkList-listItem {

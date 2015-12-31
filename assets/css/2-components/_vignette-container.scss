@@ -11,6 +11,10 @@
   box-shadow: 0 3rem 5rem rgba(0,0,0,.5);
 
   @media (min-width: $tablet) {
+    max-width: 75%;
+  }
+
+  @media (min-width: $desktopWide) {
     max-width: 50%;
     margin: $lg-padding auto;
     padding: $xl-padding;
