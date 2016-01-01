@@ -6,9 +6,9 @@
   color: white;
   background: white;
   box-shadow: 0 .3rem 0 $med-gray;
-  @include transition(transform $defaultTransition ease, filter $defaultTransition*1.5 ease);
   @include transform(translateY(0));
   @include filter(grayscale(100%));
+  transition: transform $defaultTransition ease, filter $defaultTransition*1.5 ease;
 
   &:hover,
   &:focus,

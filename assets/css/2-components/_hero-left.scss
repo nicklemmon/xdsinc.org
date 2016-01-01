@@ -1,0 +1,48 @@
+.HeroLeft {
+  @include display(block);
+  color: white;
+  padding-bottom: $lg-padding;
+  padding-left: $md-padding;
+  padding-right: $md-padding;
+
+  @media (min-width: $tablet) {
+    padding-top: $xl-padding;
+    padding-left: $lg-padding;
+    padding-right: 0;
+  }
+
+  @media (min-width: $desktopReg) {
+    padding-top: $lg-padding;
+    padding-bottom: $xl-padding;
+  }
+
+}
+
+  .HeroLeft-header {
+    padding-bottom: $sm-padding;
+    border-bottom: 1px solid white;
+    @include display(inline-block); // keeps line from going across entire div
+    margin-bottom: $sm-padding;
+
+    @media (min-width: $mobile) {
+      padding-bottom: $md-padding;
+    }
+  }
+
+  h1.HeroLeft-header {
+
+    @media (min-width: $tablet) {
+      font-weight: 700;
+      line-height: 110%;
+      font-size: 2.5rem;
+    }
+  }
+
+
+  .HeroLeft-paragraph {
+    font-size: 1.3rem;
+
+    @media (min-width: $mobile) {
+      font-size: 1.6rem;
+    }
+  }

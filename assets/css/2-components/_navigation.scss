@@ -3,8 +3,13 @@
   font-family: $secondary-font-stack;
   float: right;
   margin: 0;
+  margin-bottom: $lg-padding;
   line-height: 100%;
 }
+
+  .MenuOpen {
+    display: none; // hidden from all users (including screen readers) on screens larger than the breakpoint at the end of this partial stylesheet
+  }
 
   .MainNavigation-link {
     @extend .u-inlineBlock;
@@ -42,3 +47,80 @@
     }
 
   }
+
+
+//-- Begin Styles for Tablet/Mobile nav-menu --//
+@media (max-width: $desktopReg) {
+
+  .Section--hero {
+    padding-top: 0 !important;
+  }
+
+  header {
+    height: 70px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background: $secondary-accent-darkened;
+  }
+
+  .MainNavigation {
+    overflow: hidden;
+    max-height: 0;
+    width: 100%;
+    background: rgba($secondary-accent,1);
+    padding: $xs-padding 0 0 0;
+    @include transition(max-height $defaultTransition/2 linear);
+  }
+
+  .MainNavigation.open {
+    max-height: 300px;
+  }
+
+    .Brand {
+      @include display(block);
+      width: 100px !important;
+      float: left;
+      margin-left: $sm-padding;
+      height: auto !important;
+    }
+
+    .MenuOpen {
+      font-family: $secondary-font-stack;
+      font-size: .9rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      @include display(block);
+      float: right;
+      background: white;
+      margin: $xs-padding $sm-padding $xs-padding 0;
+      padding: $xs-padding/2 $xs-padding;
+      color: $dark-base;
+      border-radius: .75rem;
+      cursor: pointer;
+      @include transition(background $defaultTransition ease);
+
+      &:hover {
+        background: $highlight;
+      }
+    }
+
+    .MainNavigation-link {
+      @include display(block);
+      margin: 0;
+      padding: $xs-padding $sm-padding;
+      width: 100%;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: $secondary-accent-darkened;
+      }
+
+    }
+
+    .MainNavigation > .Button {
+      max-width: 100%;
+    }
+
+}

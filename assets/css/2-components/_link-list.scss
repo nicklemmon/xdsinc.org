@@ -37,7 +37,7 @@
     position: relative;
     padding: $md-padding $lg-padding*2;
     margin-left: -$xs-padding;
-    @include transition(transform $defaultTransition ease, background $defaultTransition*2 ease);
+    transition: transform $defaultTransition ease, background $defaultTransition*2 ease;
   }
 
 

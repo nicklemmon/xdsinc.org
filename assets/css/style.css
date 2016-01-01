@@ -2936,7 +2936,7 @@ h1 {
 
 h2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   line-height: 125%;
   font-weight: 700;
   margin-bottom: 3rem;
@@ -3018,6 +3018,13 @@ p a:hover {
   margin-bottom: 3rem;
   padding-bottom: 1.5rem;
 }
+@media (max-width: 700px) {
+  .SubHeading {
+    font-size: .7rem;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+}
 
 .SubHeading .fa {
   margin-right: .9rem;
@@ -3028,7 +3035,12 @@ p a:hover {
   font-family: "Montserrat", sans-serif;
   float: right;
   margin: 0;
+  margin-bottom: 3rem;
   line-height: 100%;
+}
+
+.MenuOpen {
+  display: none;
 }
 
 .MainNavigation-link {
@@ -3067,7 +3079,128 @@ p a:hover {
   width: 0;
 }
 
+@media (max-width: 1040px) {
+  .Section--hero {
+    padding-top: 0 !important;
+  }
+
+  header {
+    height: 70px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background: #1c4564;
+  }
+
+  .MainNavigation {
+    overflow: hidden;
+    max-height: 0;
+    width: 100%;
+    background: #225378;
+    padding: 1rem 0 0 0;
+    -webkit-transition: max-height 0.2s linear;
+    -moz-transition: max-height 0.2s linear;
+    transition: max-height 0.2s linear;
+  }
+
+  .MainNavigation.open {
+    max-height: 300px;
+  }
+
+  .Brand {
+    display: block;
+    width: 100px !important;
+    float: left;
+    margin-left: 1.5rem;
+    height: auto !important;
+  }
+
+  .MenuOpen {
+    font-family: "Montserrat", sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    float: right;
+    background: white;
+    margin: 1rem 1.5rem 1rem 0;
+    padding: 0.5rem 1rem;
+    color: #333333;
+    border-radius: .75rem;
+    cursor: pointer;
+    -webkit-transition: background 0.4s ease;
+    -moz-transition: background 0.4s ease;
+    transition: background 0.4s ease;
+  }
+  .MenuOpen:hover {
+    background: #acf0f2;
+  }
+
+  .MainNavigation-link {
+    display: block;
+    margin: 0;
+    padding: 1rem 1.5rem;
+    width: 100%;
+  }
+  .MainNavigation-link:hover, .MainNavigation-link:focus, .MainNavigation-link:active {
+    background: #1c4564;
+  }
+
+  .MainNavigation > .Button {
+    max-width: 100%;
+  }
+}
 /* importing navigation components */
+.HeroLeft {
+  display: block;
+  color: white;
+  padding-bottom: 3rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+@media (min-width: 900px) {
+  .HeroLeft {
+    padding-left: 3rem;
+    padding-right: 0;
+  }
+}
+@media (min-width: 1040px) {
+  .HeroLeft {
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.HeroLeft-header {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid white;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 700px) {
+  .HeroLeft-header {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  h1.HeroLeft-header {
+    font-weight: 700;
+    line-height: 110%;
+    font-size: 2.5rem;
+  }
+}
+
+.HeroLeft-paragraph {
+  font-size: 1.3rem;
+}
+@media (min-width: 700px) {
+  .HeroLeft-paragraph {
+    font-size: 1.6rem;
+  }
+}
+
+/* importing hero-left component */
 form {
   display: inline-block;
   width: 100%;
@@ -3285,7 +3418,7 @@ form input[type="submit"] {
   text-decoration: none;
   border-bottom-color: transparent;
   color: #eb7f00;
-  top: 2.5rem;
+  top: 2.35rem;
   left: 1.8rem;
   font-size: 2.5rem;
   position: absolute;
@@ -3763,7 +3896,7 @@ form input[type="submit"] {
   padding-left: 0;
   padding-right: 0;
   padding-top: 1rem;
-  padding-bottom: 0;
+  padding-bottom: 1rem;
   position: relative;
 }
 
@@ -3850,15 +3983,13 @@ header {
 .Section--programs {
   background: #f0f0f0;
   position: relative;
-  padding-top: 6rem;
 }
 
 .Section--programs .ContinueToContent {
   position: relative;
   z-index: 6;
   margin: 0 auto;
-  margin-top: -7rem;
-  margin-bottom: 3rem;
+  margin-top: -9rem;
 }
 @media (max-width: 700px) {
   .Section--programs .ContinueToContent {

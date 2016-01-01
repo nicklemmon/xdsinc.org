@@ -22,7 +22,7 @@ h1 {
 
 h2 {
   font-family: $secondary-font-stack;
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   line-height: 125%;
   font-weight: 700;
   margin-bottom: $lg-padding;
@@ -103,6 +103,12 @@ p {
   margin-right: -4px;
   margin-bottom: $lg-padding;
   padding-bottom: $sm-padding;
+
+  @media (max-width: $mobile) {
+    font-size: .7rem;
+    padding-bottom: $xs-padding;
+    margin-bottom: $md-padding;
+  }
 }
 
   .SubHeading .fa {

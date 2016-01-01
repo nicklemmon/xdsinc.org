@@ -6,8 +6,8 @@
   width: 100%;
   text-decoration: none;
   background-size: cover !important;
-  @include transition(transform $defaultTransition ease);
   @include transform(translateY(0));
+  transition: transform $defaultTransition ease;
 
   &:hover,
   &:focus,
