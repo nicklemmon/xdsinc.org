@@ -9,6 +9,7 @@
 
 .u-twoThirds {
   @extend .u-inlineBlock;
+  vertical-align: top;
   width: 100% * (2/3);
   padding-right: $sm-padding;
 
@@ -58,22 +59,23 @@
   width: 25%;
   padding-right: $sm-padding;
 
-  &:last-of-type {
-    padding-right: 0;
-  }
-
   @media (max-width: $desktopReg) {
     width: 50%;
-
-    &:nth-child(even) {
-      padding-right: 0; // disables right padding (the gutter) when the .u-oneFourth elements collapse in to two columns
-    }
-
   }
 
   @media (max-width: $mobile) {
     width: 100%;
     padding-right: 0 !important; // disables right padding (the gutter) when the .u-oneFourth elements collapse in to a single column
+    //margin-left: 0; // disables left negative margin associated with .u-inlineBlock when the .u-oneFourth elements collapse in to a single column
   }
 
+}
+
+@media (max-width: $desktopReg) {
+  
+  .u-oneFourth:last-of-type,
+  .u-oneFourth:nth-child(even) {
+    padding-right: 0;
+  }
+  
 }

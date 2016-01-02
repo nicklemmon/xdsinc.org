@@ -1,9 +1,22 @@
+header {
+  position: relative;
+  z-index: 1;
+  padding-left: $lg-padding;
+  padding-right: $lg-padding;
+  background: pink;
+  height: 50px;
+}
+
+.MenuBar {
+  float: left;
+}
+
 .MainNavigation {
-  @extend .u-inlineBlock;
+  //@extend .u-inlineBlock;
+  @include display(block);
   font-family: $secondary-font-stack;
   float: right;
   margin: 0;
-  margin-bottom: $lg-padding;
   line-height: 100%;
 }
 
@@ -52,28 +65,28 @@
 //-- Begin Styles for Tablet/Mobile nav-menu --//
 @media (max-width: $desktopReg) {
 
-  .Section--hero {
-    padding-top: 0 !important;
-  }
-
   header {
-    height: 70px;
     padding-left: 0 !important;
     padding-right: 0 !important;
     background: $secondary-accent-darkened;
+  }
+
+  .MenuBar {
+    width: 100%;
+    background: $secondary-accent;
   }
 
   .MainNavigation {
     overflow: hidden;
     max-height: 0;
     width: 100%;
-    background: rgba($secondary-accent,1);
-    padding: $xs-padding 0 0 0;
+    background: $secondary-accent-darkened;
+    padding: 0 0 0 0;
     @include transition(max-height $defaultTransition/2 linear);
   }
 
   .MainNavigation.open {
-    max-height: 300px;
+    max-height: 350px;
   }
 
     .Brand {
@@ -108,19 +121,22 @@
     .MainNavigation-link {
       @include display(block);
       margin: 0;
-      padding: $xs-padding $sm-padding;
+      padding: $sm-padding;
       width: 100%;
 
       &:hover,
       &:focus,
       &:active {
-        background: $secondary-accent-darkened;
+        background: $secondary-accent;
       }
 
     }
 
     .MainNavigation > .Button {
-      max-width: 100%;
+      @include display(block);
+      margin-left: $sm-padding;
+      margin-right: $sm-padding;
+      max-width: 90%;
     }
 
 }

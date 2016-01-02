@@ -11,6 +11,10 @@
     padding: 0 0 $lg-padding 0;
   }
 
+  @media (max-width: $mobile) {
+    padding: 0;
+  }
+
 }
 
   .LinkList .LinkList-header {
@@ -22,6 +26,12 @@
   .LinkList .LinkList-unorderedList {
     max-width: 33%; // allows list to have some padding while still allowing the container to stretch across the screen to the right
     padding-right: $sm-padding; // allows list to have some padding while still allowing the container to stretch across the screen to the right
+
+    @media (max-width: $mobile) {
+      max-width: 100%;
+      padding-right: 0;
+    }
+
   }
 
   .LinkList .LinkList-listItem {
@@ -38,6 +48,7 @@
     padding: $md-padding $lg-padding*2;
     margin-left: -$xs-padding;
     transition: transform $defaultTransition ease, background $defaultTransition*2 ease;
+
   }
 
 

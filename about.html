@@ -12,20 +12,12 @@
     <!--===== BEGIN MAIN =====-->
 		<main>
 
+			{% include header.html %}
+
 			<section class="Section--hero u-full" data-parallax="scroll" data-image-src="/assets/images/hero.png" data-speed=".65">
 			<div class="u-container">
 
-				{% include header.html %}
-
-				<!-- <div class="Circle Circle--large u-oneHalf">
-					<div class="Circle-container">
-						<h1>Food as medicine. Farming as therapy. Housing as healthcare.</h1>
-						<p class="u-emphasis">XDS is making a difference in North Carolina.</p>
-						<a class="Button Button--ghostNegative">Join us today</a>
-					</div>
-				</div> -->
-
-				<div class="HeroContent">
+				<div class="HeroBox">
 					<h1>About us</h1>
 					<p class="u-emphasis">XDS is a nonprofit helping North Carolinians today</p>
 				</div>
@@ -40,27 +32,31 @@
 			</div>
 			</section> <!-- end hero section -->
 
-			<section class="Section--programs u-full">
+			<section class="Section--vision u-full">
 			<div class="u-container">
 
-				<!-- <a class="ContinueToContent" href="#beginContent"><span class="u-noDisplay">Continue to content</span></a> -->
-
-				<h3 id="beginContent" class="SubHeading">What drives XDS</h3>
+				<h3 class="SubHeading">What drives XDS</h3>
 				<h2>Our values</h2>
 
-				<p>Cross Disability Services (XDS) is driven by several key values to Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet eu ex at fringilla. Nunc non pharetra leo, eu cursus justo.
+				<div class="u-twoThirds">
+					<p class="FullParagraph">Cross Disability Services (XDS) is driven by several key values to Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquet eu ex at fringilla. Nunc non pharetra leo, eu cursus justo.</p>
 
-				<ol>
-					<li>Nullam elementum, odio sit</li>
-					<li>Nam volutpat mauris convallis</li>
-					<li>Quisque accumsan vel lectus</li>
-					<li>Aliquam fringilla aliquet arcu</li>
-					<li> Cras sagittis ante nisl</li>
-					<li>Suspendisse non ex imperdiet</li>
-				</ol>
+					<p class="FullParagraph"> In vehicula est a tortor tempus tristique. Suspendisse non risus rutrum, consectetur lorem in, dignissim sapien.</p>
+				</div>
+
+				<div class="u-oneThird">
+					<ol class="OrderedList">
+						<li class="OrderedList-listItem"><span class="OrderedList-ListItem-text">Nullam elementum, odio sit</span></li>
+						<li class="OrderedList-listItem"><span class="OrderedList-ListItem-text">Nam volutpat mauris convallis</span></li>
+						<li class="OrderedList-listItem"><span class="OrderedList-ListItem-text">Quisque accumsan vel lectus</span></li>
+						<li class="OrderedList-listItem"><span class="OrderedList-ListItem-text">Aliquam fringilla aliquet arcu</span></li>
+						<li class="OrderedList-listItem"><span class="OrderedList-ListItem-text"> Cras sagittis ante nisl</span></li>
+						<li class="OrderedList-listItem"><span class="OrderedList-ListItem-text">Suspendisse non ex imperdiet</span></li>
+					</ol>
+				</div>
 
 			</div>
-			</section> <!-- end .Section--programs -->
+			</section> <!-- end .Section--vision -->
 
 			<section class="Section--vignette u-full" data-parallax="scroll" data-image-src="/assets/images/opt_bg_farm.png" data-speed=".65">
 			<div class="u-container">
@@ -79,96 +75,38 @@
 			</section> <!-- end .Section--vignette -->
 
 
-			<section class="Section--media u-full">
+			<section class="Section--programs u-full">
 			<div class="u-container">
 
-				<h3 class="SubHeading">Media coverage across the state</h3>
-				<h2>XDS in the media</h2>
+				<h3 id="beginContent" class="SubHeading">How we make a difference</h3>
+				<h2>Learn more about our programs</h2>
 
 				<div class="u-oneFourth">
-					<a class="MediaSource" id="wral" href="#"><span>WRAL</span></a>
-				</div>
-				<div class="u-oneFourth">
-					<a class="MediaSource" id="wunc" href="#"><span>WUNC</span></a>
-				</div>
-				<div class="u-oneFourth">
-					<a class="MediaSource" id="dth" href="#"><span>Daily Tar Heel</span></a>
+					<a class="ProgramCard" id="paws" href="#">
+						<div class="ProgramCard-title"><span>PAWS</span></div>
+					</a>
 				</div>
 
 				<div class="u-oneFourth">
-					<aside class="LinkList LinkList--news">
-						<h4 class="LinkList-header"><i class="fa fa-newspaper-o"></i>XDS in the news</h4>
+					<a class="ProgramCard" id="farm" href="#">
+						<div class="ProgramCard-title"><span>Farm at Penny Lane</span></div>
+					</a>
+				</div>
 
-						<ul class="LinkList-unorderedList">
-							<li class="LinkList-listItem"><a class="LinkList-link" href="#">Duis vehicula at urna</a></li>
-							<li class="LinkList-listItem"><a class="LinkList-link" href="#">Etiam nisi odio</a></li>
-							<li class="LinkList-listItem"><a class="LinkList-link" href="#">Aliquam posuere sem a arcu</a></li>
-							<li class="LinkList-listItem"><a class="LinkList-link" href="#">Quisque tortor risus, scelerisque</a></li>
-							<li class="LinkList-listItem"><a class="LinkList-link" href="#">Vivamus faucibus feugiat tristique</a></li>
-						</ul>
-					</aside>
+				<div class="u-oneFourth">
+					<a class="ProgramCard" id="wellness" href="#">
+						<div class="ProgramCard-title"><span>Wellness Programs</span></div>
+					</a>
+				</div>
+
+				<div class="u-oneFourth">
+					<a class="ProgramCard" id="tinyHomes" href="#">
+						<div class="ProgramCard-title"><span>Tiny Homes Collaborative</span></div>
+					</a>
 				</div>
 
 			</div>
-			</section> <!-- end .Section--media -->
-
-
-			<section class="Section--partners u-full">
-			<div class="u-container">
-
-				<h3 class="SubHeading">Efficieny through collaboration</h3>
-				<h2>Partners in service</h2>
-
-				<!-- <div class="u-oneThird">
-					<a href="https://www.med.unc.edu/psych/cecmh" class="Circle Circle--partner">
-						<div class="Circle-container">
-							<p>UNC Center for Excellence in Community Mental Health</p>
-						</div>
-					</a>
-				</div>
-
-				<div class="u-oneThird">
-					<a href="http://www.cardinalinnovations.org/" class="Circle Circle--partner">
-						<div class="Circle-container">
-							<p>Cardinal Innovations Healthcare Solutions</p>
-						</div>
-					</a>
-				</div>
-
-				<div class="u-oneThird">
-					<a href="https://www.facebook.com/tinyhomecommunitycollaborative/" class="Circle Circle--partner">
-						<div class="Circle-container">
-							<p>Tiny Home Community Collaborative</p>
-						</div>
-					</a>
-				</div> -->
-
-				<div class="u-oneThird">
-					<h4>UNC Center for Excellence in Community Mental Health</h4>
-
-					<p>Providing community mental health services in central North Carolina in partnership with XDS.</p>
-
-					<a href="https://www.med.unc.edu/psych/cecmh" class="Button Button--tertiary">Visit their website</a>
-				</div>
-
-				<div class="u-oneThird">
-					<h4>Cardinal Innovations Healthcare</h4>
-
-					<p>Providing funding and logistical support for mental health services in central North Carolina, partnering with XDS on a number of community programs.</p>
-
-					<a href="http://www.cardinalinnovations.org/" class="Button Button--tertiary">Visit their website</a>
-				</div>
-
-				<div class="u-oneThird">
-					<h4>Tiny Home Community Collaborative</h4>
-
-					<p>Collaborating with XDS to pilot tiny home projects in Chatham County, NC.</p>
-
-					<a href="https://www.facebook.com/tinyhomecommunitycollaborative/" class="Button Button--tertiary">Visit their website</a>
-				</div>
-
-			</div>
-			</section> <!-- end .Section--partners -->
+			</section> <!-- end .Section--programs -->
 
 		</main> <!-- end main -->
 		<!--===== END MAIN =====-->

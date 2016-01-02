@@ -1,73 +1,82 @@
 .Section--hero {
-  //background: url('/assets/images/hero.png') $dark-base; // commented out - served through data-attribute in html
+  background: url('/assets/images/hero.png') $dark-base; // commented out - served through data-attribute in html
   background-size: cover;
   padding-left: 0;
   padding-right: 0;
-  padding-top: $xs-padding;
+  padding-top: $lg-padding;
   padding-bottom: $xs-padding;
+  clear: both;
   position: relative;
 }
 
-  header {
-    padding-left: $lg-padding;
-    padding-right: $lg-padding;
-    margin-bottom: $sm-padding;
-  }
+    .HeroBox {
+      @include display(block);
+      position: relative;
+      z-index: 5;
+      background: white;
+      text-align: center;
+      max-width: 100% * (2/3);
+      margin: 0 auto;
+      margin-top: $lg-padding;
+      margin-bottom: -$lg-padding;
+      padding: $xl-padding $md-padding $lg-padding $md-padding;
+      box-shadow: 0 3rem 5rem rgba(0,0,0,.05);
+      clear: both;
 
-  .Section--hero .HeroContent {
-    position: relative;
-    z-index: 5;
-    background: white;
-    color: $dark-base;
-    text-align: center;
-    max-width: 100% * (2/3);
-    margin: 0 auto;
-    margin-bottom: -$lg-padding;
-    padding: $xl-padding $md-padding $lg-padding $md-padding;
-    box-shadow: 0 3rem 5rem rgba(0,0,0,.05);
-
-    @media (max-width: $tablet) {
-      max-width: 100%;
-    }
-
-    @media (max-width: $mobile) {
-      padding: $lg-padding $md-padding $lg-padding $md-padding;
-    }
-
-  }
-
-    .Section--hero .HeroContent h1 {
-      color: $secondary-accent;
-      border-bottom: 1px solid $dark-base;
-      padding-bottom: $lg-padding*1.5;
-      max-width: 800px;
-    }
-
-    .Section--hero .HeroContent .u-emphasis {
-      margin-top: -$lg-padding*1.5;
-      font-size: 1.6rem !important;
-    }
-
-      .Section--hero .HeroContent .u-emphasis:before {
-        content: '\f0fa';
-        font-family: FontAwesome;
-        font-size: 2em;
-        line-height: 120%;
-        font-style: normal;
-        border-radius: 50%;
-        @include display(block);
-        margin: 0 auto;
-        @include position(relative);
-        top: -1.25rem;
-        @include size($xs-padding*4);
-        border: 1px solid $dark-base;
-        padding: $xs-padding;
-        background: white;
+      @media (max-width: $tablet) {
+        max-width: 90%;
       }
 
-    .Section--hero .HeroContent .Button,
-    .Section--hero .HeroContent h1,
-    .Section--hero .HeroContent p {
+      @media (max-width: $mobile) {
+        padding: $xl-padding $md-padding $sm-padding $md-padding;
+        margin-bottom: -$md-padding;
+      }
+
+    }
+
+    .Section--hero .HeroBox h1 {
+      color: $secondary-accent;
+      border-bottom: 1px solid $dark-base;
+      padding-bottom: $sm-padding;
+      max-width: 800px;
+
+      @media (max-width: $mobile) {
+        padding-bottom: $xs-padding;
+        margin-bottom: $xs-padding;
+      }
+
+    }
+
+    .Section--hero .HeroBox .u-emphasis {
+      //margin-top: -$lg-padding*1.5;
+      font-size: 1.6rem !important;
+
+      @media (max-width: $desktopReg) {
+        font-size: 1.3rem !important;
+      }
+
+    }
+
+      // .Section--hero .HeroBox .u-emphasis:before {
+      //   content: '\f0fa';
+      //   font-family: FontAwesome;
+      //   font-size: 2em;
+      //   line-height: 120%;
+      //   font-style: normal;
+      //   border-radius: 50%;
+      //   @include display(block);
+      //   margin: 0 auto;
+      //   @include position(relative);
+      //   top: -1.25rem;
+      //   @include size($xs-padding*4);
+      //   border: 1px solid $dark-base;
+      //   padding: $xs-padding;
+      //   background: white;
+      // }
+
+    .Section--hero .HeroBox .Button,
+    .Section--hero .HeroBox h1,
+    .Section--hero .HeroBox p {
       margin-left: auto;
       margin-right: auto;
     }

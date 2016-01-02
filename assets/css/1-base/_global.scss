@@ -7,7 +7,7 @@ main {
 
 section,
 footer {
-  padding: $md-padding;
+  padding: $lg-padding $md-padding;
 
   @media (min-width: $mobile) {
     padding: $xl-padding $lg-padding;

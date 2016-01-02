@@ -16,7 +16,7 @@ module.exports = function (grunt) {
                 command: 'jekyll build'
             },
             jekyllServe: {
-                command: 'jekyll serve'
+                command: 'jekyll serve --force_polling'
             }
         },
 
