@@ -5,8 +5,12 @@
   padding-right: 0;
   padding-top: $lg-padding;
   padding-bottom: $xs-padding;
-  clear: both;
   position: relative;
+
+  @media (max-width:$desktopReg) {
+    clear: both;
+  }
+  
 }
 
     .HeroBox {
