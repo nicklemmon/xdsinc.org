@@ -5,11 +5,12 @@
   .OrderedList-listItem {
     color: $med-gray;
     list-style-type: decimal;
-    font-size: 1.6em;
-    line-height: 220%;
+    font-size: 2em;
+    line-height: 160%;
+    margin-bottom: $xs-padding;
     margin-left: $sm-padding;
   }
 
-  .OrderedList-ListItem-text {
+  .OrderedList-listItem-text {
     color: $dark-base;
   }

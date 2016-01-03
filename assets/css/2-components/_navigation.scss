@@ -3,6 +3,14 @@ header {
   z-index: 1;
   padding-left: $lg-padding;
   padding-right: $lg-padding;
+  max-width: $desktopWide + 100px; // matches value for .u-container
+  margin: 0 auto;
+
+  @media (min-width: $desktopReg) {
+    padding-left: 0;
+    padding-right: 0;  
+  }
+
 }
 
 .MenuBar {

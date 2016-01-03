@@ -62,7 +62,6 @@ h4 {
 }
 
 a {
-  font-size: 1.1rem;
   line-height: 130%;
 }
 
@@ -95,25 +94,30 @@ p {
   @extend .VignetteContainer-paragraph;
   font-size: 1.2rem;
   line-height: 150%;
+  color: $dark-base;
 
   @media (min-width: $mobile) {
     font-size: 1.4rem;
     line-height: 140%;
   }
 
+  @media (min-width: $desktopWide) {
+    max-width: 80%;
+  }
+
 }
 
 .SubHeading {
   font-family: $primary-font-stack;
-  color: $dark-base-lightened;
-  border-bottom: 1px solid $dark-base-lightened;
+  color: $med-gray;
+  border-bottom: 1px solid $med-gray;
   display: inline-block;
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 1px;
   margin-right: -4px;
   margin-bottom: $lg-padding;
-  padding-bottom: $sm-padding;
+  padding-bottom: $xs-padding;
 
   @media (max-width: $mobile) {
     font-size: .7rem;

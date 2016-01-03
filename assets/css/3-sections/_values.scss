@@ -1,0 +1,20 @@
+.Section--values {
+
+}
+
+  .Section--values h2 {
+    color: $secondary-accent;
+  }
+
+  .Section--values .OrderedList {
+    padding-top: $sm-padding;
+    border-top: 1px solid $dark-base-lightened;
+  }
+
+  .Section--values .OrderedList-listItem {
+    color: $secondary-accent;
+  }
+
+  .Section--values .OrderedList-listItem-text {
+    color: $light-secondary-accent;
+  }

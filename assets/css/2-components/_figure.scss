@@ -1,0 +1,37 @@
+.Figure {
+
+
+  @media (min-width: $mobile) {
+    padding-right: $sm-padding !important; // fixes padding issue when .u-oneThird elements are by themselves
+  }
+
+}
+
+.Figure--image {
+
+}
+
+  .Figure-image {
+
+  }
+
+  .Figure-caption {
+    font-family: $secondary-font-stack;
+    font-size: .9rem;
+    color: $med-gray;
+    line-height: 140%;
+    margin-top: $xs-padding;
+
+    &:before {
+      content:'\f02b';
+      font-family: FontAwesome;
+      font-style: normal;
+      margin-right: $xs-padding/2;
+    }
+
+    @media (min-width: $desktopReg) {
+      font-size: 1rem;
+      line-height: 150%;
+    }
+
+  }

@@ -8,6 +8,10 @@
 
 }
 
+.Section--farm {
+  background: $light-gray;
+}
+
   .Section--programs .ContinueToContent {
     position: relative;
     z-index: 6;
@@ -20,6 +24,9 @@
 
   }
 
-  .Section--programs h2 {
+  .Section--programs h2,
+  .Section--paws h2,
+  .Section--farm h2,
+  .Section--wellness h2 {
     color: $secondary-accent;
   }
