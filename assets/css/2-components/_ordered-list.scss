@@ -9,6 +9,11 @@
     line-height: 160%;
     margin-bottom: $xs-padding;
     margin-left: $sm-padding;
+
+    @media (min-width: $mobile) and (max-width: $desktopReg) {
+      font-size: 1.8em;
+    }
+
   }
 
   .OrderedList-listItem-text {

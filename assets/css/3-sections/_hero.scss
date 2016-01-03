@@ -10,35 +10,47 @@
   @media (max-width:$desktopReg) {
     clear: both;
   }
-  
+
 }
 
-    .HeroBox {
-      @include display(block);
-      position: relative;
-      z-index: 5;
-      background: white;
-      text-align: center;
-      max-width: 100% * (2/3);
-      margin: 0 auto;
-      margin-top: $lg-padding;
-      margin-bottom: -$lg-padding;
-      padding: $xl-padding $md-padding $lg-padding $md-padding;
-      box-shadow: 0 3rem 5rem rgba(0,0,0,.05);
-      clear: both;
+  @include keyframes(fadeInDown) {
+    0% {
+      opacity: 0;
+      @include transform(translateY(-$lg-padding));
+    }
+    100% {
+      opacity: 1;
+      @include transform(translateY(0));
+    }
+  }
 
-      @media (max-width: $tablet) {
-        max-width: 90%;
-      }
+  .HeroBox {
+    @include display(block);
+    position: relative;
+    z-index: 5;
+    background: white;
+    text-align: center;
+    max-width: 100% * (2/3);
+    margin: 0 auto;
+    margin-top: $lg-padding;
+    margin-bottom: -$lg-padding;
+    padding: $xl-padding $md-padding $lg-padding $md-padding;
+    box-shadow: 0 3rem 5rem rgba(0,0,0,.05);
+    clear: both;
+    @include animation(fadeInDown $defaultTransition ease);
 
-      @media (max-width: $mobile) {
-        padding: $xl-padding $md-padding $sm-padding $md-padding;
-        margin-bottom: -$md-padding;
-      }
-
+    @media (max-width: $tablet) {
+      max-width: 90%;
     }
 
-    .Section--hero .HeroBox h1 {
+    @media (max-width: $mobile) {
+      padding: $xl-padding $md-padding $sm-padding $md-padding;
+      margin-bottom: -$md-padding;
+    }
+
+  }
+
+    .HeroBox h1 {
       color: $secondary-accent;
       border-bottom: 1px solid $dark-base;
       padding-bottom: $sm-padding;
@@ -51,7 +63,7 @@
 
     }
 
-    .Section--hero .HeroBox .u-emphasis {
+    .HeroBox .u-emphasis {
       //margin-top: -$lg-padding*1.5;
       font-size: 1.6rem !important;
 
@@ -78,9 +90,9 @@
       //   background: white;
       // }
 
-    .Section--hero .HeroBox .Button,
-    .Section--hero .HeroBox h1,
-    .Section--hero .HeroBox p {
+    .HeroBox .Button,
+    .HeroBox h1,
+    .HeroBox p {
       margin-left: auto;
       margin-right: auto;
     }

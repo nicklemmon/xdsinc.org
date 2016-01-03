@@ -7,8 +7,13 @@
   }
 
   .Section--values .OrderedList {
-    padding-top: $sm-padding;
-    border-top: 1px solid $dark-base-lightened;
+    padding: $sm-padding;
+    border: 1px solid $med-gray;
+
+    @media (min-width: $tablet) {
+      padding: $lg-padding;
+    }
+
   }
 
   .Section--values .OrderedList-listItem {
