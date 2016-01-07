@@ -1,48 +1,68 @@
 footer {
   background: $dark-base;
   color: white;
+  font-family: $secondary-font-stack;
 }
 
-  footer a {
-    text-decoration: none;
-    color: white;
+footer .u-oneThird,
+footer .u-twoThirds {
+
+  @media (max-width: $tablet) {
+    width: 100%;
   }
 
-  footer > .u-twoThirds {
-    @include display(flex);
-    @include align-content(space-between);
-  }
+}
 
-  .FooterUnorderedList {
-    float: right;
-  }
-
-  .FooterUnorderedList-listItem {
-    @extend .u-inlineBlock;
-    text-transform: uppercase;
-    margin-right: $sm-padding;
-  }
+.FooterUnorderedList {
+  margin-bottom: $xs-padding;
+  border-bottom: 1px solid $dark-base-lightened;
+}
 
   .FooterUnorderedList-link {
+    @include display(block);
+    width: 100%;
+    margin: 0 auto;
+    text-decoration: none;
+    color: white;
     font-family: $secondary-font-stack;
     font-size: .8rem;
+    text-transform: uppercase;
     letter-spacing: 2px;
-    line-height: 300%;
+    padding-top: $xs-padding;
+    padding-bottom: $xs-padding;
+    padding-left: $xs-padding;
+    border-top: 1px solid $dark-base-lightened;
+    @include transition(background $defaultTransition ease);
 
-    &:after {
-      content: "";
-      @include display(block);
-      margin: 0 auto;
-      @include position(relative);
-      top: -.4rem;
-      width: 0%;
-      height: 1px;
-      background: white;
-      @include transition(width $defaultTransition/2 ease);
+    &:hover {
+      background: $dark-base-darkened;
+    }
+
+    @media (min-width: $tablet) {
+      @extend .u-inlineBlock;
+      width: auto;
+      font-size: .9rem;
     }
 
   }
 
-    .FooterUnorderedList-link:hover:after {
-      width: 100%;
-    }
+footer .u-full {
+  margin-top: $md-padding;
+
+  @media (min-width: $tablet) {
+    float: left;
+    margin-top: -$lg-padding*3;
+  }
+
+}
+
+footer p {
+  @include display(block);
+  font-size: .8rem;
+  margin-bottom: $xs-padding;
+
+  @media (min-width: $tablet) {
+    font-size: .9rem;
+  }
+
+}

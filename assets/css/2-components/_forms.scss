@@ -12,7 +12,7 @@
     margin-top: -$xl-padding*1.75;
   }
 
-  @media (min-width: $tablet) {
+  @media (min-width: $desktopReg) {
     max-width: 100% * (2/3);
     padding: $xl-padding $xl-padding $lg-padding $xl-padding;
   }
@@ -55,6 +55,17 @@ form {
 
   }
 
+  form textarea,
+  form select {
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+    }
+
+  }
+
   form input[type="text"],
   form input[type="tel"],
   form textarea,
@@ -73,9 +84,13 @@ form {
 
   }
 
+  form select {
+    -webkit-appearance: none;
+    padding: .7rem;
+  }
 
   form input[type="tel"] {
-    font-size: 1rem;
+    -webkit-appearance: none;
   }
 
   form input[type="submit"] {
@@ -87,9 +102,7 @@ form {
 
   }
 
-  form textarea,
-  form select,
-  form select option {
+  form textarea {
     padding: $xs-padding;
   }
 

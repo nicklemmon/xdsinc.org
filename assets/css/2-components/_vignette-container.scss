@@ -24,8 +24,14 @@
 
   .VignetteContainer .VignetteContainer-paragraph {
     color: $dark-base;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     line-height: 150%;
+
+    @media (min-width: $tablet) {
+      font-size: 1.5rem;
+      line-height: 150%;
+    }
+
   }
 
   .VignetteContainer .Button {

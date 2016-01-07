@@ -33,7 +33,7 @@
   color: white;
   text-shadow: 0 .1rem .25rem $secondary-accent-darkened;
   background: $secondary-accent;
-  box-shadow: inset 0 0 0 .2rem $secondary-accent-darkened;
+  box-shadow: inset 0 0 0 .2rem $secondary-accent-lightened;
 
   &:hover,
   &:focus,
@@ -119,7 +119,7 @@
   }
 
   @media (max-width: $mobile) {
-    @include size(5rem);
+    @include size(4.5rem);
   }
 
 }
@@ -139,7 +139,7 @@
     @media (max-width: $mobile) {
       font-size: 2.5rem;
       top: 1.85rem;
-      left: 1.25rem;
+      left: 1.05rem;
     }
 
   }

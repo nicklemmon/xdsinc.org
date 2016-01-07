@@ -14,3 +14,15 @@
   }
 
 }
+
+  .Section--formHolder .u-full {
+    margin-left: 4px; // eliminates margin-left: -4px from u-oneHalf visually without breaking the 50% width of each input
+  }
+
+  .Section--formHolder .u-oneHalf { // removes right padding on smallest screen sizes as remnant of .u-oneHalf
+
+     @media (max-width: $mobile) {
+       padding-right: 0;
+     }
+
+  }

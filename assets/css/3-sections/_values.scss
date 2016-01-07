@@ -6,15 +6,15 @@
     color: $secondary-accent;
   }
 
-  .Section--values .OrderedList {
-    padding: $sm-padding;
-    border: 1px solid $med-gray;
-
-    @media (min-width: $tablet) {
-      padding: $lg-padding;
-    }
-
-  }
+  // .Section--values .OrderedList {
+  //   padding: $sm-padding;
+  //   border: 1px solid $med-gray;
+  //
+  //   @media (min-width: $tablet) {
+  //     padding: $xl-padding $lg-padding $lg-padding $xl-padding;
+  //   }
+  //
+  // }
 
   .Section--values .OrderedList-listItem {
     color: $secondary-accent;

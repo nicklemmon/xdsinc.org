@@ -94,8 +94,9 @@ header {
     max-height: 0;
     width: 100%;
     background: $secondary-accent-darkened;
+    box-shadow: $bigBoxShadow;
     padding: 0 0 0 0;
-    @include transition(max-height $defaultTransition/2 linear);
+    @include transition(max-height $defaultTransition ease);
   }
 
   .MainNavigation.open {
@@ -136,13 +137,18 @@ header {
       margin: 0;
       padding: $sm-padding;
       width: 100%;
+      border-bottom: 1px solid $secondary-accent;
 
       &:hover,
-      &:focus,
-      &:active {
-        background: $secondary-accent;
+      &:active,
+      &:focus {
+        background: $secondary-accent-darkened;
       }
 
+    }
+
+    .MainNavigation-link:hover:after {
+      width: 0%;
     }
 
     .MainNavigation > .Button {

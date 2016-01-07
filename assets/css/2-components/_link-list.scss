@@ -1,7 +1,7 @@
 .LinkList {
   padding: 0 $sm-padding $xs-padding 0;
   width: 100%;
-  height: 100%;
+  height: auto;
 
   @media (min-width: $mobile) and (max-width: $desktopReg) {
     display: none;
@@ -36,6 +36,11 @@
 
   .LinkList .LinkList-listItem {
     overflow: hidden; // hides overflowing link that is set to wider than its parent for the transform animation
+
+    &:last-of-type {
+      margin-bottom: $sm-padding;
+    }
+
   }
 
   .LinkList .LinkList-link {
@@ -48,7 +53,6 @@
     padding: $md-padding $lg-padding*2;
     margin-left: -$xs-padding;
     transition: transform $defaultTransition ease, background $defaultTransition*2 ease;
-
   }
 
 

@@ -7,14 +7,21 @@
   border-radius: 50%;
   background: white;
   color: $light-secondary-accent;
-  @include transition(background $defaultTransition*1.5 ease, line-height $defaultTransition/2 ease);
+  text-decoration: none;
+  @include transition(background $defaultTransition*1.5 ease, line-height $defaultTransition ease);
 
   &:hover,
   &:focus,
   &:active {
     background: $highlight;
     line-height: 70%; // moves icon up slightly on hover
+
   }
+
+  @media (max-width: $mobile) {
+    margin-right: 10px;
+  }
+
 }
 
   .SocialMedia span { // hides text from users without screen-readers

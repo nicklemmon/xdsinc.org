@@ -8,6 +8,23 @@
 
 }
 
+@media (max-width: $desktopReg) and (min-width: $mobile) {
+
+  .Section--programs .u-oneFourth {
+    padding-right: $xs-padding;
+
+    &:last-of-type {
+      padding-right: $xs-padding;
+    }
+
+    &:nth-child(odd) {
+      padding-right: 0;
+    }
+
+  }
+
+}
+
 .Section--farm,
 .Section--housing {
   background: $light-gray;
