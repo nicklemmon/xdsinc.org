@@ -2,7 +2,7 @@
   position: relative;
   @include display(block);
   margin-bottom: $sm-padding;
-  height: 30rem;
+  height: $xl-padding*5;
   width: 100%;
   text-decoration: none;
   background-size: cover !important;
@@ -19,6 +19,7 @@
   &:focus > .ProgramCard-title,
   &:active > .ProgramCard-title {
     background: $highlight;
+    @include cardBoxShadow($highlight-darkened);
   }
 }
 
@@ -53,9 +54,9 @@
     line-height: 140%;
     letter-spacing: 1px;
     font-weight: 400;
-    box-shadow: 0 .3rem 0 $med-gray;
+    @include cardBoxShadow($med-gray);
     overflow: hidden;
-    @include transition(background $defaultTransition*1.5 ease, color $defaultTransition*2 ease);
+    @include transition(background $defaultTransition*1.5 ease, box-shadow $defaultTransition*1.5 ease);
 
     span {
       @include display(block); // centering

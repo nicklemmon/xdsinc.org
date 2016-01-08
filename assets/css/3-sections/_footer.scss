@@ -18,40 +18,47 @@ footer .u-twoThirds {
   border-bottom: 1px solid $dark-base-lightened;
 }
 
-  .FooterUnorderedList-link {
-    @include display(block);
-    width: 100%;
-    margin: 0 auto;
-    text-decoration: none;
-    color: white;
-    font-family: $secondary-font-stack;
-    font-size: .8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding-top: $xs-padding;
-    padding-bottom: $xs-padding;
-    padding-left: $xs-padding;
+  .FooterUnorderedList-listItem {
     border-top: 1px solid $dark-base-lightened;
-    @include transition(background $defaultTransition ease);
-
-    &:hover {
-      background: $dark-base-darkened;
-    }
-
-    @media (min-width: $tablet) {
-      @extend .u-inlineBlock;
-      width: auto;
-      font-size: .9rem;
-    }
-
+    overflow-x: hidden;
   }
+
+    .FooterUnorderedList-link {
+      @include display(block);
+      width: 100%;
+      margin: 0 auto;
+      text-decoration: none;
+      color: white;
+      font-family: $secondary-font-stack;
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding-top: $xs-padding;
+      padding-bottom: $xs-padding;
+      padding-left: $md-padding;
+      @include transform(translateX(-$xs-padding));
+      transition: background $defaultTransition ease, transform $defaultTransition ease;
+
+      &:hover {
+        background: $dark-base-darkened;
+        @include transform(translateX(-$xs-padding/2));
+      }
+
+      @media (min-width: $tablet) {
+        @extend .u-inlineBlock;
+        width: auto;
+        font-size: .9rem;
+      }
+
+    }
 
 footer .u-full {
   margin-top: $md-padding;
 
   @media (min-width: $tablet) {
     float: left;
-    margin-top: -$lg-padding*3;
+    margin-top: -$lg-padding*2;
+    margin-left: -4px; // to align with social media icons
   }
 
 }
@@ -65,4 +72,8 @@ footer p {
     font-size: .9rem;
   }
 
+}
+
+footer p .fa {
+  margin-right: $xs-padding/3;
 }

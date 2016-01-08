@@ -14,4 +14,12 @@ $mobile: 700px;
 // Misc
 $defaultBorderRadius: .5rem;
 $defaultTransition: .4s;
-$bigBoxShadow: 0 3rem 5rem rgba(0,0,0,.5);
+$bigBoxShadow: 0 4rem 5rem rgba(0,0,0,.5);
+
+@mixin cardBoxShadowBorder($color) {
+  border-bottom: solid .4rem $color;
+}
+
+@mixin cardBoxShadow($color) {
+  box-shadow: 0 .4rem 0 $color;
+}

@@ -13,105 +13,24 @@
 
 }
 
-  @include keyframes(fadeInDown) {
-    0% {
-      opacity: 0;
-      @include transform(translateY(-$lg-padding));
-    }
-    100% {
-      opacity: 1;
-      @include transform(translateY(0));
-    }
+  .Section--hero .HeroLeft,
+  .Section--hero .HeroBox {
+    opacity:0;
+    opacity: 1 \9; /*just in case ie*/
+    -webkit-animation:fadeInDown ease 1;
+    -moz-animation:fadeInDown ease 1;
+    animation:fadeInDown ease 1;
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
   }
 
-  .HeroBox {
-    @include display(block);
-    position: relative;
-    z-index: 5;
-    background: white;
-    text-align: center;
-    max-width: 100% * (2/3);
-    margin: 0 auto;
-    margin-top: $lg-padding;
-    margin-bottom: -$lg-padding;
-    padding: $xl-padding $md-padding $lg-padding $md-padding;
-    box-shadow: 0 3rem 5rem rgba(0,0,0,.05);
-    clear: both;
-    @include animation(fadeInDown $defaultTransition ease);
-
-    @media (max-width: $tablet) {
-      max-width: 90%;
-    }
-
-    @media (max-width: $mobile) {
-      padding: $lg-padding $md-padding $sm-padding $md-padding;
-      margin-bottom: -$md-padding;
-    }
-
+  .Section--hero .HeroLeft {
+    @include animation-duration($defaultTransition*2);
+    @include animation-delay($defaultTransition);
   }
 
-    .HeroBox h1 {
-      color: $secondary-accent;
-      border-bottom: 1px solid $dark-base;
-      padding-bottom: $sm-padding;
-      max-width: 800px;
-
-      @media (max-width: $mobile) {
-        padding-bottom: $xs-padding;
-        margin-bottom: $xs-padding;
-      }
-
-    }
-
-    .HeroBox .u-emphasis {
-      //margin-top: -$lg-padding*1.5;
-      font-size: 1.6rem !important;
-
-      @media (max-width: $desktopReg) {
-        font-size: 1.3rem !important;
-      }
-
-    }
-
-      // .Section--hero .HeroBox .u-emphasis:before {
-      //   content: '\f0fa';
-      //   font-family: FontAwesome;
-      //   font-size: 2em;
-      //   line-height: 120%;
-      //   font-style: normal;
-      //   border-radius: 50%;
-      //   @include display(block);
-      //   margin: 0 auto;
-      //   @include position(relative);
-      //   top: -1.25rem;
-      //   @include size($xs-padding*4);
-      //   border: 1px solid $dark-base;
-      //   padding: $xs-padding;
-      //   background: white;
-      // }
-
-    .HeroBox .Button,
-    .HeroBox h1,
-    .HeroBox p {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-  .Brand {
-    @extend .u-inlineBlock;
-    font-family: $secondary-font-stack;
-    font-size: 1.2rem;
-    width: 240px;
-    height: 80px;
-    margin-top: $sm-padding;
-    line-height: 100%;
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
-    //background: url('/assets/images/logo_xds-transparent-realigned.png') white no-repeat center;
-    background-size: 100%;
+  .Section--hero .HeroBox {
+    @include animation-duration($defaultTransition);
+    @include animation-delay($defaultTransition);
   }
-
-    .Brand span {
-      @extend .u-noDisplay;
-    }

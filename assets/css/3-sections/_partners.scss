@@ -4,6 +4,10 @@
   background: $light-gray;
 }
 
+  .Section--partners .SubHeading {
+    @extend .SubHeadingDark;
+  }
+
   .Section--partners h2 {
     color: $secondary-accent;
   }

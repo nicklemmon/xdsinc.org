@@ -126,6 +126,11 @@ p {
   }
 }
 
+  .SubHeadingDark {
+    color: $dark-base-lightened;
+    border-color: $dark-base-lightened;
+  }
+
   .SubHeading .fa {
     margin-right: .9rem;
   }

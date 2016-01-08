@@ -8,7 +8,7 @@
   background: white;
   color: $light-secondary-accent;
   text-decoration: none;
-  @include transition(background $defaultTransition*1.5 ease, line-height $defaultTransition ease);
+  @include transition(background $defaultTransition*1.5 ease, line-height $defaultTransition*.5 ease);
 
   &:hover,
   &:focus,

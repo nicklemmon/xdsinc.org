@@ -6,6 +6,7 @@
   max-width: 100%;
   background: white;
   box-shadow: $bigBoxShadow;
+  @include cardBoxShadowBorder($med-gray);
 
   @media (min-width: $mobile) {
     max-width: 90%;

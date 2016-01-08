@@ -5,16 +5,17 @@
   width: 100%;
   color: white;
   background: white;
-  box-shadow: 0 .3rem 0 $med-gray;
+  @include cardBoxShadow($med-gray);
   @include transform(translateY(0));
   @include filter(grayscale(100%));
-  transition: transform $defaultTransition ease, filter $defaultTransition*1.5 ease;
+  transition: transform $defaultTransition ease, filter $defaultTransition*1.5 ease, box-shadow $defaultTransition*1.5 ease;
 
   &:hover,
   &:focus,
   &:active {
     @include transform(translateY(-.5rem));
     @include filter(grayscale(0%));
+    @include cardBoxShadow($highlight-darkened);
   }
 
 }

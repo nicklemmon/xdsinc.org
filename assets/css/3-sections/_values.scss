@@ -2,6 +2,10 @@
 
 }
 
+  .Section--values .SubHeading {
+    @extend .SubHeadingDark;
+  }
+
   .Section--values h2 {
     color: $secondary-accent;
   }

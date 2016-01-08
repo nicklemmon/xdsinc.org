@@ -2,6 +2,10 @@
   background: $light-gray;
 }
 
+  .Section--form .SubHeading {
+    @extend .SubHeadingDark;
+  }
+
   .Section--form h2 {
     color: $secondary-accent;
   }

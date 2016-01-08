@@ -8,16 +8,18 @@
 @import '0-tools/font-awesome/font-awesome'; /* importing font-awesome */
 
 //=== Importing base
-@import '1-base/vars'; /* importing variables */
 @import '1-base/colors'; /* importing color variables */
+@import '1-base/vars'; /* importing variables */
 @import '1-base/global'; /* importing misc */
 @import '1-base/utilities'; /* importing utilities */
 @import '1-base/grid'; /* importing grid */
 @import '1-base/typography'; /* importing typography */
+@import '1-base/animations'; /* importing animations */
 
 //=== Importing components
 @import '2-components/navigation'; /* importing navigation components */
 @import '2-components/hero-left'; /* importing hero-left component */
+@import '2-components/hero-box'; /* importing hero-box component */
 @import '2-components/forms'; /* importing form components */
 @import '2-components/buttons'; /* importing button components */
 @import '2-components/circles'; /* importing circle components */

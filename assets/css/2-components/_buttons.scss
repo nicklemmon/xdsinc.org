@@ -82,18 +82,6 @@
 
 }
 
-@include keyframes(bounce) {
-  0%, 20%, 50%, 80%, 100% {
-    @include transform(translateY(0));
-  }
-  40% {
-    @include transform(translateY(-15px));
-  }
-  60% {
-  @include transform(translateY(-15px));
-  }
-}
-
 .ContinueToContent {
   @include display(block);
   margin: 0 auto;

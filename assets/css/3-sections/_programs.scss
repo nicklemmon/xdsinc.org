@@ -8,6 +8,10 @@
 
 }
 
+  .Section--programs .SubHeading {
+    @extend .SubHeadingDark;
+  }
+
 @media (max-width: $desktopReg) and (min-width: $mobile) {
 
   .Section--programs .u-oneFourth {
@@ -29,6 +33,11 @@
 .Section--housing {
   background: $light-gray;
 }
+
+  .Section--farm .SubHeading,
+  .Section--housing .SubHeading {
+    @extend .SubHeadingDark;
+  }
 
   .Section--programs .ContinueToContent {
     position: relative;

@@ -9,6 +9,7 @@
   background: white;
   margin: 0 auto;
   box-shadow: $bigBoxShadow;
+  @include cardBoxShadowBorder($med-gray);
 
   @media (min-width: $tablet) {
     max-width: 75%;
@@ -24,8 +25,10 @@
 
   .VignetteContainer .VignetteContainer-paragraph {
     color: $dark-base;
+    max-width: 100%;
     font-size: 1.1rem;
     line-height: 150%;
+    margin-bottom: 1.1rem;
 
     @media (min-width: $tablet) {
       font-size: 1.5rem;
