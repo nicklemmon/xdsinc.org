@@ -90,7 +90,9 @@ p {
     }
   }
 
-.FullParagraph {
+.FullParagraph,
+.FullParagraph-unorderedList,
+.FullParagraph-listItem {
   @extend .VignetteContainer-paragraph;
   font-size: 1.2rem;
   line-height: 150%;
@@ -106,6 +108,26 @@ p {
   }
 
 }
+
+  .FullParagraph-unorderedList {
+    list-style-type: square;
+  }
+
+  .FullParagraph-orderedList {
+    list-style-type: decimal;
+  }
+
+  .FullParagraph-listItem {
+    //list-style-type: square;
+    margin-left: $sm-padding;
+    margin-bottom: $xs-padding;
+
+    @media (min-width: $mobile) {
+      font-size: 1.15rem;
+      line-height: 140%;
+    }
+
+  }
 
 .SubHeading {
   font-family: $primary-font-stack;
