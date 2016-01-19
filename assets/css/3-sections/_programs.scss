@@ -56,6 +56,12 @@
     color: $light-secondary-accent;
   }
 
+  .Section--wellness h4,
+  .Section--housing h4,
+  .Section--paws h4 {
+    color: $highlight;
+  }
+
   .Section--programs h2,
   .Section--paws h2,
   .Section--farm h2,

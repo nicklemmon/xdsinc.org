@@ -109,6 +109,16 @@ p {
 
 }
 
+  .FullParagraph-unorderedList,
+  .FullParagraph-orderedList {
+
+    @media (max-width: $mobile) {
+      margin-top: $xs-padding;
+      margin-bottom: $sm-padding;
+    }
+
+  }
+
   .FullParagraph-unorderedList {
     list-style-type: square;
   }

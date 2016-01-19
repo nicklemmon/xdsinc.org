@@ -1,6 +1,5 @@
 .Figure {
 
-
   @media (min-width: $mobile) {
     padding-right: $sm-padding !important; // fixes padding issue when .u-oneThird elements are by themselves
   }
@@ -21,6 +20,7 @@
     color: $med-gray;
     line-height: 140%;
     margin-top: $xs-padding;
+    margin-bottom: $sm-padding;
 
     &:before {
       content:'\f02b';

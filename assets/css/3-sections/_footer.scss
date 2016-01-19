@@ -14,8 +14,14 @@ footer .u-twoThirds {
 }
 
 .FooterUnorderedList {
+  margin-top: $sm-padding;
   margin-bottom: $xs-padding;
   border-bottom: 1px solid $dark-base-lightened;
+
+  @media (min-width: $tablet) {
+    margin-top: 0;
+  }
+
 }
 
   .FooterUnorderedList-listItem {
