@@ -24,6 +24,18 @@
     @extend .u-noDisplay;
   }
 
+
+.MediaSource#dth {
+  //background: #7BAFD4; // taken from http://identity.unc.edu/colors/
+  background: url("/assets/images/logo_dth.jpg") white no-repeat center;
+  background-size: 90%;
+}
+
+.MediaSource#no {
+  background: url("/assets/images/logo_no.png") white no-repeat center;
+  background-size: 90%;
+}
+
 .MediaSource#wral {
   //background: #041E30; // taken from www.wral.com
   background: url("/assets/images/logo_wral.png") white no-repeat center;
@@ -36,8 +48,7 @@
   background-size: 90%;
 }
 
-.MediaSource#dth {
-  //background: #7BAFD4; // taken from http://identity.unc.edu/colors/
-  background: url("/assets/images/logo_dth.jpg") white no-repeat center;
-  background-size: 90%;
+.MediaSource#unchealth {
+  background: url("/assets/images/logo_unchealthcare.png") white no-repeat center;
+  background-size: 110%;
 }
