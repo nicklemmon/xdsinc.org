@@ -20,10 +20,15 @@
   //
   // }
 
+  .Section--values h4 {
+    color: $highlight;
+    margin-top: 0;
+  }
+
   .Section--values .OrderedList-listItem {
-    color: $secondary-accent;
+    color: $dark-base;
   }
 
   .Section--values .OrderedList-listItem-text {
-    color: $secondary-accent;
+    color: $dark-base-lightened;
   }

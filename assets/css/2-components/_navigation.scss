@@ -90,6 +90,10 @@ header {
     font-weight: 700;
     //background: url('/assets/images/logo_xds-transparent-realigned.png') white no-repeat center;
     background-size: 100%;
+
+    @media (min-width: $desktopReg) {
+      margin-top: $md-padding;
+    }
   }
 
     .Brand span {

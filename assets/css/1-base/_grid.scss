@@ -61,6 +61,7 @@
 
   @media (max-width: $desktopReg) {
     width: 50%;
+    margin-bottom: $sm-padding;
   }
 
   @media (max-width: $mobile) {
@@ -72,10 +73,10 @@
 }
 
 @media (max-width: $desktopReg) {
-  
+
   .u-oneFourth:last-of-type,
   .u-oneFourth:nth-child(even) {
     padding-right: 0;
   }
-  
+
 }
