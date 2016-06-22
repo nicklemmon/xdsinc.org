@@ -1,14 +1,28 @@
+.SocialMediaContainer {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(flex-start);
+
+  @media (min-width: $tablet) {
+    @include justify-content(space-around);
+  }
+}
+
 .SocialMedia {
   position: relative;
-  @extend .u-inlineBlock;
+  @include display(inline-block);
   @include size(3rem);
   font-size: 1.4rem;
-  margin-right: $sm-padding;
   border-radius: 50%;
   background: white;
   color: $light-secondary-accent;
   text-decoration: none;
   @include transition(background $defaultTransition*1.5 ease, line-height $defaultTransition*.5 ease);
+  margin-right: 10px;
+
+  @media (min-width: $tablet) {
+    margin-right: 0;
+  }
 
   &:hover,
   &:focus,
@@ -18,9 +32,6 @@
 
   }
 
-  @media (max-width: $mobile) {
-    margin-right: 10px;
-  }
 
 }
 
@@ -31,7 +42,7 @@
 
   .SocialMedia--Facebook:before {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 35%;
     content: "\f09a";
     font-family: FontAwesome;
@@ -39,15 +50,15 @@
 
   .SocialMedia--Twitter:before {
     position: absolute;
-    top: 30%;
-    left: 30%;
+    top: 25%;
+    left: 25%;
     content: "\f099";
     font-family: FontAwesome;
   }
 
   .SocialMedia--YouTube:before {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 28%;
     content: "\f16a";
     font-family: FontAwesome;
@@ -55,7 +66,7 @@
 
   .SocialMedia--LinkedIn:before {
     position: absolute;
-    top: 30%;
+    top: 22%;
     left: 32%;
     content: "\f0e1";
     font-family: FontAwesome;
