@@ -1,0 +1,61 @@
+.HeroLeft {
+  @include display(block);
+  color: white;
+  padding-bottom: $lg-padding;
+  padding-left: $md-padding;
+  padding-right: $md-padding;
+
+  @media (min-width: $tablet) {
+    padding-top: $xl-padding;
+    padding-left: $lg-padding;
+    padding-right: 0;
+  }
+
+  @media (min-width: $desktopReg) {
+    padding-top: $xl-padding*1.5;
+    padding-bottom: $xl-padding;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+}
+
+  .HeroLeft-header {
+    padding-bottom: $sm-padding;
+    border-bottom: 1px solid white;
+    @include display(inline-block); // keeps line from going across entire div
+    margin-bottom: $sm-padding;
+
+    @media (min-width: $mobile) {
+      padding-bottom: $md-padding;
+    }
+  }
+
+  h1.HeroLeft-header {
+
+    @media (min-width: $tablet) {
+      font-weight: 700;
+      line-height: 110%;
+      font-size: 2.7rem;
+    }
+  }
+
+
+  .HeroLeft-paragraph {
+    font-size: 1.3rem;
+
+    @media (min-width: $mobile) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .HeroLeft .Button {
+
+    @media (min-width: $desktopReg) {
+      margin: 0 auto;
+    }
+
+  }

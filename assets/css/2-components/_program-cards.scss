@@ -1,0 +1,83 @@
+.ProgramCard {
+  position: relative;
+  @include display(block);
+  margin-bottom: $sm-padding;
+  height: $xl-padding*5;
+  width: 100%;
+  text-decoration: none;
+  background-size: cover !important;
+  @include transform(translateY(0));
+  transition: transform $defaultTransition ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include transform(translateY(-.5rem));
+  }
+
+  &:hover > .ProgramCard-title,
+  &:focus > .ProgramCard-title,
+  &:active > .ProgramCard-title {
+    background: $highlight;
+    @include cardBoxShadow($highlight-darkened);
+  }
+}
+
+.ProgramCard#paws {
+  background: url('/assets/images/opt_sm_bg_paws.png');
+}
+
+.ProgramCard#farm {
+  background: url('/assets/images/opt_sm_bg_farm.png');
+}
+
+.ProgramCard#wellness {
+  background: url('/assets/images/opt_sm_bg_wellness.png');
+}
+
+.ProgramCard#tinyHomes {
+  background: url('/assets/images/opt_sm_bg_tiny-home.png');
+}
+
+  .ProgramCard-title {
+    @include display(flex);
+    @include align-items(center); // vertically centers text within .ProgramCard-title
+    position: absolute;
+    font-family: $secondary-font-stack;
+    bottom: 0;
+    color: $secondary-accent;
+    padding: $sm-padding;
+    width: 100%;
+    min-height: 7rem;
+    background: white;
+    font-size: 1.1rem;
+    line-height: 140%;
+    letter-spacing: 1px;
+    font-weight: 400;
+    @include cardBoxShadow($med-gray);
+    overflow: hidden;
+    @include transition(background $defaultTransition*1.5 ease, box-shadow $defaultTransition*1.5 ease);
+
+    span {
+      @include display(block); // centering
+      margin: 0 auto; // centering
+      position: relative;
+      z-index: 1;
+      padding-bottom: $xs-padding/2;
+      border-bottom: 1px solid $secondary-accent;
+    }
+
+    // &::before,
+    // &:before {
+    //   content:"";
+    //   @extend .u-inlineBlock;
+    //   z-index: 0;
+    //   position: absolute;
+    //   left: -6%;
+    //   bottom: 20%;
+    //   @include size(7rem);
+    //   border-radius: 50%;
+    //   background: $highlight;
+    // }
+
+  }

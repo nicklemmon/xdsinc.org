@@ -58,3 +58,9 @@ _artwork
 _artwork/*
 design-pattern_files/
 design-pattern_files/*
+node_modules/*
+node_modules
+node_modules/
+_upload
+_upload/
+_upload/*

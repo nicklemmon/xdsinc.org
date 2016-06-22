@@ -1,0 +1,188 @@
+header {
+  position: relative;
+  z-index: 1;
+  padding-left: $lg-padding;
+  padding-right: $lg-padding;
+  max-width: $desktopWide + 100px; // matches value for .u-container
+  margin: 0 auto;
+
+  @media (min-width: 1500px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+
+}
+
+.MenuBar {
+  float: left;
+}
+
+.MainNavigation {
+  //@extend .u-inlineBlock;
+  @include display(block);
+  font-family: $secondary-font-stack;
+  float: right;
+  margin: 0;
+  line-height: 100%;
+
+  @media (min-width: $desktopReg) {
+    //margin-top: $md-padding;
+  }
+
+}
+
+  .MenuOpen {
+    display: none; // hidden from all users (including screen readers) on screens larger than the breakpoint at the end of this partial stylesheet
+  }
+
+  .MainNavigation-link {
+    @include display(inline-block);
+    font-size: .95rem;
+    margin-left: $sm-padding;
+    line-height: 100%;
+    text-decoration: none;
+    color: white;
+    @include transition(transform $defaultTransition ease);
+
+    &:after {
+      content: "";
+      @include display(block);
+      margin: 0 auto;
+      @include position(relative);
+      top: .3rem;
+      width: 0%;
+      height: 1px;
+      background: white;
+      @include transition(width $defaultTransition/2 ease);
+    }
+
+  }
+
+    .MainNavigation-link:hover:after {
+      width: 100%;
+    }
+
+  .MainNavigation .Button {
+    @include display(inline-block);
+    letter-spacing: 1px;
+
+    &:after {
+      width: 0; // disables underline for buttons within the navigation
+    }
+
+  }
+
+  .MainNavigation-link .fa {
+    margin-right: $xs-padding/2;
+  }
+
+  .Brand {
+    @include display(inline-block);
+    font-family: $secondary-font-stack;
+    font-size: 1.2rem;
+    width: 240px;
+    height: 80px;
+    margin-top: $sm-padding;
+    line-height: 100%;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    //background: url('/assets/images/logo_xds-transparent-realigned.png') white no-repeat center;
+    background-size: 100%;
+
+    @media (min-width: $desktopReg) {
+      margin-top: $md-padding;
+    }
+  }
+
+    .Brand span {
+      margin-left: -9999px;
+    }
+
+/////////////////////////////////////////////////
+//-- Begin Styles for Tablet/Mobile nav-menu --//
+////////////////////////////////////////////////
+@media (max-width: $desktopReg) {
+
+  header {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background: $secondary-accent-darkened;
+  }
+
+  .MenuBar {
+    width: 100%;
+    background: $secondary-accent;
+  }
+
+  .MainNavigation {
+    overflow: hidden;
+    max-height: 0;
+    width: 100%;
+    background: $secondary-accent-darkened;
+    box-shadow: $bigBoxShadow;
+    padding: 0 0 0 0;
+    @include transition(max-height $defaultTransition ease);
+  }
+
+  .MainNavigation.open {
+    max-height: 350px;
+  }
+
+    .Brand {
+      @include display(block);
+      width: 100px !important;
+      float: left;
+      margin-left: $sm-padding;
+      height: auto !important;
+    }
+
+    .MenuOpen {
+      font-family: $secondary-font-stack;
+      font-size: .9rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      @include display(block);
+      float: right;
+      background: white;
+      margin: $xs-padding $sm-padding $xs-padding 0;
+      padding: $xs-padding/2 $xs-padding;
+      color: $dark-base;
+      border-radius: .75rem;
+      cursor: pointer;
+      @include transition(background $defaultTransition ease);
+
+      &:hover {
+        background: $highlight;
+      }
+    }
+
+    .MainNavigation-link {
+      @include display(block);
+      margin: 0;
+      padding: $sm-padding;
+      width: 100%;
+      border-bottom: 1px solid $secondary-accent;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: $secondary-accent-darkened;
+      }
+
+    }
+
+    .MainNavigation-link:hover:after {
+      width: 0%;
+    }
+
+    .MainNavigation > .Button {
+      @include display(block);
+      margin-left: $sm-padding;
+      margin-right: $sm-padding;
+      max-width: 90%;
+    }
+
+}

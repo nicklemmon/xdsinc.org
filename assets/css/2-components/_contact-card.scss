@@ -1,0 +1,30 @@
+.ContactCard {
+	@include display(block);
+	max-width: 400px;
+	padding: $md-padding;
+	margin: $sm-padding 0 $sm-padding 0;
+	background: $light-base-lightened;
+	color: $med-gray;
+	box-shadow: 0 $sm-padding $sm-padding rgba($med-gray, .3);
+
+	.FullParagraph {
+		font-family: $secondary-font-stack;
+		font-size: 1rem;
+		margin-bottom: $sm-padding/2;
+
+		&:last-child {
+			padding-bottom: $md-padding;
+			border-bottom: 1px solid $med-gray;
+		}
+	}
+
+	a {
+		font-size: .9rem;
+		text-decoration: none;
+	}
+
+	i.fa {
+		margin-right: $xs-padding/2;
+
+	}
+}

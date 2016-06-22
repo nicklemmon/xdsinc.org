@@ -1,0 +1,42 @@
+.Section--media {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  padding-bottom: $lg-padding;
+
+  @media (max-width: $mobile) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: $lg-padding;
+  }
+}
+
+  .Section--media .LinkList {
+
+    @media (min-width: $desktopReg) {
+      position: absolute;
+      top: 0;
+    }
+
+  }
+
+  .Section--media h2 {
+    color: $secondary-accent;
+  }
+
+  .Section--media h2,
+  .Section--media h3 {
+
+    @media (max-width: $mobile) {
+      margin-left: $md-padding;
+    }
+
+  }
+
+@media (min-width: $mobile) and (max-width: $desktopReg) {
+
+  #dth {
+    margin-top: $sm-padding; // fixes issue with the media source collapsing inappropriately
+  }
+
+}

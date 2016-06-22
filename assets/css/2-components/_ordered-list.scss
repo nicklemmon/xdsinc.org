@@ -1,0 +1,21 @@
+.OrderedList {
+  font-family: $secondary-font-stack;
+}
+
+  .OrderedList-listItem {
+    color: $med-gray;
+    list-style-type: decimal;
+    font-size: 1.8em;
+    line-height: 160%;
+    margin-bottom: $xs-padding;
+    margin-left: $sm-padding;
+
+    @media (min-width: $mobile) and (max-width: $desktopReg) {
+      font-size: 1.8em;
+    }
+
+  }
+
+  .OrderedList-listItem-text {
+    color: $dark-base;
+  }

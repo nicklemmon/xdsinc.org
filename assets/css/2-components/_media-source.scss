@@ -1,0 +1,54 @@
+.MediaSource {
+  @include display(block);
+  text-align: center;
+  padding: $xl-padding $lg-padding;
+  width: 100%;
+  color: white;
+  background: white;
+  @include cardBoxShadow($med-gray);
+  @include transform(translateY(0));
+  @include filter(grayscale(100%));
+  transition: transform $defaultTransition ease, filter $defaultTransition*1.5 ease, box-shadow $defaultTransition*1.5 ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    @include transform(translateY(-.5rem));
+    @include filter(grayscale(0%));
+    @include cardBoxShadow($highlight-darkened);
+  }
+
+}
+
+  .MediaSource span {
+    @extend .u-noDisplay;
+  }
+
+
+.MediaSource#dth {
+  //background: #7BAFD4; // taken from http://identity.unc.edu/colors/
+  background: url("/assets/images/logo_dth.jpg") white no-repeat center;
+  background-size: 90%;
+}
+
+.MediaSource#no {
+  background: url("/assets/images/logo_no.png") white no-repeat center;
+  background-size: 90%;
+}
+
+.MediaSource#wral {
+  //background: #041E30; // taken from www.wral.com
+  background: url("/assets/images/logo_wral.png") white no-repeat center;
+  background-size: 90%;
+}
+
+.MediaSource#wunc {
+  //background: #4A565F; // taken from www.wunc.org
+  background: url("/assets/images/logo_wunc.jpg") white no-repeat center;
+  background-size: 90%;
+}
+
+.MediaSource#unchealth {
+  background: url("/assets/images/logo_unchealthcare.png") white no-repeat center;
+  background-size: 110%;
+}

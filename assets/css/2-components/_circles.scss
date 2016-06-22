@@ -1,0 +1,89 @@
+.Circle {
+  border-radius: 50%; // makes a circle!
+  text-align: center;
+  @include display(flex);
+  @include justify-content(center);
+  @include align-items(center);
+  @include transition(background $defaultTransition ease);
+}
+
+  .Circle-container {
+
+  }
+
+  .Circle--large {
+    @include size(300px);
+    padding: $lg-padding;
+    padding-right: $lg-padding !important; // fixes issue with grid removing right padding
+    background: rgba($primary-accent, .8);
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media (min-width: $mobile) {
+      @include size(550px);
+      margin-left: $lg-padding;
+      padding-top: $xl-padding;
+    }
+
+  }
+
+    .Circle--large .u-emphasis {
+      padding-top: $sm-padding;
+      border-top: 1px solid white;
+      font-size: 1.6rem
+    }
+
+  .Circle--med {
+    @include size(400px);
+    color: white;
+    background: rgba($highlight, .9);
+    padding: $lg-padding;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .Circle--partner {
+    @include size(240px);
+    @include display(block);
+    color: white;
+    background: rgba($light-secondary-accent, .9);
+    padding: $lg-padding;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: $primary-accent;
+    }
+
+  }
+
+    .Circle--partner .Circle-container {
+      @include display(flex);
+      @include justify-content(center);
+      @include align-items(center);
+    }
+
+    .Circle--partner p {
+      font-family: $secondary-font-stack;
+      @include display(block);
+      margin: 20% auto;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .Circle--partner span {
+      @extend .u-noDisplay;
+    }
+
+  .Circle .Button {
+    margin: 0 auto; // centers buttons within .Circle components
+  }
+
+  .Circle a {
+    color: white;
+  }

@@ -1,0 +1,32 @@
+.Section--form {
+  background: $light-gray;
+}
+
+  .Section--form .SubHeading {
+    @extend .SubHeadingDark;
+  }
+
+  .Section--form h2 {
+    color: $secondary-accent;
+  }
+
+.Section--formHolder {
+
+  @media (max-width: $mobile) { // removes padding on the section at the smallest breakpoint
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
+
+  .Section--formHolder .u-full {
+    margin-left: 4px; // eliminates margin-left: -4px from u-oneHalf visually without breaking the 50% width of each input
+  }
+
+  .Section--formHolder .u-oneHalf { // removes right padding on smallest screen sizes as remnant of .u-oneHalf
+
+     @media (max-width: $mobile) {
+       padding-right: 0;
+     }
+
+  }

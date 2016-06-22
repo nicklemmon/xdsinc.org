@@ -1,0 +1,62 @@
+.SocialMedia {
+  position: relative;
+  @extend .u-inlineBlock;
+  @include size(3rem);
+  font-size: 1.4rem;
+  margin-right: $sm-padding;
+  border-radius: 50%;
+  background: white;
+  color: $light-secondary-accent;
+  text-decoration: none;
+  @include transition(background $defaultTransition*1.5 ease, line-height $defaultTransition*.5 ease);
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: $highlight;
+    line-height: 70%; // moves icon up slightly on hover
+
+  }
+
+  @media (max-width: $mobile) {
+    margin-right: 10px;
+  }
+
+}
+
+  .SocialMedia span { // hides text from users without screen-readers
+    position: absolute;
+    left: -9999px;
+  }
+
+  .SocialMedia--Facebook:before {
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    content: "\f09a";
+    font-family: FontAwesome;
+  }
+
+  .SocialMedia--Twitter:before {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    content: "\f099";
+    font-family: FontAwesome;
+  }
+
+  .SocialMedia--YouTube:before {
+    position: absolute;
+    top: 30%;
+    left: 28%;
+    content: "\f16a";
+    font-family: FontAwesome;
+  }
+
+  .SocialMedia--LinkedIn:before {
+    position: absolute;
+    top: 30%;
+    left: 32%;
+    content: "\f0e1";
+    font-family: FontAwesome;
+  }

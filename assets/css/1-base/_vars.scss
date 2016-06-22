@@ -1,11 +1,25 @@
-/*== COLORS ==*/
-$light-base: #FFFFE2;
-$dark-base: #333333;
-  $dark-base-lightened: lighten($dark-base, 50%);
-$primary-accent: #EB7F00;
-  $primary-accent-darkened: #EB5C00;
-$light-secondary-accent: #1695A3;
-$secondary-accent: #225378;
-$highlight: #ACF0F2;
+// Padding variables
+$xs-padding: 1rem;
+$sm-padding: 1.5rem;
+$md-padding: 2rem;
+$lg-padding: 3rem;
+$xl-padding: 6rem;
 
-/*== MISC VARIABLES ==*/
+// Media queries
+$desktopWide: 1300px;
+$desktopReg: 1040px;
+$tablet: 900px;
+$mobile: 700px;
+
+// Misc
+$defaultBorderRadius: .5rem;
+$defaultTransition: .4s;
+$bigBoxShadow: 0 4rem 5rem rgba(0,0,0,.5);
+
+@mixin cardBoxShadowBorder($color) {
+  border-bottom: solid .4rem $color;
+}
+
+@mixin cardBoxShadow($color) {
+  box-shadow: 0 .4rem 0 $color;
+}

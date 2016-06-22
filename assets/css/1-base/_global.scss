@@ -1,0 +1,20 @@
+body {
+}
+
+main {
+  width: 100%;
+}
+
+section,
+footer {
+  padding: $lg-padding $md-padding;
+
+  @media (min-width: $mobile) {
+    padding: $xl-padding $lg-padding;
+  }
+
+}
+
+i.fa {
+  margin-right: $xs-padding;
+}

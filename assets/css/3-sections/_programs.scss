@@ -1,0 +1,71 @@
+.Section--programs {
+  background: $light-gray;
+  position: relative;
+
+  @media (max-width: $mobile) {
+    padding-top: $xl-padding;
+  }
+
+}
+
+  .Section--programs .SubHeading {
+    @extend .SubHeadingDark;
+  }
+
+@media (max-width: $desktopReg) and (min-width: $mobile) {
+
+  .Section--programs .u-oneFourth {
+    padding-right: $xs-padding;
+
+    &:last-of-type {
+      padding-right: $xs-padding;
+    }
+
+    &:nth-child(odd) {
+      padding-right: 0;
+    }
+
+  }
+
+}
+
+.Section--farm,
+.Section--housing {
+  background: $light-gray;
+}
+
+  .Section--farm .SubHeading,
+  .Section--housing .SubHeading {
+    @extend .SubHeadingDark;
+  }
+
+  .Section--programs .ContinueToContent {
+    position: relative;
+    z-index: 6;
+    margin: 0 auto;
+    margin-top: -9rem;
+
+    @media (max-width: $mobile) {
+      margin-bottom: $md-padding;
+    }
+
+  }
+
+  .Section--farm h4,
+  .Section--housing h4 {
+    color: $light-secondary-accent;
+  }
+
+  .Section--wellness h4,
+  .Section--housing h4,
+  .Section--paws h4 {
+    color: $highlight;
+  }
+
+  .Section--programs h2,
+  .Section--paws h2,
+  .Section--farm h2,
+  .Section--wellness h2,
+  .Section--housing h2 {
+    color: $secondary-accent;
+  }

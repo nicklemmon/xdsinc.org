@@ -1,0 +1,33 @@
+.Section--partners {
+  padding-top: $xl-padding;
+  padding-bottom: $xl-padding;
+  background: $light-gray;
+}
+
+  .Section--partners .SubHeading {
+    @extend .SubHeadingDark;
+  }
+
+  .Section--partners h2 {
+    color: $secondary-accent;
+  }
+
+  .Section--partners h4 {
+    color: $dark-base-lightened;
+  }
+
+  .Section--partners p {
+    color: $dark-base;
+  }
+
+
+
+  .Section--partners .u-oneThird {
+    vertical-align: top;
+
+    @media (max-width: $mobile) {
+      @include justify-content(center);
+      @include align-items(center);
+    }
+
+  }

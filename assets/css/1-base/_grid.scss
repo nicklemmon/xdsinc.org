@@ -1,0 +1,82 @@
+.u-container {
+  max-width: $desktopWide + 100px;
+  margin: 0 auto; // centers;
+}
+
+.u-full {
+  width: 100%;
+}
+
+.u-twoThirds {
+  @extend .u-inlineBlock;
+  vertical-align: top;
+  width: 100% * (2/3);
+  padding-right: $sm-padding;
+
+  &:last-of-type {
+    padding-right: 0;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+
+}
+
+.u-oneHalf {
+  @extend .u-inlineBlock;
+  width: 50%;
+  padding-right: $sm-padding;
+
+  &:last-of-type {
+    padding-right: 0;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+
+}
+
+.u-oneThird {
+  @extend .u-inlineBlock;
+  width: 100% * (1/3);
+  padding-right: $sm-padding;
+
+  &:last-of-type {
+    padding-right: 0;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    margin-bottom: $md-padding;
+  }
+
+}
+
+.u-oneFourth {
+  @extend .u-inlineBlock;
+  width: 25%;
+  padding-right: $sm-padding;
+
+  @media (max-width: $desktopReg) {
+    width: 50%;
+    margin-bottom: $sm-padding;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    padding-right: 0 !important; // disables right padding (the gutter) when the .u-oneFourth elements collapse in to a single column
+    //margin-left: 0; // disables left negative margin associated with .u-inlineBlock when the .u-oneFourth elements collapse in to a single column
+  }
+
+}
+
+@media (max-width: $desktopReg) {
+
+  .u-oneFourth:last-of-type,
+  .u-oneFourth:nth-child(even) {
+    padding-right: 0;
+  }
+
+}

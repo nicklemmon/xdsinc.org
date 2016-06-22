@@ -1,1 +1,16 @@
-/*== SASS COLOR VARIABLES ==*/
+$light-base: #FFFFE2;
+  $light-base-lightened: scale-color($light-base, $lightness: 20%);
+  $light-base-darkened: scale-color($light-base, $lightness: -20%);
+$dark-base: #333333;
+  $dark-base-lightened: lighten($dark-base, 50%);
+  $dark-base-darkened: darken($dark-base, 5%);
+$primary-accent: #EB7F00;
+  $primary-accent-darkened: #E07900;
+$light-secondary-accent: #1695A3;
+$secondary-accent: #225378;
+  $secondary-accent-lightened: lighten($secondary-accent, 15%);
+  $secondary-accent-darkened: darken($secondary-accent, 5%);
+$highlight: #ACF0F2;
+  $highlight-darkened: darken($highlight, 8%);
+$light-gray: #F0F0F0;
+$med-gray: darken($light-gray, 10%);

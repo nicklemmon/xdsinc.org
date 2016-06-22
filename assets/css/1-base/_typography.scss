@@ -1,2 +1,180 @@
 $primary-font-stack: 'Crimson Text', sans-serif;
 $secondary-font-stack: 'Montserrat', sans-serif;
+
+body {
+  font-size: 62.5%; // used for rem font-sizing so that they correspond roughly to px
+  font-family: $primary-font-stack;
+}
+
+h1 {
+  font-family: $secondary-font-stack;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  line-height: 135%;
+  margin-bottom: $xs-padding/2;
+
+  @media (min-width:$mobile){
+    font-size: 2.2rem;
+    margin-bottom: $md-padding;
+  }
+
+}
+
+h2 {
+  font-family: $secondary-font-stack;
+  font-size: 1.6rem;
+  line-height: 125%;
+  font-weight: 700;
+  margin-bottom: $lg-padding;
+
+  @media (min-width:$mobile) {
+    font-size: 2.2rem;
+  }
+
+}
+
+h3 {
+  font-family: $secondary-font-stack;
+  font-size: 1.4rem;
+  line-height: 130%;
+  margin-bottom: $lg-padding;
+
+  @media (min-width:$mobile) {
+    font-size: 1.6rem;
+  }
+
+}
+
+h4 {
+  font-family: $secondary-font-stack;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 140%;
+  margin-top: $xs-padding;
+  margin-bottom: $sm-padding;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  @media (min-width:$mobile) {
+    font-size: 1.4rem;
+  }
+
+}
+
+h5 {
+  font-family: $secondary-font-stack;
+  font-size: 1rem;
+  line-height: 130%;
+  margin-top: $xs-padding;
+  margin-bottom: $sm-padding;
+
+  @media (min-width:$mobile) {
+    font-size: 1.2rem;
+  }
+}
+
+a {
+  line-height: 130%;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 130%;
+
+  @media (min-width: $mobile) {
+    font-size: 1.2rem;
+    line-height: 140%;
+    margin-bottom: $sm-padding;
+  }
+
+}
+
+  p:last-of-type {
+    margin-bottom: $md-padding;
+  }
+
+  p a {
+    color: $light-secondary-accent;
+    @include transition(color .4s ease);
+
+    &:hover {
+      color: $secondary-accent;
+    }
+  }
+
+.FullParagraph,
+.FullParagraph-unorderedList,
+.FullParagraph-listItem {
+  @extend .VignetteContainer-paragraph;
+  font-size: 1.2rem;
+  line-height: 150%;
+  color: $dark-base;
+
+  @media (min-width: $mobile) {
+    font-size: 1.4rem;
+    line-height: 140%;
+  }
+
+  @media (min-width: $desktopWide) {
+    max-width: 80%;
+  }
+
+}
+
+  .FullParagraph-unorderedList,
+  .FullParagraph-orderedList {
+
+    @media (max-width: $mobile) {
+      margin-top: $xs-padding;
+      margin-bottom: $sm-padding;
+    }
+
+  }
+
+  .FullParagraph-unorderedList {
+    list-style-type: square;
+  }
+
+  .FullParagraph-orderedList {
+    list-style-type: decimal;
+  }
+
+  .FullParagraph-listItem {
+    //list-style-type: square;
+    margin-left: $sm-padding;
+    margin-bottom: $xs-padding;
+
+    @media (min-width: $mobile) {
+      font-size: 1.15rem;
+      line-height: 140%;
+    }
+
+  }
+
+.SubHeading {
+  font-family: $primary-font-stack;
+  color: $med-gray;
+  border-bottom: 1px solid $med-gray;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin-right: -4px;
+  margin-bottom: $lg-padding;
+  padding-bottom: $xs-padding;
+
+  @media (max-width: $mobile) {
+    font-size: .7rem;
+    padding-bottom: $xs-padding;
+    margin-bottom: $md-padding;
+  }
+}
+
+  .SubHeadingDark {
+    color: $dark-base-lightened;
+    border-color: $dark-base-lightened;
+  }
+
+  .SubHeading .fa {
+    margin-right: .9rem;
+  }
