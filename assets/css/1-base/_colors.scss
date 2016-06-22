@@ -1,5 +1,6 @@
 $light-base: #FFFFE2;
-  $light-base-darkened: darken($light-base, 20%);
+  $light-base-lightened: scale-color($light-base, $lightness: 20%);
+  $light-base-darkened: scale-color($light-base, $lightness: -20%);
 $dark-base: #333333;
   $dark-base-lightened: lighten($dark-base, 50%);
   $dark-base-darkened: darken($dark-base, 5%);

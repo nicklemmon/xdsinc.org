@@ -10,6 +10,10 @@
 
 }
 
+.u-inline {
+	@include display(inline);
+}
+
 .u-emphasis {
   font-style: italic;
 }
