@@ -13,7 +13,7 @@ h1 {
   line-height: 135%;
   margin-bottom: $xs-padding/2;
 
-  @media(min-width:$mobile){
+  @media (min-width:$mobile){
     font-size: 2.2rem;
     margin-bottom: $md-padding;
   }
@@ -27,7 +27,7 @@ h2 {
   font-weight: 700;
   margin-bottom: $lg-padding;
 
-  @media(min-width:$mobile) {
+  @media (min-width:$mobile) {
     font-size: 2.2rem;
   }
 
@@ -35,11 +35,11 @@ h2 {
 
 h3 {
   font-family: $secondary-font-stack;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 130%;
   margin-bottom: $lg-padding;
 
-  @media(min-width:$mobile) {
+  @media (min-width:$mobile) {
     font-size: 1.6rem;
   }
 
@@ -47,7 +47,7 @@ h3 {
 
 h4 {
   font-family: $secondary-font-stack;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   line-height: 140%;
   margin-top: $xs-padding;
@@ -55,10 +55,22 @@ h4 {
   text-transform: uppercase;
   letter-spacing: 1px;
 
-  @media(min-width:$mobile) {
-    font-size: 1.6rem;
+  @media (min-width:$mobile) {
+    font-size: 1.4rem;
   }
 
+}
+
+h5 {
+  font-family: $secondary-font-stack;
+  font-size: 1rem;
+  line-height: 130%;
+  margin-top: $xs-padding;
+  margin-bottom: $sm-padding;
+
+  @media (min-width:$mobile) {
+    font-size: 1.2rem;
+  }
 }
 
 a {
