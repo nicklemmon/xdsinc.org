@@ -11,7 +11,6 @@
 @import '1-base/colors'; /* importing color variables */
 @import '1-base/vars'; /* importing variables */
 @import '1-base/global'; /* importing misc */
-@import '1-base/utilities'; /* importing utilities */
 @import '1-base/grid'; /* importing grid */
 @import '1-base/typography'; /* importing typography */
 @import '1-base/animations'; /* importing animations */
@@ -40,4 +39,8 @@
 @import '3-sections/partners'; /* importing partners section */
 @import '3-sections/values'; /* importing values section */
 @import '3-sections/form'; /* importing form sections */
+@import '3-sections/donate'; /* importing donate sections */
 @import '3-sections/footer'; /* importing footer section */
+
+//=== Import utilities (So they can override all the things!)
+@import '1-base/utilities'; /* importing utilities */

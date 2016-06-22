@@ -10,6 +10,10 @@
 
 }
 
+.u-block {
+  @include display(block);
+}
+
 .u-inline {
 	@include display(inline);
 }
@@ -20,4 +24,9 @@
 
 .u-noDisplay {
   margin-left: -9999px; // hides from users not using screen readers
+}
+
+.u-marginX--auto {
+  margin-left: auto;
+  margin-right: auto;
 }

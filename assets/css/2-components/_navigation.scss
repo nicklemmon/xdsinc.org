@@ -37,7 +37,7 @@ header {
   }
 
   .MainNavigation-link {
-    @extend .u-inlineBlock;
+    @include display(inline-block);
     font-size: .95rem;
     margin-left: $sm-padding;
     line-height: 100%;
@@ -78,7 +78,7 @@ header {
   }
 
   .Brand {
-    @extend .u-inlineBlock;
+    @include display(inline-block);
     font-family: $secondary-font-stack;
     font-size: 1.2rem;
     width: 240px;
@@ -97,7 +97,7 @@ header {
   }
 
     .Brand span {
-      @extend .u-noDisplay;
+      margin-left: -9999px;
     }
 
 /////////////////////////////////////////////////
