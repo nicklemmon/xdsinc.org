@@ -51,7 +51,10 @@ footer .u-twoThirds {
       }
 
       @media (min-width: $tablet) {
-        @extend .u-inlineBlock;
+        @include display(inline-block);
+        margin: 0; // helps w/ extra spacing w/ display: inline-block
+        line-height: 100%; // helps w/ extra spacing w/ display: inline-block
+        margin-left: -4px; // helps w/ extra spacing w/ display: inline-block;
         width: auto;
         font-size: .9rem;
       }
