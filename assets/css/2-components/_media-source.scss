@@ -9,6 +9,7 @@
   @include transform(translateY(0));
   @include filter(grayscale(100%));
   transition: transform $defaultTransition ease, filter $defaultTransition*1.5 ease, box-shadow $defaultTransition*1.5 ease;
+  border: 1px solid $light-gray;
 
   &:hover,
   &:focus,
