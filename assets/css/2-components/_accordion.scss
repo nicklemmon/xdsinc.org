@@ -1,0 +1,50 @@
+.Accordion {
+	@include display(block);
+	&:first-of-type {
+		border-top: 1px solid $med-gray;
+	}
+}
+
+	.Accordion-header {
+		padding: $sm-padding $md-padding;
+		cursor: pointer;
+		border-bottom: 1px solid $med-gray;
+		@include transition(background $defaultTransition ease);
+
+		&:hover {
+			background: rgba(0,0,0,.05);
+		}
+
+		.fa {
+			color: $light-secondary-accent;
+			@include transform(rotate(0deg));
+			@include transition(transform $defaultTransition ease);
+		}
+
+		&.is-expanded {
+			background: rgba(0,0,0,.05);
+
+			.fa {
+				@include transform(rotate(90deg));
+			}
+		}
+
+		h5 {
+			color: $dark-base;
+			margin: 0; // disables default margin for header to prevent unusual re-sizing of the .Accordion
+		}
+
+	}
+
+	.Accordion-content {
+		padding: $md-padding;
+
+		&.is-collapsed {
+			display: none;
+			border-bottom: none;
+		}
+		&.is-expanded {
+			display: block;
+			border-bottom: 1px solid $med-gray;
+		}
+	}

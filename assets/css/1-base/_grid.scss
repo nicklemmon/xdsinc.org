@@ -19,6 +19,7 @@
 
   @media (max-width: $mobile) {
     width: 100%;
+    padding-right: 0;
   }
 
 }
@@ -34,6 +35,7 @@
 
   @media (max-width: $mobile) {
     width: 100%;
+    padding-right: 0;
   }
 
 }
@@ -50,6 +52,7 @@
   @media (max-width: $mobile) {
     width: 100%;
     margin-bottom: $md-padding;
+    padding-right: 0;
   }
 
 }

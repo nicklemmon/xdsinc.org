@@ -32,4 +32,24 @@ $( document ).ready(function() {
     $(".Section--media").height(biggestHeight);
   }
 
+  $('.Accordion-header').click(function() {
+    $accordionHeader = $(this);
+    $accordionContent = $(this).next('.Accordion-content');
+
+    if ($accordionContent.hasClass('is-collapsed')) {
+      $accordionContent.slideDown(400);
+      $accordionContent.toggleClass('is-expanded is-collapsed');
+      $accordionHeader.toggleClass('is-expanded is-collapsed');
+    }
+    else {
+      $accordionContent.slideUp(400);
+      $accordionContent.toggleClass('is-expanded is-collapsed');
+      $accordionHeader.toggleClass('is-expanded is-collapsed');
+    }
+    
+    
+  });
+
+    
+
 });

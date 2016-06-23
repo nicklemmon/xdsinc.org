@@ -25,10 +25,14 @@
     margin-top: 0;
   }
 
+  .Section--values .OrderedList {
+    margin-left: -8px;
+  }
+
   .Section--values .OrderedList-listItem {
-    color: $dark-base;
+    color: $med-gray;
   }
 
   .Section--values .OrderedList-listItem-text {
-    color: $dark-base-lightened;
+    color: $dark-base;
   }
