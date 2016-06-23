@@ -27,8 +27,8 @@
   &:hover,
   &:focus,
   &:active {
-    background: $highlight;
-    line-height: 70%; // moves icon up slightly on hover
+    background: darken(white, 10%);
+    line-height: 90%; // moves icon up slightly on hover
 
   }
 
