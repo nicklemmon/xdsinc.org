@@ -6,7 +6,10 @@
 }
 
 	.Accordion-header {
-		padding: $sm-padding $md-padding;
+		@include display(flex);
+		@include align-items(center);
+		@include justify-content(flex-start);
+		padding: $sm-padding;
 		cursor: pointer;
 		border-bottom: 1px solid $med-gray;
 		@include transition(background $defaultTransition ease);
@@ -16,6 +19,7 @@
 		}
 
 		.fa {
+			font-size: 1rem;
 			color: $light-secondary-accent;
 			@include transform(rotate(0deg));
 			@include transition(transform $defaultTransition ease);
@@ -37,7 +41,11 @@
 	}
 
 	.Accordion-content {
-		padding: $md-padding;
+		padding: $sm-padding;
+
+		@media (min-width: $mobile) {
+			padding: $md-padding;
+		}
 
 		&.is-collapsed {
 			display: none;
