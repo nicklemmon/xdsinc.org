@@ -37,12 +37,12 @@ $( document ).ready(function() {
     $accordionContent = $(this).next('.Accordion-content');
 
     if ($accordionContent.hasClass('is-collapsed')) {
-      $accordionContent.slideDown(400);
+      $accordionContent.slideDown(700);
       $accordionContent.toggleClass('is-expanded is-collapsed');
       $accordionHeader.toggleClass('is-expanded is-collapsed');
     }
     else {
-      $accordionContent.slideUp(400);
+      $accordionContent.slideUp(700);
       $accordionContent.toggleClass('is-expanded is-collapsed');
       $accordionHeader.toggleClass('is-expanded is-collapsed');
     }
