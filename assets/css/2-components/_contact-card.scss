@@ -6,6 +6,7 @@
 	background: $light-base-lightened;
 	color: $med-gray;
 	box-shadow: 0 $sm-padding $sm-padding rgba($med-gray, .3);
+	overflow-wrap: break-word;
 
 	.FullParagraph {
 		font-family: $secondary-font-stack;
