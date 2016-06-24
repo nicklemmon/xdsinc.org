@@ -41,7 +41,11 @@
 	}
 
 	.Accordion-content {
-		padding: $md-padding;
+		padding: $sm-padding;
+
+		@media (min-width: $mobile) {
+			padding: $md-padding;
+		}
 
 		&.is-collapsed {
 			display: none;
