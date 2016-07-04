@@ -30,7 +30,7 @@
 }
 
 .Section--farm,
-.Section--housing {
+.Section--paws {
   background: $light-gray;
 }
 
@@ -52,13 +52,12 @@
   }
 
   .Section--farm h4,
-  .Section--housing h4 {
+  .Section--paws h4 {
     color: $light-secondary-accent;
   }
 
   .Section--wellness h4,
-  .Section--housing h4,
-  .Section--paws h4 {
+  .Section--housing h4 {
     color: $highlight;
   }
 
