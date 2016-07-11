@@ -1,6 +1,6 @@
 .ContactCard {
 	@include display(block);
-	max-width: 400px;
+	max-width: 430px;
 	padding: $md-padding;
 	margin: $sm-padding 0 $sm-padding 0;
 	background: $light-base-lightened;
@@ -12,6 +12,7 @@
 		font-family: $secondary-font-stack;
 		font-size: 1rem;
 		margin-bottom: $sm-padding/2;
+		max-width: 100%;
 
 		&:last-child {
 			padding-bottom: $md-padding;
