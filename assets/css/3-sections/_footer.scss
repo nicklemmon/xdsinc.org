@@ -60,16 +60,6 @@ footer .u-twoThirds {
 
     }
 
-footer .u-full {
-  margin-top: $md-padding;
-
-  @media (min-width: $tablet) {
-    float: left;
-    margin-top: -$lg-padding*2;
-    margin-left: -4px; // to align with social media icons
-  }
-
-}
 
 footer p {
   @include display(block);
