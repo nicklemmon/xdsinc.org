@@ -90,6 +90,10 @@ p {
 
 }
 
+strong {
+  font-weight: 700;
+}
+
   p:last-of-type {
     margin-bottom: $md-padding;
   }
@@ -122,6 +126,15 @@ p {
   }
 
 }
+
+  address {
+    color: $dark-base-lightened;
+    font-size: 1rem;
+
+    @media (min-width: $mobile) {
+      font-size: 1.1rem;
+    }
+  }
 
   .FullParagraph-unorderedList,
   .FullParagraph-orderedList {
