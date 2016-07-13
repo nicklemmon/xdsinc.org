@@ -14,3 +14,4 @@ $highlight: scale-color($secondary-accent, $lightness: 30%);
   $highlight-darkened: darken($highlight, 8%);
 $light-gray: #F0F0F0;
 $med-gray: darken($light-gray, 10%);
+$dark-gray: darken($light-gray, 20%);
