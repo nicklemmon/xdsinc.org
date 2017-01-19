@@ -5,5 +5,7 @@ permalink: pretty
 
 port: 3000
 
-exclude: ['css', '_scss', 'assets/css', 'node_modules', 'tags', 'Gruntfile.js', 'package.json']
-keep_files: ['_site/assets/css']
+exclude: ['node_modules', 'tags', 'Gruntfile.js', 'package.json']
+
+sass:
+  sass_dir: './assets/css'

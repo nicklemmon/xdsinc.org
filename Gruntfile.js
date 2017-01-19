@@ -64,7 +64,8 @@ module.exports = function (grunt) {
 
     // Register the grunt serve task
     grunt.registerTask('serve', [
-        'concurrent:serve'
+        'concurrent:serve',
+        'sass'
     ]);
 
     // Register the grunt build task
