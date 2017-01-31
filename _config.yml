@@ -5,7 +5,15 @@ permalink: pretty
 
 port: 3000
 
-exclude: ['node_modules', 'tags', 'Gruntfile.js', 'package.json']
-
-sass:
-  sass_dir: './assets/css'
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - node_modules
+  - gulpfile.js
+  - README.md
+  - assets/images
+  - assets/scripts
+  - assets/styles
+  - TODO.md
+  - .scss-lint.yml
