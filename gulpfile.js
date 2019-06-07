@@ -55,7 +55,7 @@ gulp.task('lint', function() {
 });
 
 // Using Jekyll command to build site
-gulp.task('build', shell.task([ 'jekyll build' ]));
+gulp.task('markup', shell.task([ 'jekyll build' ]));
 
 // BrowerSync stuff for a local server and cross-browser refreshing
 gulp.task('browser-sync', function() {
@@ -87,8 +87,12 @@ gulp.task('scripts', function() {
 })
 
 //== Run These!
-gulp.task('default', ['clean'], function() {
-  return runSequence('build', 'sass', 'imageMin', 'scripts', 'browser-sync', 'watch');
+gulp.task('build', ['clean'], function() {
+  return runSequence( 'markup', 'sass', 'imageMin', 'scripts' );
+})
+
+gulp.task('default', ['build'], function() {
+  return runSequence('browser-sync', 'watch');
 })
 
 gulp.task('watch', function(){
