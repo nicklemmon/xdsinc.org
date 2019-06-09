@@ -1,20 +1,21 @@
 'use strict';
 
 //== Requiring Things
-var gulp         = require('gulp'),
-    gutil        = require('gulp-util'),
-    sass         = require('gulp-sass'),
-    sassGlob     = require('gulp-sass-glob'),
-    scsslint     = require('gulp-scss-lint'),
+var gulp = require('gulp'),
+    gutil = require('gulp-util'),
+    sass = require('gulp-sass'),
+    sassGlob = require('gulp-sass-glob'),
+    scsslint = require('gulp-scss-lint'),
     autoprefixer = require('gulp-autoprefixer'),
-    shell        = require('gulp-shell'),
-    clean        = require('gulp-clean'),
-    browserSync  = require('browser-sync'),
-    concatJS     = require('gulp-concat'),
-    uglify       = require('gulp-uglify'),
-    imageMin     = require('gulp-imagemin'),
-    runSequence  = require('run-sequence'),
-    reload       = browserSync.reload;
+    shell = require('gulp-shell'),
+    clean = require('gulp-clean'),
+    browserSync = require('browser-sync'),
+    concatJS = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    imageMin = require('gulp-imagemin'),
+    cleanCSS = require('gulp-clean-css'),
+    runSequence = require('run-sequence'),
+    reload = browserSync.reload;
 
 //== Global Variables
 var base = {
@@ -38,6 +39,7 @@ gulp.task('sass', function() {
   return gulp.src('assets/styles/styles.scss')
     .pipe(sassGlob())
     .pipe(sass())
+    .pipe(cleanCSS({compatibility: 'ie11'}))
     .pipe(autoprefixer( 'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4' ))
     .pipe(gulp.dest('_site/assets/styles/'))
 });
