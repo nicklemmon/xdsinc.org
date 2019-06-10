@@ -8,7 +8,6 @@ const sass = require( 'gulp-sass' );
 const sassGlob = require( 'gulp-sass-glob' );
 const scssLint = require( 'gulp-scss-lint' );
 const autoprefixer = require( 'gulp-autoprefixer' );
-const shell = require( 'gulp-shell' );
 const gulpClean = require( 'gulp-clean' );
 const browserSync = require( 'browser-sync' );
 const concatJS = require( 'gulp-concat' );
@@ -18,7 +17,7 @@ const cleanCSS = require( 'gulp-clean-css' );
 const exec = require( 'child_process' ).exec;
 
 const Base = {
-  assets: './assets/'
+  assets: './assets'
 }
 
 const Path = {
@@ -34,11 +33,11 @@ function clean( callback ) {
 }
 
 function styles( callback ) {
-  return src( `${Base.assets}/${Path.styles}/styles.scss` )
+  return src( `${Base.assets}/${Path.styles}styles.scss` )
     .pipe( sassGlob() )
     .pipe( sass() )
-    .pipe( cleanCSS( {compatibility: 'ie11'}) )
     .pipe( autoprefixer( 'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4' ) )
+    .pipe( cleanCSS( {compatibility: 'ie11'}) )
     .pipe( dest( '_site/assets/styles/' ) )
 
   callback();
@@ -53,7 +52,7 @@ function images( callback ) {
 }
 
 function lint( callback ) {
-  return src( `${Base.assets}/${Path.styles}/**/_*.scss` )
+  return src( `${Base.assets}/${Path.styles}**/_*.scss` )
     .pipe( scssLint({
       'bundleExec': true,
       'config': '.scss-lint.yml',
@@ -93,6 +92,8 @@ function scripts() {
     .pipe( dest( './_site/assets/scripts/' ) );
 }
 
+const build = parallel( images, markup, scripts );
+
 exports.clean = clean;
 exports.styles = styles;
 exports.lint = lint;
@@ -100,5 +101,5 @@ exports.markup = markup;
 exports.images = images;
 exports.server = server;
 exports.scripts = scripts;
-exports.build = series( clean, parallel( markup, styles, images, scripts ) );
-exports.default = series( parallel( markup, styles, images, scripts ), server );
+exports.build = series( clean, build, styles );
+exports.default = series( build, styles, server );
