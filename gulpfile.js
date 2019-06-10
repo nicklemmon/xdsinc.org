@@ -1,66 +1,78 @@
-'use strict';
+const {
+  src,
+  dest,
+  parallel,
+  series
+} = require( 'gulp' );
+const sass = require( 'gulp-sass' );
+const sassGlob = require( 'gulp-sass-glob' );
+const scssLint = require( 'gulp-scss-lint' );
+const autoprefixer = require( 'gulp-autoprefixer' );
+const gulpClean = require( 'gulp-clean' );
+const browserSync = require( 'browser-sync' );
+const concatJS = require( 'gulp-concat' );
+const uglify = require( 'gulp-uglify' );
+const imageMin = require( 'gulp-imagemin' );
+const cleanCSS = require( 'gulp-clean-css' );
+const exec = require( 'child_process' ).exec;
 
-//== Requiring Things
-var gulp = require('gulp'),
-    gutil = require('gulp-util'),
-    sass = require('gulp-sass'),
-    sassGlob = require('gulp-sass-glob'),
-    scsslint = require('gulp-scss-lint'),
-    autoprefixer = require('gulp-autoprefixer'),
-    shell = require('gulp-shell'),
-    clean = require('gulp-clean'),
-    browserSync = require('browser-sync'),
-    concatJS = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    imageMin = require('gulp-imagemin'),
-    cleanCSS = require('gulp-clean-css'),
-    runSequence = require('run-sequence'),
-    reload = browserSync.reload;
-
-//== Global Variables
-var base = {
-  assets: './assets/'
+const Base = {
+  assets: './assets'
 }
 
-var path = {
+const Path = {
   styles: 'styles/',
   scripts: 'scripts/',
   images: 'images/'
 }
 
-// Delete the output directory
-gulp.task('clean', function() {
-  return gulp.src('./_site/') // delete the output dir
-    .pipe(clean());
-});
+function clean( callback ) {
+  return src( './_site/' ).pipe( gulpClean() )
 
-// Sass task
-gulp.task('sass', function() {
-  return gulp.src('assets/styles/styles.scss')
-    .pipe(sassGlob())
-    .pipe(sass())
-    .pipe(cleanCSS({compatibility: 'ie11'}))
-    .pipe(autoprefixer( 'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4' ))
-    .pipe(gulp.dest('_site/assets/styles/'))
-});
+  callback()
+}
 
-// Linting
-gulp.task('lint', function() {
-  return gulp.src('assets/styles/**/_*.scss')
-    .pipe(scsslint({
+function styles( callback ) {
+  return src( `${Base.assets}/${Path.styles}styles.scss` )
+    .pipe( sassGlob() )
+    .pipe( sass() )
+    .pipe( autoprefixer( 'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4' ) )
+    .pipe( cleanCSS( {compatibility: 'ie11'}) )
+    .pipe( dest( '_site/assets/styles/' ) )
+
+  callback();
+}
+
+function images( callback ) {
+  return src( `${Base.assets}/${Path.images}**/*` )
+    .pipe( imageMin() )
+    .pipe( dest( '_site/assets/images/' ) )
+
+  callback();
+}
+
+function lint( callback ) {
+  return src( `${Base.assets}/${Path.styles}**/_*.scss` )
+    .pipe( scssLint({
       'bundleExec': true,
       'config': '.scss-lint.yml',
       'filePipeOutput': 'scss-lint-report.xml',
       'maxBuffer': 30000000000000000000 * 1024
-    }))
-    .pipe(gulp.dest('./reports'))
-});
+    }) )
+    .pipe( dest('./reports') );
 
-// Using Jekyll command to build site
-gulp.task('markup', shell.task([ 'jekyll build' ]));
+  callback();
+}
 
-// BrowerSync stuff for a local server and cross-browser refreshing
-gulp.task('browser-sync', function() {
+function markup( callback ) {
+  exec( 'jekyll build', function( err, stdout, stderr ) {
+    console.log( stdout );
+    console.log( stderr );
+    callback( err );
+  });
+}
+
+function server() {
   browserSync({
     server: './_site',
     port: 1999,
@@ -68,38 +80,26 @@ gulp.task('browser-sync', function() {
     reloadOnRestart: true,
     notify: false
   })
-})
+}
 
-// Minify images
-gulp.task('imageMin', function() {
-  return gulp.src(base.assets + path.images + '**/*')
-    .pipe(imageMin())
-    .pipe(gulp.dest('_site/assets/images/'))
-})
-
-// Concat and uglify the scripts
-gulp.task('scripts', function() {
-  return gulp.src([
-    base.assets + path.scripts + 'vendor/*.js',
-    base.assets + path.scripts + 'custom/*.js'
+function scripts() {
+  return src([
+    `${Base.assets}/${Path.scripts}vendor/*.js`,
+    `${Base.assets}/${Path.scripts}custom/*.js`
   ])
-    .pipe(concatJS('scripts.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./_site/assets/scripts/'))
-})
+    .pipe( concatJS( 'scripts.min.js' ) )
+    .pipe( uglify() )
+    .pipe( dest( './_site/assets/scripts/' ) );
+}
 
-//== Run These!
-gulp.task('build', ['clean'], function() {
-  return runSequence( 'markup', 'sass', 'imageMin', 'scripts' );
-})
+const build = parallel( images, markup, scripts );
 
-gulp.task('default', ['build'], function() {
-  return runSequence('browser-sync', 'watch');
-})
-
-gulp.task('watch', function(){
-  gulp.watch('./assets/styles/**/*.scss', ['sass']);
-  gulp.watch('./assets/scripts/**/*.js', ['scripts']);
-  gulp.watch('./_layouts/**/*.html', ['default']);
-  gulp.watch('./_modules/**/*.liquid', ['default']);
-});
+exports.clean = clean;
+exports.styles = styles;
+exports.lint = lint;
+exports.markup = markup;
+exports.images = images;
+exports.server = server;
+exports.scripts = scripts;
+exports.build = series( clean, build, styles );
+exports.default = series( build, styles, server );
