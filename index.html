@@ -1,149 +1,96 @@
 ---
+layout: default
 ---
 
-<!DOCTYPE html>
+<section class="Section--hero u-full">
+	<div class="u-container">
+		<div class="HeroLeft">
+			<h1 class="HeroLeft-header">XDS is making a difference in <br>North Carolina</h1>
 
-<html lang="en">
+			<p class="HeroLeft-paragraph u-emphasis">Food as medicine. Farming as therapy. Housing as healthcare.</p>
 
-	{% include head.html %}
+			<a class="Button Button--tertiary" href="/about">Learn more</a>
+		</div>
+	</div>
+</section>
 
-	<body>
+{% include programs.html %}
 
-    <!--===== BEGIN MAIN =====-->
-		<main>
+<section class="Section--vignette u-full" data-parallax="scroll" data-image-src="/assets/images/opt_bg_farm.png" data-speed=".65">
+	<div class="u-container">
+		<div class="VignetteContainer">
+			<h3 class="SubHeading">XDS Mission Statement</h3>
 
-			{% include header.html %}
+			<p class="VignetteContainer-paragraph">Our Mission is in partnership with UNC Center for Excellence in Community Mental Health to empower and assist people with multiple disabilities to live in the community of their choice, achieve personal responsibility, and gain an enhanced quality of life by providing  an array of clinically appropriate, person-centered, and flexible treatment, rehabilitation, and support services.</p>
 
-			<section class="Section--hero u-full">
-			<div class="u-container">
+			<a href="/contact" class="Button Button--primary">Reach out</a>
+		</div>
+	</div>
+</section>
 
-				<div class="HeroLeft">
-					<h1 class="HeroLeft-header">XDS is making a difference in <br>North Carolina</h1>
+<section class="Section--media u-full">
+	<div class="u-container">
+		<h3 class="SubHeading">Media coverage across the state</h3>
 
-					<p class="HeroLeft-paragraph u-emphasis">Food as medicine. Farming as therapy. Housing as healthcare.</p>
-					<a class="Button Button--tertiary" href="/about">Learn more</a>
-				</div>
+		<h2>XDS in the Media</h2>
 
-			</div>
-			</section> <!-- end hero section -->
+		<div class="u-oneFourth">
+			<a class="MediaSource" id="no" href="http://www.newsobserver.com/news/local/community/chapel-hill-news/article25767400.html"><span>News and Observer - UNC mental health clients, dogs grow and serve together at Penny Lane</span></a>
+		</div>
 
-			{% include programs.html %}
+		<div class="u-oneFourth">
+			<a class="MediaSource" id="wunc" href="http://wunc.org/post/farm-provides-therapy-people-mental-illness-and-developmental-disabilities#stream/0"><span>WUNC - Farm Provides Therapy for People with Mental Illness and Development Disabilities</span></a>
+		</div>
 
-			<section class="Section--vignette u-full" data-parallax="scroll" data-image-src="/assets/images/opt_bg_farm.png" data-speed=".65">
-			<div class="u-container">
+		<div class="u-oneFourth">
+			<a class="MediaSource" id="unchealth" href="https://www.youtube.com/watch?v=ut8HGJj_RY4"><span>UNC Healthcare</span></a>
+		</div>
 
-				<div class="VignetteContainer">
-					<h3 class="SubHeading">XDS Mission Statement</h3>
+		<div class="u-oneFourth">
+			<aside class="LinkList LinkList--news">
+				<h4 class="LinkList-header"><i class="fa fa-newspaper-o"></i>XDS in the news</h4>
 
-					<p class="VignetteContainer-paragraph">Our Mission is in partnership with UNC Center for Excellence in Community Mental Health to empower and assist people with multiple disabilities to live in the community of their choice, achieve personal responsibility, and gain an enhanced quality of life by providing  an array of clinically appropriate, person-centered, and flexible treatment, rehabilitation, and support services.</p>
+				<ul class="LinkList-unorderedList">
+					<li class="LinkList-listItem"><a class="LinkList-link" href="http://chathamhabitat.org/margaret-pollard-tiny-house/">Chatham County Habitat for Humanity - Tiny House, Big Idea</a></li>
+					<li class="LinkList-listItem"><a class="LinkList-link" href="http://www.indyweek.com/indyweek/in-chatham-county-a-nonprofit-will-build-tiny-homes-for-the-homeless/Content?oid=4663653">Indy Week - Nonprofit building Tiny Homes for the Homeless</a></li>
+					<li class="LinkList-listItem"><a class="LinkList-link" href="https://www.youtube.com/watch?v=_PKDJkNJXEM">Goodmon Awards - XDS Executive Director wins Goodmon Award in 2015</a></li>
+					<li class="LinkList-listItem"><a class="LinkList-link" href="http://philnc.org/tag/thava-mahadevan/">Philanthropy NC - ‘Tiny homes’ to house people with mental illness</a></li>
+					<li class="LinkList-listItem"><a class="LinkList-link" href="http://www.indyweek.com/indyweek/thava-mahadevan-of-the-farm-at-penny-lane/Content?oid=3814455">Thava Mahadevan of The Farm at Penny Lane</a></li>
+					<li class="LinkList-listItem"><a class="LinkList-link" href="http://www.northcarolinahealthnews.org/2014/01/28/farm-at-penny-lane-cultivates-more-than-plants/">NC Health News - Farm at Penny Lane Cultivates More Than Plants</a></li>
+				</ul>
+			</aside>
+		</div>
+	</div>
+</section>
 
-					<a href="/contact" class="Button Button--primary">Reach out</a>
-				</div>
+<section class="Section--partners u-full">
+	<div class="u-container">
+		<h3 class="SubHeading">Efficieny through collaboration</h3>
 
-			</div>
-			</section> <!-- end .Section--vignette -->
+		<h2>Partners in Service</h2>
 
+		<div class="u-oneThird">
+			<h4>UNC Center for Excellence in Community Mental Health</h4>
 
-			<section class="Section--media u-full">
-			<div class="u-container">
+			<p>Providing community mental health services in central North Carolina in partnership with XDS.</p>
 
-				<h3 class="SubHeading">Media coverage across the state</h3>
-				<h2>XDS in the Media</h2>
+			<a href="https://www.med.unc.edu/psych/cecmh" class="Button Button--tertiary">Visit their website</a>
+		</div>
 
-				<div class="u-oneFourth">
-					<a class="MediaSource" id="no" href="http://www.newsobserver.com/news/local/community/chapel-hill-news/article25767400.html"><span>News and Observer - UNC mental health clients, dogs grow and serve together at Penny Lane</span></a>
-				</div>
-				<div class="u-oneFourth">
-					<a class="MediaSource" id="wunc" href="http://wunc.org/post/farm-provides-therapy-people-mental-illness-and-developmental-disabilities#stream/0"><span>WUNC - Farm Provides Therapy for People with Mental Illness and Development Disabilities</span></a>
-				</div>
-				<div class="u-oneFourth">
-					<a class="MediaSource" id="unchealth" href="https://www.youtube.com/watch?v=ut8HGJj_RY4"><span>UNC Healthcare</span></a>
-				</div>
+		<div class="u-oneThird">
+			<h4>Cardinal Innovations Healthcare</h4>
 
-				<div class="u-oneFourth">
-					<aside class="LinkList LinkList--news">
-						<h4 class="LinkList-header"><i class="fa fa-newspaper-o"></i>XDS in the news</h4>
+			<p>Providing funding and logistical support for mental health services in central North Carolina, partnering with XDS on a number of community programs.</p>
 
-						<ul class="LinkList-unorderedList">
-							<li class="LinkList-listItem"><a class="LinkList-link" href="http://chathamhabitat.org/margaret-pollard-tiny-house/">Chatham County Habitat for Humanity - Tiny House, Big Idea</a></li>
-							<li class="LinkList-listItem"><a class="LinkList-link" href="http://www.indyweek.com/indyweek/in-chatham-county-a-nonprofit-will-build-tiny-homes-for-the-homeless/Content?oid=4663653">Indy Week - Nonprofit building Tiny Homes for the Homeless</a></li>
-							<li class="LinkList-listItem"><a class="LinkList-link" href="https://www.youtube.com/watch?v=_PKDJkNJXEM">Goodmon Awards - XDS Executive Director wins Goodmon Award in 2015</a></li>
-							<li class="LinkList-listItem"><a class="LinkList-link" href="http://philnc.org/tag/thava-mahadevan/">Philanthropy NC - ‘Tiny homes’ to house people with mental illness</a></li>
-							<li class="LinkList-listItem"><a class="LinkList-link" href="http://www.indyweek.com/indyweek/thava-mahadevan-of-the-farm-at-penny-lane/Content?oid=3814455">Thava Mahadevan of The Farm at Penny Lane</a></li>
-							<li class="LinkList-listItem"><a class="LinkList-link" href="http://www.northcarolinahealthnews.org/2014/01/28/farm-at-penny-lane-cultivates-more-than-plants/">NC Health News - Farm at Penny Lane Cultivates More Than Plants</a></li>
-						</ul>
-					</aside>
-				</div>
+			<a href="http://www.cardinalinnovations.org/" class="Button Button--tertiary">Visit their website</a>
+		</div>
 
-			</div>
-			</section> <!-- end .Section--media -->
+		<div class="u-oneThird">
+			<h4>Tiny Home Community Collaborative</h4>
 
+			<p>Collaborating with XDS to pilot tiny home projects in Chatham County, NC.</p>
 
-			<section class="Section--partners u-full">
-			<div class="u-container">
-
-				<h3 class="SubHeading">Efficieny through collaboration</h3>
-				<h2>Partners in Service</h2>
-
-				<!-- <div class="u-oneThird">
-					<a href="https://www.med.unc.edu/psych/cecmh" class="Circle Circle--partner">
-						<div class="Circle-container">
-							<p>UNC Center for Excellence in Community Mental Health</p>
-						</div>
-					</a>
-				</div>
-
-				<div class="u-oneThird">
-					<a href="http://www.cardinalinnovations.org/" class="Circle Circle--partner">
-						<div class="Circle-container">
-							<p>Cardinal Innovations Healthcare Solutions</p>
-						</div>
-					</a>
-				</div>
-
-				<div class="u-oneThird">
-					<a href="https://www.facebook.com/tinyhomecommunitycollaborative/" class="Circle Circle--partner">
-						<div class="Circle-container">
-							<p>Tiny Home Community Collaborative</p>
-						</div>
-					</a>
-				</div> -->
-
-				<div class="u-oneThird">
-					<h4>UNC Center for Excellence in Community Mental Health</h4>
-
-					<p>Providing community mental health services in central North Carolina in partnership with XDS.</p>
-
-					<a href="https://www.med.unc.edu/psych/cecmh" class="Button Button--tertiary">Visit their website</a>
-				</div>
-
-				<div class="u-oneThird">
-					<h4>Cardinal Innovations Healthcare</h4>
-
-					<p>Providing funding and logistical support for mental health services in central North Carolina, partnering with XDS on a number of community programs.</p>
-
-					<a href="http://www.cardinalinnovations.org/" class="Button Button--tertiary">Visit their website</a>
-				</div>
-
-				<div class="u-oneThird">
-					<h4>Tiny Home Community Collaborative</h4>
-
-					<p>Collaborating with XDS to pilot tiny home projects in Chatham County, NC.</p>
-
-					<a href="https://www.facebook.com/tinyhomecommunitycollaborative/" class="Button Button--tertiary">Visit their website</a>
-				</div>
-
-			</div>
-			</section> <!-- end .Section--partners -->
-
-		</main> <!-- end main -->
-		<!--===== END MAIN =====-->
-
-    {% include footer.html %}
-
-  	{% include scripts.html %}
-
-
-	</body>
-
-</html>
+			<a href="https://www.facebook.com/tinyhomecommunitycollaborative/" class="Button Button--tertiary">Visit their website</a>
+		</div>
+	</div>
+</section>

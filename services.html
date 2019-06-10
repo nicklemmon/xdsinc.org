@@ -1,196 +1,275 @@
 ---
+layout: default
 ---
 
-<!DOCTYPE html>
+<section class="Section--hero u-full">
+  <div class="u-container">
+    <div class="HeroBox">
+      <h1>Make a referral</h1>
 
-<html lang="en">
+      <p class="u-emphasis">Make a service referral through our partner providers</p>
+    </div>
+  </div>
+</section>
 
-	{% include head.html %}
+<section class="Section--form">
+  <div class="u-container">
+    <h3 class="SubHeading">In partnership with UNC CECMH</h3>
+    
+    <h2>Make a Referral for Services</h2>
 
-	<body>
+    <div class="u-full">
+      <p class="FullParagraph">XDS currently provides services in partnership with <a href="https://www.med.unc.edu/psych/cecmh">UNC Center for Excellence in Community Mental Health</a>. If you are interested in making a referral for services, these services are not currently provided directly by XDS.</p>
 
-    <!--===== BEGIN MAIN =====-->
-		<main>
+      <p class="FullParagraph">Fill out the form and a representative of <a href="https://www.med.unc.edu/psych/cecmh">UNC Center for Excellence in Community Mental Health</a> will be in touch shortly</p>
+    </div>
+  </div>
+</section>
 
-			{% include header.html %}
+<section class="Section--formHolder" data-parallax="scroll" data-image-src="/assets/images/opt_bg_farm.png" data-speed=".65">
+  <form class="FormBox" action="//formspree.io/beth_rossi@med.unc.edu" method="POST">
+    <h3 class="SubHeading">Make a referral to UNC CECMH</h3>
 
-			<section class="Section--hero u-full">
-			<div class="u-container">
+    <div class="u-full">
+      <div class="u-oneHalf">
+        <label name="first-name" for="first-name">First name</label>
 
-				<div class="HeroBox">
-					<h1>Make a referral</h1>
-					<p class="u-emphasis">Make a service referral through our partner providers</p>
-				</div>
-
-			</div>
-			</section> <!-- end hero section -->
-
-			<section class="Section--form">
-      <div class="u-container">
-
-        <h3 class="SubHeading">In partnership with UNC CECMH</h3>
-        <h2>Make a Referral for Services</h2>
-
-        <div class="u-full">
-					<p class="FullParagraph">XDS currently provides services in partnership with <a href="https://www.med.unc.edu/psych/cecmh">UNC Center for Excellence in Community Mental Health</a>. If you are interested in making a referral for services, these services are not currently provided directly by XDS.</p>
-
-					<p class="FullParagraph">Fill out the form and a representative of <a href="https://www.med.unc.edu/psych/cecmh">UNC Center for Excellence in Community Mental Health</a> will be in touch shortly</p>
-				</div>
-
+        <input type="text" placeholder="First name" name="first-name" id="first-name" />
       </div>
-      </section> <!-- .Section--form -->
 
-      <section class="Section--formHolder" data-parallax="scroll" data-image-src="/assets/images/opt_bg_farm.png" data-speed=".65">
+      <div class="u-oneHalf">
+        <label name="last-name" for="last-name">Last name</label>
 
-        <form class="FormBox" action="//formspree.io/beth_rossi@med.unc.edu" method="POST">
+        <input type="text" placeholder="Last name" name="last-name" id="last-name" />
+      </div>
+    </div>
 
-					<h3 class="SubHeading">Make a referral to UNC CECMH</h3>
+    <div class="u-full">
+      <div class="u-oneHalf">
+        <label name="email" for="email">E-mail address</label>
 
-					<div class="u-full">
-						<div class="u-oneHalf">
-							<label name="first-name" for="first-name">First name</label>
-		          <input type="text" placeholder="First name" name="first-name"></input>
-						</div>
+        <input type="text" placeholder="example@gmail.com" name="email" id="email" required />
+      </div>
 
-						<div class="u-oneHalf">
-		          <label name="last-name" for="last-name">Last name</label>
-		          <input type="text" placeholder="Last name" name="last-name"></input>
-						</div>
-					</div>
+      <div class="u-oneHalf">
+        <label name="phone-number" for="phone-number">Phone number</label>
 
-					<div class="u-full">
-						<div class="u-oneHalf">
-		          <label name="email" for="email">E-mail address</label>
-							<input type="text" placeholder="example@gmail.com" name="email" required></input>
-						</div>
+        <input type="tel" placeholder="919.555.4723" name="phone-number" id="phone-number" required />
+      </div>
+    </div>
 
-						<div class="u-oneHalf">
-		          <label name="phone-number" for="phone-number">Phone number</label>
-							<input type="tel" placeholder="919.555.4723" name="phone-number" required></input>
-						</div>
-					</div>
+    <label name="county" for="county">
+      County of residence
+    </label>
 
-          <label name="county" for="county">County of residence</label>
-          <select name="county-select">
-              <option value="" selected="selected">Pick your county</option>
-              <option value="Alamance">Alamance</option>
-              <option value="Alexander">Alexander</option>
-              <option value="Alleghany">Alleghany</option>
-              <option value="Anson">Anson</option>
-              <option value="Ashe">Ashe</option>
-              <option value="Avery">Avery</option>
-              <option value="Beaufort">Beaufort</option>
-              <option value="Bertie">Bertie</option>
-              <option value="Bladen">Bladen</option>
-              <option value="Brunswick">Brunswick</option>
-              <option value="Buncombe">Buncombe</option>
-              <option value="Burke">Burke</option>
-              <option value="Cabarrus">Cabarrus</option>
-              <option value="Caldwell">Caldwell</option>
-              <option value="Camden">Camden</option>
-              <option value="Carteret">Carteret</option>
-              <option value="Caswell">Caswell</option>
-              <option value="Catawba">Catawba</option>
-              <option value="Chatham">Chatham</option>
-              <option value="Cherokee">Cherokee</option>
-              <option value="Chowan">Chowan</option>
-              <option value="Clay">Clay</option>
-              <option value="Cleveland">Cleveland</option>
-              <option value="Columbus">Columbus</option>
-              <option value="Craven">Craven</option>
-              <option value="Cumberland">Cumberland</option>
-              <option value="Currituck">Currituck</option>
-              <option value="Dare">Dare</option>
-              <option value="Davidson">Davidson</option>
-              <option value="Davie">Davie</option>
-              <option value="Duplin">Duplin</option>
-              <option value="Durham">Durham</option>
-              <option value="Edgecombe">Edgecombe</option>
-              <option value="Forsyth">Forsyth</option>
-              <option value="Franklin">Franklin</option>
-              <option value="Gaston">Gaston</option>
-              <option value="Gates">Gates</option>
-              <option value="Graham">Graham</option>
-              <option value="Granville">Granville</option>
-              <option value="Greene">Greene</option>
-              <option value="Guilford">Guilford</option>
-              <option value="Halifax">Halifax</option>
-              <option value="Harnett">Harnett</option>
-              <option value="Haywood">Haywood</option>
-              <option value="Henderson">Henderson</option>
-              <option value="Hertford">Hertford</option>
-              <option value="Hoke">Hoke</option>
-              <option value="Hyde">Hyde</option>
-              <option value="Iredell">Iredell</option>
-              <option value="Jackson">Jackson</option>
-              <option value="Johnston">Johnston</option>
-              <option value="Jones">Jones</option>
-              <option value="Lee">Lee</option>
-              <option value="Lenoir">Lenoir</option>
-              <option value="Lincoln">Lincoln</option>
-              <option value="Macon">Macon</option>
-              <option value="Madison">Madison</option>
-              <option value="Martin">Martin</option>
-              <option value="McDowell">McDowell</option>
-              <option value="Mecklenburg">Mecklenburg</option>
-              <option value="Mitchell">Mitchell</option>
-              <option value="Montgomery">Montgomery</option>
-              <option value="Moore">Moore</option>
-              <option value="Nash">Nash</option>
-              <option value="New Hanover">New Hanover</option>
-              <option value="Northampton">Northampton</option>
-              <option value="Onslow">Onslow</option>
-              <option value="Orange">Orange</option>
-              <option value="Pamlico">Pamlico</option>
-              <option value="Pasquotank">Pasquotank</option>
-              <option value="Pender">Pender</option>r
-              <option value="Perquimans">Perquimans</option>
-              <option value="Person">Person</option>
-              <option value="Pitt">Pitt</option>
-              <option value="Polk">Polk</option>
-              <option value="Randolph">Randolph</option>
-              <option value="Richmond">Richmond</option>
-              <option value="Robeson">Robeson</option>
-              <option value="Rockingham">Rockingham</option>
-              <option value="Rowan">Rowan</option>
-              <option value="Rutherford">Rutherford</option>
-              <option value="Sampson">Sampson</option>
-              <option value="Scotland">Scotland</option>
-              <option value="Stanly">Stanly</option>
-              <option value="Stokes">Stokes</option>
-              <option value="Surry">Surry</option>
-              <option value="Swain">Swain</option>
-              <option value="Transylvania">Transylvania</option>
-              <option value="Tyrrell">Tyrrell</option>
-              <option value="Union">Union</option>
-              <option value="Vance">Vance</option>
-              <option value="Wake">Wake</option>
-              <option value="Warren">Warren</option>
-              <option value="Washington">Washington</option>
-              <option value="Watauga">Watauga</option>
-              <option value="Wayne">Wayne</option>
-              <option value="Wilkes">Wilkes</option>
-              <option value="Wilson">Wilson</option>
-              <option value="Yadkin">Yadkin</option>
-              <option value="Yancey">Yancey</option>
-          </select> <!-- end county dropdown menu -->
+    <select name="county-select" id="county">
+      <option value="" selected="selected" disabled>Pick your county</option>
 
-          <label name="enquiry" for="enquiry">Your enquiry or service request</label>
-          <textarea type="text" placeholder="Your enquiry or service request"></textarea>
+      <option value="Alamance">Alamance</option>
 
-					<input class="Button Button--primary" type="submit" value="Send"/>
-				</form>
+      <option value="Alexander">Alexander</option>
 
-      </section> <!-- end .Section--formHolder -->
+      <option value="Alleghany">Alleghany</option>
 
-		</main> <!-- end main -->
-		<!--===== END MAIN =====-->
+      <option value="Anson">Anson</option>
 
-    {% include footer.html %}
+      <option value="Ashe">Ashe</option>
 
-  	{% include scripts.html %}
+      <option value="Avery">Avery</option>
 
+      <option value="Beaufort">Beaufort</option>
 
-	</body>
+      <option value="Bertie">Bertie</option>
 
-</html>
+      <option value="Bladen">Bladen</option>
+
+      <option value="Brunswick">Brunswick</option>
+
+      <option value="Buncombe">Buncombe</option>
+
+      <option value="Burke">Burke</option>
+
+      <option value="Cabarrus">Cabarrus</option>
+
+      <option value="Caldwell">Caldwell</option>
+
+      <option value="Camden">Camden</option>
+
+      <option value="Carteret">Carteret</option>
+
+      <option value="Caswell">Caswell</option>
+
+      <option value="Catawba">Catawba</option>
+
+      <option value="Chatham">Chatham</option>
+
+      <option value="Cherokee">Cherokee</option>
+
+      <option value="Chowan">Chowan</option>
+
+      <option value="Clay">Clay</option>
+
+      <option value="Cleveland">Cleveland</option>
+
+      <option value="Columbus">Columbus</option>
+
+      <option value="Craven">Craven</option>
+
+      <option value="Cumberland">Cumberland</option>
+
+      <option value="Currituck">Currituck</option>
+
+      <option value="Dare">Dare</option>
+
+      <option value="Davidson">Davidson</option>
+
+      <option value="Davie">Davie</option>
+
+      <option value="Duplin">Duplin</option>
+
+      <option value="Durham">Durham</option>
+
+      <option value="Edgecombe">Edgecombe</option>
+
+      <option value="Forsyth">Forsyth</option>
+
+      <option value="Franklin">Franklin</option>
+
+      <option value="Gaston">Gaston</option>
+
+      <option value="Gates">Gates</option>
+
+      <option value="Graham">Graham</option>
+
+      <option value="Granville">Granville</option>
+
+      <option value="Greene">Greene</option>
+
+      <option value="Guilford">Guilford</option>
+
+      <option value="Halifax">Halifax</option>
+
+      <option value="Harnett">Harnett</option>
+
+      <option value="Haywood">Haywood</option>
+
+      <option value="Henderson">Henderson</option>
+
+      <option value="Hertford">Hertford</option>
+
+      <option value="Hoke">Hoke</option>
+
+      <option value="Hyde">Hyde</option>
+
+      <option value="Iredell">Iredell</option>
+
+      <option value="Jackson">Jackson</option>
+
+      <option value="Johnston">Johnston</option>
+
+      <option value="Jones">Jones</option>
+
+      <option value="Lee">Lee</option>
+
+      <option value="Lenoir">Lenoir</option>
+
+      <option value="Lincoln">Lincoln</option>
+
+      <option value="Macon">Macon</option>
+
+      <option value="Madison">Madison</option>
+
+      <option value="Martin">Martin</option>
+
+      <option value="McDowell">McDowell</option>
+
+      <option value="Mecklenburg">Mecklenburg</option>
+
+      <option value="Mitchell">Mitchell</option>
+
+      <option value="Montgomery">Montgomery</option>
+
+      <option value="Moore">Moore</option>
+
+      <option value="Nash">Nash</option>
+
+      <option value="New Hanover">New Hanover</option>
+
+      <option value="Northampton">Northampton</option>
+
+      <option value="Onslow">Onslow</option>
+
+      <option value="Orange">Orange</option>
+
+      <option value="Pamlico">Pamlico</option>
+
+      <option value="Pasquotank">Pasquotank</option>
+
+      <option value="Pender">Pender</option>
+r
+      <option value="Perquimans">Perquimans</option>
+
+      <option value="Person">Person</option>
+
+      <option value="Pitt">Pitt</option>
+
+      <option value="Polk">Polk</option>
+
+      <option value="Randolph">Randolph</option>
+
+      <option value="Richmond">Richmond</option>
+
+      <option value="Robeson">Robeson</option>
+
+      <option value="Rockingham">Rockingham</option>
+
+      <option value="Rowan">Rowan</option>
+
+      <option value="Rutherford">Rutherford</option>
+
+      <option value="Sampson">Sampson</option>
+
+      <option value="Scotland">Scotland</option>
+
+      <option value="Stanly">Stanly</option>
+
+      <option value="Stokes">Stokes</option>
+
+      <option value="Surry">Surry</option>
+
+      <option value="Swain">Swain</option>
+
+      <option value="Transylvania">Transylvania</option>
+
+      <option value="Tyrrell">Tyrrell</option>
+
+      <option value="Union">Union</option>
+
+      <option value="Vance">Vance</option>
+
+      <option value="Wake">Wake</option>
+
+      <option value="Warren">Warren</option>
+
+      <option value="Washington">Washington</option>
+
+      <option value="Watauga">Watauga</option>
+
+      <option value="Wayne">Wayne</option>
+
+      <option value="Wilkes">Wilkes</option>
+
+      <option value="Wilson">Wilson</option>
+
+      <option value="Yadkin">Yadkin</option>
+
+      <option value="Yancey">Yancey</option>
+    </select>
+
+    <label name="enquiry" for="enquiry">Your enquiry or service request</label>
+
+    <textarea type="text" placeholder="Your enquiry or service request" id="enquiry"></textarea>
+
+    <input class="Button Button--primary" type="submit" value="Send"/>
+  </form>
+</section>
