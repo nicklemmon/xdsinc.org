@@ -6,11 +6,9 @@ footer {
 
 footer .u-oneThird,
 footer .u-twoThirds {
-
   @media (max-width: $tablet) {
     width: 100%;
   }
-
 }
 
 .FooterUnorderedList {
@@ -21,45 +19,48 @@ footer .u-twoThirds {
   @media (min-width: $tablet) {
     margin-top: 0;
   }
-
 }
 
-  .FooterUnorderedList-listItem {
-    border-top: 1px solid $dark-base-lightened;
-    overflow-x: hidden;
+.FooterUnorderedList-listItem {
+  border-top: 1px solid $dark-base-lightened;
+  overflow-x: hidden;
+}
+
+.FooterUnorderedList-link {
+  @include display(block);
+  width: 150%;
+  margin: 0 auto;
+  text-decoration: none;
+  color: white;
+  font-family: $secondary-font-stack;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-top: $xs-padding;
+  padding-bottom: $xs-padding;
+  padding-left: $md-padding;
+  @include transform(translateX(-$xs-padding));
+  transition: background $defaultTransition ease, transform $defaultTransition ease;
+
+  &:hover,
+  &:focus {
+    background: $dark-base-darkened;
+    @include transform(translateX(-$xs-padding/2));
   }
 
-    .FooterUnorderedList-link {
-      @include display(block);
-      width: 150%;
-      margin: 0 auto;
-      text-decoration: none;
-      color: white;
-      font-family: $secondary-font-stack;
-      font-size: .8rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      padding-top: $xs-padding;
-      padding-bottom: $xs-padding;
-      padding-left: $md-padding;
-      @include transform(translateX(-$xs-padding));
-      transition: background $defaultTransition ease, transform $defaultTransition ease;
+  &:focus {
+    outline: 1px dashed white;
+    outline-offset: -5px;
+  }
 
-      &:hover {
-        background: $dark-base-darkened;
-        @include transform(translateX(-$xs-padding/2));
-      }
-
-      @media (min-width: $tablet) {
-        @include display(inline-block);
-        margin: 0; // helps w/ extra spacing w/ display: inline-block
-        line-height: 100%; // helps w/ extra spacing w/ display: inline-block
-        margin-left: -4px; // helps w/ extra spacing w/ display: inline-block;
-        font-size: .9rem;
-      }
-
-    }
-
+  @media (min-width: $tablet) {
+    @include display(inline-block);
+    margin: 0; // helps w/ extra spacing w/ display: inline-block
+    line-height: 100%; // helps w/ extra spacing w/ display: inline-block
+    margin-left: -4px; // helps w/ extra spacing w/ display: inline-block;
+    font-size: .9rem;
+  }
+}
 
 footer p {
   @include display(block);
@@ -69,7 +70,6 @@ footer p {
   @media (min-width: $tablet) {
     font-size: .9rem;
   }
-
 }
 
 footer p .fa {
