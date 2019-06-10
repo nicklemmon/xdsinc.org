@@ -1,6 +1,45 @@
-@import '0-tools/**/*.scss';
-@import '1-vendor/**/*.scss';
-@import '2-base/**/*.scss';
-@import '3-components/**/*.scss';
-@import '4-sections/**/*.scss';
-@import '5-overrides/**/*.scss';
+// Tools
+@import '0-tools/colors';
+@import '0-tools/vars';
+
+// Vendor
+@import '1-vendor/bourbon/bourbon';
+@import '1-vendor/neat/neat';
+@import '1-vendor/font-awesome.min';
+@import '1-vendor/yahoo-css-reset.min';
+
+// Base
+@import '2-base/animations';
+@import '2-base/global';
+@import '2-base/grid';
+@import '2-base/typography';
+
+// Components
+@import '3-components/accordion';
+@import '3-components/buttons';
+@import '3-components/circles';
+@import '3-components/contact-card';
+@import '3-components/figure';
+@import '3-components/forms';
+@import '3-components/hero-box';
+@import '3-components/hero-left';
+@import '3-components/link-list';
+@import '3-components/media-source';
+@import '3-components/navigation';
+@import '3-components/ordered-list';
+@import '3-components/program-cards';
+@import '3-components/vignette-container';
+
+// Sections
+@import '4-sections/donate';
+@import '4-sections/footer';
+@import '4-sections/form';
+@import '4-sections/hero';
+@import '4-sections/media';
+@import '4-sections/partners';
+@import '4-sections/programs';
+@import '4-sections/values';
+@import '4-sections/vignette';
+
+// Utilities
+@import '5-overrides/utilities';

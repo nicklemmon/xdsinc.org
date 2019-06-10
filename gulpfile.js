@@ -6,7 +6,6 @@ const {
   watch
 } = require( 'gulp' );
 const sass = require( 'gulp-sass' );
-const sassGlob = require( 'gulp-sass-glob' );
 const scssLint = require( 'gulp-scss-lint' );
 const autoprefixer = require( 'gulp-autoprefixer' );
 const gulpClean = require( 'gulp-clean' );
@@ -36,7 +35,6 @@ function clean( callback ) {
 
 function styles( callback ) {
   return src( `${Base.assets}/${Path.styles}styles.scss` )
-    .pipe( sassGlob() )
     .pipe( sass() )
     .pipe( autoprefixer( 'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4' ) )
     .pipe( cleanCSS( {compatibility: 'ie11'}) )
