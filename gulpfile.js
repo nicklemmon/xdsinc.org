@@ -2,7 +2,8 @@ const {
   src,
   dest,
   parallel,
-  series
+  series,
+  watch
 } = require( 'gulp' );
 const sass = require( 'gulp-sass' );
 const sassGlob = require( 'gulp-sass-glob' );
@@ -103,4 +104,4 @@ exports.images = images;
 exports.server = server;
 exports.scripts = scripts;
 exports.build = series( clean, build, styles );
-exports.default = series( build, styles, server );
+exports.default = series( build, styles, server, watch );

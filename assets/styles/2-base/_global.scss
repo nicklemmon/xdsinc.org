@@ -1,4 +1,5 @@
-body {
+*:focus {
+  outline: 1px dashed currentColor;
 }
 
 main {
@@ -12,7 +13,6 @@ footer {
   @media (min-width: $mobile) {
     padding: $xl-padding $lg-padding;
   }
-
 }
 
 i.fa {
