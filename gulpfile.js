@@ -27,7 +27,8 @@ const Path = {
 }
 
 function clean( callback ) {
-  return src( './_site/' ).pipe( gulpClean() )
+  return src( './_site/', { allowEmpty: true } )
+    .pipe( gulpClean() )
 
   callback()
 }
