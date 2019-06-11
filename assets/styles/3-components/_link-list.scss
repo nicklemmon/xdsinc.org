@@ -1,85 +1,68 @@
 .LinkList {
-  padding: 0 $sm-padding $xs-padding 0;
   width: 100%;
   height: auto;
+}
 
-  @media (min-width: $mobile) and (max-width: $desktopReg) {
-    display: none;
-  }
+.LinkList .LinkList-header {
+  margin: 0 0;
+  padding: $xl-padding $md-padding $md-padding $md-padding;
+  background: $secondary-accent-darkened;
+}
 
-  @media (min-width: $mobile) {
-    padding: 0 0 $lg-padding 0;
-    height: 100%;
-  }
-
+.LinkList .LinkList-unorderedList {
   @media (max-width: $mobile) {
-    padding: 0;
+    max-width: 100%;
+    padding-right: 0;
   }
 }
 
-  .LinkList .LinkList-header {
-    margin: 0 0;
-    padding: $xl-padding $md-padding $md-padding $md-padding;
+.LinkList .LinkList-listItem {
+  overflow: hidden; // hides overflowing link that is set to wider than its parent for the transform animation
+}
+
+.LinkList .LinkList-link {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-style: italic;
+  letter-spacing: 1px;
+  line-height: 110%;
+  position: relative;
+  padding: $sm-padding $lg-padding;
+  margin-left: -$xs-padding;
+  outline-offset: -10px;
+  transition: transform $defaultTransition ease, background $defaultTransition*2 ease;
+
+  @media (max-width: $mobile) {
+    padding: $md-padding $md-padding $md-padding $lg-padding*2;
+  }
+}
+
+.LinkList-linkContent {
+  padding-left: $md-padding;
+  line-height: 1.4;
+}
+
+.LinkList--news {
+  background: $secondary-accent;
+  color: white;
+}
+
+.LinkList--news .LinkList-link {
+  color: white;
+  text-decoration: none;
+  outline-offset: -5px;
+
+  &:hover,
+  &:focus,
+  &:active {
     background: $secondary-accent-darkened;
+    @include transform(translateX(.25rem));
   }
+}
 
-  .LinkList .LinkList-unorderedList {
-    max-width: 33%; // allows list to have some padding while still allowing the container to stretch across the screen to the right
-    padding-right: $sm-padding; // allows list to have some padding while still allowing the container to stretch across the screen to the right
-
-    @media (max-width: $mobile) {
-      max-width: 100%;
-      padding-right: 0;
-    }
-  }
-
-  .LinkList .LinkList-listItem {
-    overflow: hidden; // hides overflowing link that is set to wider than its parent for the transform animation
-
-    &:last-of-type {
-      margin-bottom: $sm-padding;
-    }
-  }
-
-  .LinkList .LinkList-link {
-    @include display(block);
-    font-size: 1.3rem;
-    font-style: italic;
-    letter-spacing: 1px;
-    line-height: 110%;
-    position: relative;
-    padding: $md-padding $lg-padding*2;
-    margin-left: -$xs-padding;
-    transition: transform $defaultTransition ease, background $defaultTransition*2 ease;
-
-    @media (max-width: $mobile) {
-      padding: $md-padding $md-padding $md-padding $lg-padding*2;
-    }
-  }
-
-  .LinkList--news {
-    background: $secondary-accent;
-    color: white;
-  }
-
-    .LinkList--news .LinkList-link {
-      color: white;
-      text-decoration: none;
-      outline-offset: -5px;
-
-      &:hover,
-      &:focus,
-      &:active {
-        background: $secondary-accent-darkened;
-        @include transform(translateX(.25rem));
-      }
-    }
-
-      .LinkList--news .LinkList-link:before {
-        content: '\f054';
-        font-family: FontAwesome;
-        font-style: normal;
-        position: absolute;
-        left: $lg-padding;
-        top: $md-padding;
-      }
+.LinkList--news .LinkList-link:before {
+  content: '\f054';
+  font-family: FontAwesome;
+  font-style: normal;
+}

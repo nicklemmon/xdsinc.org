@@ -10,7 +10,7 @@
   @include filter(grayscale(100%));
   transition: transform $defaultTransition ease, filter $defaultTransition*1.5 ease, box-shadow $defaultTransition*1.5 ease;
   border: 1px solid $light-gray;
-  outline-offset: -3px;
+  outline-offset: -6px;
 
   &:hover,
   &:focus,
@@ -25,10 +25,9 @@
   }
 }
 
-  .MediaSource span {
-    @extend .u-noDisplay;
-  }
-
+.MediaSource span {
+  @extend .u-noDisplay;
+}
 
 .MediaSource#dth {
   //background: #7BAFD4; // taken from http://identity.unc.edu/colors/
