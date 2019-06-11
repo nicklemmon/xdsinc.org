@@ -8,27 +8,13 @@
   background-size: cover !important;
   @include transform(translateY(0));
   background: #FFF;
+  outline-offset: 5px;
   transition: transform $defaultTransition ease;
 
   &:hover,
   &:focus,
   &:active {
     @include transform(translateY(-.5rem));
-  }
-
-  &:hover > .ProgramCard-title,
-  &:focus > .ProgramCard-title,
-  &:active > .ProgramCard-title, {
-    background: rgba(0,0,0,0);
-    color: #FFF;
-    @include cardBoxShadow($highlight-darkened);
-  }
-
-  &:hover > .ProgramCard-title span,
-  &:focus > .ProgramCard-title span,
-  &:active > .ProgramCard-title span {
-    border-bottom: 1px solid #FFF;
-    text-shadow: 1px 2px 5px rgba(0,0,0,.8)
   }
 }
 
@@ -77,18 +63,4 @@
       border-bottom: 1px solid $secondary-accent;
       @include transition(border-bottom $defaultTransition*1.5 ease, text-shadow $defaultTransition*1.5 ease);
     }
-
-    // &::before,
-    // &:before {
-    //   content:"";
-    //   @extend .u-inlineBlock;
-    //   z-index: 0;
-    //   position: absolute;
-    //   left: -6%;
-    //   bottom: 20%;
-    //   @include size(7rem);
-    //   border-radius: 50%;
-    //   background: $highlight;
-    // }
-
   }

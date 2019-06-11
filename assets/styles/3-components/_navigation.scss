@@ -127,7 +127,7 @@ header {
   }
 
   .MainNavigation.open {
-    max-height: 350px;
+    max-height: 375px;
   }
 
     .Brand {
@@ -151,11 +151,17 @@ header {
       padding: $xs-padding/2 $xs-padding;
       color: $dark-base;
       border-radius: .75rem;
+      text-decoration: none;
+      outline-offset: 3px;
       cursor: pointer;
       @include transition(background $defaultTransition ease);
 
       &:hover {
         background: $highlight;
+      }
+
+      &:focus {
+        outline: 1px dashed white;
       }
     }
 
@@ -164,6 +170,7 @@ header {
       margin: 0;
       padding: $sm-padding;
       width: 100%;
+      outline-offset: -10px;
       border-bottom: 1px solid $secondary-accent;
 
       &:hover,
@@ -171,7 +178,6 @@ header {
       &:focus {
         background: $secondary-accent-darkened;
       }
-
     }
 
     .MainNavigation-link:hover:after {
@@ -183,6 +189,10 @@ header {
       margin-left: $sm-padding;
       margin-right: $sm-padding;
       max-width: 90%;
+      
+      &:last-child {
+        margin-top: $sm-padding;
+        margin-bottom: $sm-padding
+      }
     }
-
 }
