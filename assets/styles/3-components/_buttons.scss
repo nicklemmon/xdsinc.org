@@ -11,7 +11,7 @@
   max-width: $lg-padding*6;
   position: relative;
   border: none;
-  outline-offset: -3px;
+  outline-offset: -6px;
   cursor: pointer;
   @include transition(background $defaultTransition ease);
 }
