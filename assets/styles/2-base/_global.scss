@@ -1,5 +1,9 @@
-*:focus {
-  outline: 1px dashed currentColor;
+* {
+  scroll-behavior: smooth;
+  
+  &:focus {
+    outline: 1px dashed currentColor;
+  }
 }
 
 main {
