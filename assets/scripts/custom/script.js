@@ -7,19 +7,31 @@ $( document ).ready(function() {
       });
   });
 
-  $('.Accordion-header').click(function() {
-    $accordionHeader = $(this);
-    $accordionContent = $(this).next('.Accordion-content');
+  $( '.Accordion-header' ).click( function() {
+    $accordionHeader = $( this );
+    $accordionContent = $( this ).next( '.Accordion-content' );
 
-    if ($accordionContent.hasClass('is-collapsed')) {
-      $accordionContent.slideDown(700);
-      $accordionContent.toggleClass('is-expanded is-collapsed');
-      $accordionHeader.toggleClass('is-expanded is-collapsed');
+    if ( $accordionContent.hasClass('is-collapsed' ) ) {
+      $accordionContent
+        .slideDown(700)
+        .removeClass( 'is-collapsed' )
+        .addClass( 'is-expanded' );
+
+      $accordionHeader
+        .removeClass( 'is-collapsed' )
+        .addClass( 'is-expanded' )
+        .attr( 'aria-expanded', 'true' );
     }
     else {
-      $accordionContent.slideUp(700);
-      $accordionContent.toggleClass('is-expanded is-collapsed');
-      $accordionHeader.toggleClass('is-expanded is-collapsed');
+      $accordionContent
+        .slideUp( 700 )
+        .removeClass( 'is-expanded' )
+        .addClass( 'is-collapsed' );
+
+      $accordionHeader
+        .removeClass( 'is-expanded' )
+        .addClass( 'is-collapsed' )
+        .attr( 'aria-expanded', 'false' );
     }
   });
 });
