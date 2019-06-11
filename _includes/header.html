@@ -2,10 +2,11 @@
   <div class="MenuBar">
     <a href="/index.html" class="Brand">XDS Inc.</a>
 
-    <a class="MenuOpen" role="button" href="javascript:void(0);">Menu</a> <!-- only displayed to users viewing the site below the viewport established in the stylesheet -->
+    <!-- only displayed to users viewing the site below the viewport established in the stylesheet -->
+    <a class="MenuOpen" role="button" href="javascript:void(0);" aria-controls="mainNav">Menu</a>
   </div>
 
-  <nav class="MainNavigation">
+  <nav class="MainNavigation" id="mainNav">
     <a class="MainNavigation-link" href="/about">About</a>
 
     <a class="MainNavigation-link" href="/initiatives">Initiatives</a>
