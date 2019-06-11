@@ -15,7 +15,6 @@
   @media (max-width: $mobile) {
     padding: 0;
   }
-
 }
 
   .LinkList .LinkList-header {
@@ -32,7 +31,6 @@
       max-width: 100%;
       padding-right: 0;
     }
-
   }
 
   .LinkList .LinkList-listItem {
@@ -41,7 +39,6 @@
     &:last-of-type {
       margin-bottom: $sm-padding;
     }
-
   }
 
   .LinkList .LinkList-link {
@@ -58,10 +55,7 @@
     @media (max-width: $mobile) {
       padding: $md-padding $md-padding $md-padding $lg-padding*2;
     }
-
   }
-
-
 
   .LinkList--news {
     background: $secondary-accent;
@@ -71,6 +65,7 @@
     .LinkList--news .LinkList-link {
       color: white;
       text-decoration: none;
+      outline-offset: -5px;
 
       &:hover,
       &:focus,
@@ -78,7 +73,6 @@
         background: $secondary-accent-darkened;
         @include transform(translateX(.25rem));
       }
-
     }
 
       .LinkList--news .LinkList-link:before {
