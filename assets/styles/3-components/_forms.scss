@@ -17,7 +17,6 @@
     max-width: 100% * (2/3);
     padding: $xl-padding $xl-padding $lg-padding $xl-padding;
   }
-
 }
 
 form {
@@ -58,13 +57,11 @@ form {
 
   form textarea,
   form select {
-
     &:hover,
     &:focus,
     &:active {
       outline: none;
     }
-
   }
 
   form input[type="text"],
@@ -86,8 +83,7 @@ form {
   }
 
   form select {
-    -webkit-appearance: none;
-    padding: .7rem;
+    height: 3rem;
   }
 
   form input[type="tel"] {

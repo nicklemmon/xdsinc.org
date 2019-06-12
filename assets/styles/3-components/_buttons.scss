@@ -19,7 +19,7 @@
 .Button--primary {
   color: white;
   text-shadow: 0 .1rem .25rem $primary-accent-darkened;
-  background: $primary-accent-darkened;
+  background: scale-color($primary-accent-darkened, $lightness: -10%);
   box-shadow: inset 0 0 0 .2rem $primary-accent;
 
   &:hover,
