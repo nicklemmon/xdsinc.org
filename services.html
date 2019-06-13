@@ -28,20 +28,20 @@ title: Services
 </section>
 
 <section class="Section--formHolder" data-parallax="scroll" data-image-src="/assets/images/opt_bg_farm.png" data-speed=".65">
-  <form class="FormBox" action="//formspree.io/beth_rossi@med.unc.edu" method="POST">
+  <form class="FormBox" action="https://formspree.io/beth_rossi@med.unc.edu" method="POST" name="services">
     <h3 class="SubHeading">Make a referral to UNC CECMH</h3>
 
     <div class="u-full">
       <div class="u-oneHalf">
         <label name="first-name" for="first-name">First name</label>
 
-        <input type="text" placeholder="First name" name="first-name" id="first-name" />
+        <input type="text" placeholder="First name" name="firstName" id="first-name" />
       </div>
 
       <div class="u-oneHalf">
         <label name="last-name" for="last-name">Last name</label>
 
-        <input type="text" placeholder="Last name" name="last-name" id="last-name" />
+        <input type="text" placeholder="Last name" name="lastName" id="last-name" />
       </div>
     </div>
 
@@ -55,7 +55,7 @@ title: Services
       <div class="u-oneHalf">
         <label name="phone-number" for="phone-number">Phone number</label>
 
-        <input type="tel" placeholder="919.555.4723" name="phone-number" id="phone-number" required />
+        <input type="tel" placeholder="919.555.4723" name="phoneNumber" id="phone-number" required />
       </div>
     </div>
 
@@ -63,7 +63,7 @@ title: Services
       County of residence
     </label>
 
-    <select name="county-select" id="county">
+    <select name="county" id="county">
       <option value="" selected="selected" disabled>Pick your county</option>
 
       <option value="Alamance">Alamance</option>
@@ -269,7 +269,7 @@ r
 
     <label name="enquiry" for="enquiry">Your enquiry or service request</label>
 
-    <textarea type="text" placeholder="Your enquiry or service request" id="enquiry"></textarea>
+    <textarea type="text" placeholder="Your enquiry or service request" id="enquiry" name="enquiry"></textarea>
 
     <input class="Button Button--primary" type="submit" value="Send"/>
   </form>
