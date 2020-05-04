@@ -1,1 +1,16 @@
-@import 'https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css'
+@import '../1-vendor/_jquery-modal.min.scss';
+
+.jquery-modal {
+  z-index: 50;
+}
+
+.Modal {
+  p {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
+
+.Modal-button {
+  margin: 0 auto;
+}
