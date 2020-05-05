@@ -19,6 +19,13 @@ title: Donate
 
 		<h2>Donate</h2>
 
+		<div class="Alert" role="alert">
+			<p class="FullParagraph u-mg-b--sm">In response to COVID-19, we are currently accepting donations for initiatives that provide healthy meals, telehealth care sessions, and more for our clients.</p>
+
+			{% include paypal-donate-form.html buttonContent="Donate to the COVID-19 fund" %}
+		</div>
+
+
 		<p class="FullParagraph">Your donation will enable us to continue offering specialized services that will reach more community members with severe mental illness.</p>
 
 		<p class="FullParagraph">Tax deductible donations can be made payable to XDS Inc. Mail checks to <strong>XDS Inc, PO Box 368, Carrboro, NC 27510</strong>.</p>
@@ -43,14 +50,6 @@ title: Donate
 
 		<p class="FullParagraph">Or donate directly via PayPal:</p>
 
-		<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-			<input class="u-pd-l--0" type="hidden" name="cmd" value="_s-xclick">
-
-			<input class="u-pd-l--0" type="hidden" name="hosted_button_id" value="WABJS563A7AEQ">
-
-			<input class="u-pd-l--0" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-
-			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-		</form>
+		{% include paypal-donate-form.html buttonContent="Donate" %}
 	</div>
 </section>

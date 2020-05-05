@@ -5,8 +5,11 @@
 }
 
 .Modal {
+  max-width: 600px;
+
   p {
-    font-size: 1.3rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
     text-align: center;
   }
 }

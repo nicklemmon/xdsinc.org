@@ -40,6 +40,6 @@ $(document).ready(function() {
   if ($($donateModal).length) {
     setTimeout(function() {
       $($donateModal).modal({ fadeDuration: 250 });
-    }, 750);
+    }, 1000);
   }
 });
