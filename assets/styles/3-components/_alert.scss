@@ -1,0 +1,13 @@
+$background-color: #fffaba;
+
+.Alert {
+  border: 1px solid $primary-accent;
+  background-color: $background-color;
+  padding: 2rem;
+  margin-bottom: 2rem;
+
+  p {
+    color: darken($background-color, 75%);
+    margin-bottom: 0;
+  }
+}

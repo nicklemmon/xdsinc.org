@@ -1,0 +1,19 @@
+@import '../1-vendor/_jquery-modal.min.scss';
+
+.jquery-modal {
+  z-index: 50;
+}
+
+.Modal {
+  max-width: 700px;
+
+  p {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+}
+
+.Modal-button {
+  margin: 0 auto;
+}
