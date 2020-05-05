@@ -1,4 +1,4 @@
-# Getting Started
+# Getting Started!
 
 1. Run `npm install && bundle install` to install project dependencies
 2. Run `gulp` for a development build with a local server
